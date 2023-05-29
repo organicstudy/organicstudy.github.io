@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Konsep Keamanan Jaringan - QnA</title>
+    <meta name="description" content="Konsep Keamanan Jaringan, , , , , , , 0, Cara Kerja Sistem Pendeteksi dan Penahanan Serangan ke Jaringan, www.masfadli.com, 1366 x 768, png, , 20, konsep-keamanan-jaringan, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Konsep Keamanan Jaringan - QnA" />
+    <meta property="og:description" content="Konsep Keamanan Jaringan, , , , , , , 0, Cara Kerja Sistem Pendeteksi dan Penahanan Serangan ke Jaringan, www.masfadli.com, 1366 x 768, png, , 20, konsep-keamanan-jaringan, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Konsep Keamanan Jaringan - QnA" />
+    <meta name="twitter:description" content="Konsep Keamanan Jaringan, , , , , , , 0, Cara Kerja Sistem Pendeteksi dan Penahanan Serangan ke Jaringan, www.masfadli.com, 1366 x 768, png, , 20, konsep-keamanan-jaringan, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://organicstudy.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://organicstudy.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://organicstudy.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://organicstudy.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://organicstudy.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Konsep Keamanan Jaringan</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">besargila24</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Konsep+Keamanan+Jaringan" alt="Konsep Keamanan Jaringan">
+                    </div>
+                    <p></p>
+                    <p>1.konsep sistem keamanan jaringan
+2.mengevaluasi keamanan jaringan pada server
+3.mengkonfigurasi sistem keamanan jaringan pada Linux Debian 6</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-konsep-sistem-keamanan-jaringan2-mengevaluasi-keamanan-jaringan-pada-server3-mengkonfigurasi-sistem-keamanan-jaringan-pada-linux-debian-6">1.
+                                            1.konsep sistem keamanan jaringan
+2.mengevaluasi keamanan jaringan pada server
+3.mengkonfigurasi sistem keamanan jaringan pada Linux Debian 6</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-konsep-dasar-pada-keamanan-informasi-dan-jaringan%e2%80%8b">2.
+                                            Sebutkan konsep dasar pada keamanan informasi dan jaringan?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-mengenai-konsep-mac-filtering-pada-sistem-keamanan-jaringan-wireless-yang-mendukung-wep">3.
+                                            Jelaskan mengenai konsep MAC Filtering pada sistem keamanan jaringan wireless yang mendukung WEP ..??</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-kegiatan-manusia-yang-menyesuaikan-diri-dengan-lingkungan-alam-adalah-a-manusia-dapat-mengolah-tanah-dengan-traktor-b-nelayan-menggunaka-jaring-untuk-menangkap-ikan-c-petani">4.
+                                            Contoh kegiatan manusia yang menyesuaikan diri dengan lingkungan alam adalah ....    a. Manusia dapat mengolah tanah dengan traktor.    b. Nelayan menggunaka jaring untuk menangkap ikan.    c. Petani menanam padi saat musim penghujan.    d. Manusia memanean buah dari kebun buah.2. Akibat dari timbulnya masalah sosial dalam masyarakat adalah ....     a. kenyamanan                      c. keresahan     b. kedamaian                         d. keamanan3. Menanam sayur-sayuran seperti kol, wortel, dan buncis biasanya dilakukan oleh penduduk yang tinggal di daerah sekitar ....     a. lembah                                c. danau     b. pegunungan                       d. pesisir4. Salah satu dampak terjadinya kemiskinan adalah ....     a. kesejahteraan masyarakat meningkat     b. gizi buruk pada balita     c. luasnya lapangan pekerjaan     d. kualitas pendidikan meningkat5. Akibat yang timbul dari adanya angka kelahiran yang tinggi dan angka kematian yang     rendah adalah ....Pertumbuhan penduduk yang tinggiPertumbuhan penduduk yang rendahPersebaran penduduk yang tidak merataPenigkatan pendapatan penduduk 6. Berikut ini merupakan negara yang menjajah Indonesia paling lama adalah ....    a. Portugis                                  c. Jepang    b. Spanyol                                  d. Belanda7. Tokoh yang mencetuskan sistem tanam paksa pada masa penjajahan Bcelanda adalah ....     a. Daendeles                             c. Van den Bosch     b. Pieter Both                            d. Douwes Dekker8. Tanggal berdirinya organisasi Budi Utomo dijadikan sebagai  ....     a. Hari Kebangkitan Nasional     b. Hari Pahlawan     c. Hari Pendidikand Nasional     d. Hari Sumpah Pemuda9. Perhatikan beberapa tokoh berikut ini !     (1) Mr. Muh. Yamin     (2) Prof. Dr. Mr. Soepomo     (3) Ir. Soekarno     (4) dr. Rajiman WediodiningratTokoh Indonesia yang menawarkan konsep dasar negara pada sidang BPUPKI tanggal 28      Mei – 1 Juni 1945 ditunjukan pada nomor ....(1), (2), dan (3)(1), (2), dan (4)(1), (3), dan (4)(2), (3), dan (4) . Perhatikan pernyataan berikut ini !       (1) Menghabiskan uang negara       (2) Merebut kemerdekaan Indonesia       (3) Meningkatkan kualitas hidup       (4) Mencapai kesejahteraan masyarakat  10. Tujuan pembanguan saran dan prasarana di berbagai bidang ditunjukkan pada         Nomor ....          a. (1) dan (2)                          c. (2) dan (3)          b. (1) dan (3)                          d. (3) dan (4)  11. Kegiatan mengolah barang jadi atau setengah jadi menggunakan sarana dan peralatan          tertentu disebut dengan kegiatan ....Perdagangan                   c. PerindustrianPendistribusian               d. Perkantoran 12. Berikut ini jenis pekerjaan yang menghasilkan jasa adalah ....          a. pedagang                            c. peternak          b. petani                                  d. Sopir 13. Toko yang melayani pembelian dalam jumlah barang yang besar disebut ....          a. toko grosir                          c. Swalayan          b. mini market                        d. toko kelontong14.  Koperasi adalah usaha bersama yang didirikan dengan tujuan untuk ....          a. membantu pemerintah          b. memberikan pinjaman          c. mencari keuntungan sebanyak-banyaknya          d. menyejahterakan anggotanya15. Jenis pekerjaan berikut ini yang menghasilkan barang adalah ....          a. pedagang                            c. Dokter          b. petani                                  d. sopir16. Perusahaan yang terdiri dari anggota aktif dan anggota pasif adalah ....          a. firma                                     c. PT          b. CV                                          d. BUMN17. Kegiatan berikut ini yang termasuk distribusi adalah ....          a. pabrik membuat barang untuk dipakai dalam negeri          b. pabrik garmen mengekspor produknya ke KanadaPerusahaan batik membuat baju batikPabrik tekstil mempekerjakan beberapa karyawan baru18. Berikut yang termasuk keuntungan dari adanya kegiatan konsumsi, yaitu ....          a.  meningkatkan keuntungan bagi produsen          b.  mengakibatkan pola hidup boros pada masyarakat          c. konsumsi yang tidak seimbang mengakibatkan ketimpangan pola konsumsi          d.  menimbulkan resesi ekonomi19. Organisasi pergerakan nasional pertama yang berdiri di Indonesia adalah ....          a. Tri Koro Dharma                      c. Indische Partij          b. Budi Utomo                              d. Jong Sumatranen Bond20. Kenampakan alam Indonesia meliputi wilayah ... dan ....          a. pegunungan dan lautan          c. daratan dan perkebunan          b. daratan dan lautan                  d. lautan dan perairan II.  Isilah titik-titik di bawah ini dengan jawaban yang tepat !1.Manusia melakukan kegiatan ekonomi bertujuan untuk ....2.Cultur Stelsel disebut juga sistem ....3.Asas koperasi adalah ....4.Letak wilayah Indonesia secara geografis diantara dua samudera,yaitu ... dan ....5.Sungai terpanjang di Pulau Jawa yaitu ....​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-kabel-di-bawah-ini-yang-tidak-digunakan-dalam-sistem-jaringan-komputer-adalah-a-twin-pairb-tupc-utpd-co-cable2-suatu-rute-atau-aturan-main-yang-mengatur-kimunikasi-data-disebut-a">5.
+                                            1. Kabel di bawah ini yang tidak digunakan dalam sistem jaringan komputer adalah... 
+A. Twin-pair
+B. TUP
+C. UTP
+D. Co-cable
+2. Suatu rute atau aturan main yang mengatur kimunikasi data disebut.... 
+A. Protokol
+B. Address IP
+C. TCP
+D. NNTP
+3. sebutkan untuk pengguna internet adalah... 
+A. Cracker
+B. Cader
+C. Netters
+D. Hacker
+4. Konsep jaringan komputer lahir pada tahun 1940 di... 
+A. Inggris
+B. Amerika 
+C. Prancis
+D. Jerman
+5. Berikut ini yang bukan keuntungan dari jaringan komputer adalah... 
+A. Resource sharing
+B. Reliabilitas tinggi
+C. Keamanan tidaj terjamin
+D. Menghemat uang
+6. Tempat-tempat yang menyediakan koneksi LAN dengan teknologi Wi-fi adalah.... 
+A. Server
+B. Workstation
+C. Network
+D. Hotspot
+7.berikut ini adalah persyaratan yang harus dipenuhi dalam mengakses internet melalui TV kabel, kecuali... 
+A. Internet card
+B. Kabel modern
+C. Ethernet card 
+D. Perangkat komputer standar
+8. Perangkat keras komputer disebut juga.... 
+A. Softwere 
+B. Hardwere
+C. Sparewere
+D. Brainwere
+9. Berikut ini sumber daya yang tidak dapat digunakan dalam sebuah jaringan adalah.... 
+A. Printer
+B. Scanner
+C. USB Falsh
+D. Floppy disk
+10. Berikut ini dibutuhkan untuk membangun sebuah jaringan, kecuali... 
+A. NIC
+B. Konektor RJ 45
+C. Kabel antena
+D. HUB
+11. Untuk memperluas jaringan LAN dibutuhkan alat berupa... 
+A. Gateway
+B. HUB
+C. Kabel UTP
+D. UPS
+Tolong di jawab ya plis.... Jawabnya yang bener jangan asal-asalan  ya plis....  Secepatnya ya.... </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-fakta-dan-opini-dari-berita-ini-tajuk-rencana-menyoal-kembali-ketimpangan-kompas-laporan-lembaga-non-pemerintah-bahwa-ketimpangan-masih-lebar-di-tengah-berbagai-upaya-menurunkan-menunjuk">6.
+                                            SEBUTKAN FAKTA DAN OPINI DARI BERITA INI 
+TAJUK RENCANA: Menyoal Kembali Ketimpangan (Kompas) Laporan lembaga non- pemerintah bahwa ketimpangan masih lebar di tengah berbagai upaya menurunkan menunjukkan adanya masalah struktural. Laporan ketimpangan Indonesia oleh International NGO Forum on Indonesian Development (INFID) dan Oxfam menegaskan kembali, sulit mengatasi ketimpangan kemakmuran jika masalah mendasar tak disentuh. Laporan itu menegaskan kembali perekonomian Indonesia terlalu didikte pasar setelah krisis keuangan dan ekonomi tahun 1997. Bantuan Dana Moneter Internasional (IMF) dan Bank Dunia saat itu mensyaratkan penyesuaian struktural dalam kemasan penyehatan ekonomi. Terjadi liberalisasi dalam bentuk swastanisasi layanan publik, liberalisasi sektor keuangan dan perbankan, serta penghapusan subsidi komoditas mendasar, termasuk penghapusan perlindungan efektif budidaya beras dan gula. Dalam perkembangan kemudian, terutama setelah lepas dari IMF, pemerintah terus membangun jaring pengaman sosial, seperti pendidikan gratis, asuransi semesta kesehatan, serta bantuan kredit usaha kecil dan menengah. Kelompok buruh dilindungi melalui undang-undang ketenagakerjaan yang oleh penganut ekonomi pasar dianggap tidak fleksibel dan mengurangi daya saing Indonesia. Meski demikian, mulai 2009, indeks rasio gini naik yang berarti ketimpangan memburuk. Dari sebelumnya 0,35 menjadi 0,37 dan sejak 2011 menjadi 0,41 yang bertahan hingga 2015, tertinggi sejak Indonesia merdeka. Upaya pemerintahan Presiden Joko Widodo menurunkan ketimpangan menghasilkan rasio gini 0,394 pada 2016. Laporan INFID dan Oxfam mengidentifikasi dominannya kepentingan politik kelompok atau orang, politik upah buruh murah, dan sistem perpajakan belum berhasil mendistribusi kemakmuran. Reformasi 1998 belum berhasil membangun kelembagaan politik menghapus praktik korupsi, kolusi, dan nepotisme. Kelindan kepentingan politik dan ekonomi pasar semakin kasatmata, elite mampu mengubah aturan untuk kepentingan sendiri. Ketimpangan menjadi masalah banyak negara dan menimbulkan keresahan sosial. Negara yang berusaha mengekang ekonomi pasar dan swastanisasi akan berhadapan dengan perangkat internasional, seperti General Agreement on Trade in Services, General Agreement on Tariffs and Trade, dan Trade in Intellectual Property Rights. Pada sisi lain, kesadaran ketimpangan menghambat perekonomian juga mendorong sejumlah pihak mencari konsep pembangunan yang menghargai hak kolektif komunitas di masyarakat, perempuan, dan warga miskin. Kita juga tidak menginginkan perlindungan berlebihan pada sektor usaha sehingga menyebabkan ketidakefisienan. Mencari keseimbangan antara ekonomi pasar dan menjamin kemakmuran adil dan beradab, seperti diamanatkan konstitusi kita, jelas memerlukan kejernihan pikiran, hati nurani, dan keberanian untuk berubah</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#la-guruparagraf-berikut-untuk-soal-nomor-2-dan-3-jaringan-sosial-telah-cepat-menjadi-bagiandari-kehidupan-dengan-banyaknya-teknologi-barudan-perkembangan-jaringan-sosial-saat-ini-adabanyak-manfaat">7.
+                                            la guru!Paragraf berikut untuk soal nomor 2 dan 3.Jaringan sosial telah cepat menjadi bagiandari kehidupan. Dengan banyaknya teknologi barudan perkembangan jaringan sosial saat ini, adabanyak manfaat bagi pelajar untuk menggunakanmedia sosial. Banyak pelajar ditantang untuk bisamenyesuaikan diri dengan konsep pembelajaran yangbaru dan tugas-tugas khusus. Media sosial membantumemusatkan pengetahuan kolektif seluruh kelasuntuk membuat kegiatan belajar dan berkomunikasimenjadi lebih efisien. Media sosial juga dapatmembantu untuk menjaga semua informasi agarterorganisasi dan mudah diakses. Dengan mediasosial, data yang pelajar miliki akan aman, akurat,dan bisa saling dibagikan.Disadur dari: https://www.progresstech.co.id/blog/manfaat-media-sosial-pelajarl, diunduh 27 Januari 2020Gagasan pokok paragraf tersebut adalah ....pentingnya jaringan sosial dalammasyarakatb. perkembangan teknologi informasiC. manfaat media sosial bagi pelajard. pembelajaran dengan sistemkelebihan media sosiala.iharapkanningkatkaya secaraga terjadan sosiale.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-berikut-adalah-salah-satu-keuntungan-penggunaan-jaringan-internet-adalah-a-produktivitas-kerjab-kualitas-jaringanc-efektivitas-kerja-d-keseragaman-informasi-2-berikut-adalah-beberapa-jenis">8.
+                                            1. berikut adalah salah satu keuntungan penggunaan jaringan internet adalah.... A. produktivitas kerjaB. kualitas jaringanC. efektivitas kerja D. keseragaman informasi 2. berikut adalah beberapa jenis kabel yang sering digunakan dalam koneksi jaringan kecuali.... A. coaxialB. wireless C. UTPD. fiber optik 3. jaringan sistem informasi dalam sebuah perusahaan atau organisasi yang juga menggunakan teknologi client server adalah.... A. jaringan LAN B. jaringan protokolC. jaringan server D. jaringan intranet4. selain memiliki kelebihan, ternyata intranet juga memiliki beberapa kekurangan seperti berikut ini kecuali.... A. perlunya pelatihan khusus untuk mendidik penggunaan jaringanB. dibutuhkan biaya khusus untuk mentransfer dataC. mudah terjadi kesalahan pengiriman data dan informasiD. dibutuhkan sistem keamanan data dan informasi5. berikut adalah penggolongan jaringan komputer berdasarkan wilayah kecuali.... A. LANB. RANC. WAND. MAN6. kelompok pengguna internet yang menggunakan halaman website sebagai forum diskusi dengan topik tertentu disebut..... A. milisB. news groveC. telnetD. gopher7. komputer yang hanya memiliki hak untuk mengakses data/internet dalam sebuah jaringan komputer disebut.... A. networkB. clientC. protokolD. server8. layanan yang digunakan untuk transfer file antar komputer di internet dengan konsep client server disebut.... A. FTPB. WNNC. HTTPD. ISP9. ............ merupakan kejahatan yang terjadi di internet10. aplikasi e-mail diciptakan oleh....... 11. program penelitian ARPA diciptakan pada tahun...... 12. jaringan yang bersifat internal perusahaan atau organisasi disebut.... 13. salah satu contoh yang digunakan dalam jaringan nirkabel adalah...... 14. ARPANA pertama kali dikembangkan di Negara...... 15. proyek DARPA berhasil menciptakan prosesor yang disebut..... </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jaringan-sosial-telah-cepat-menjadi-bagian-dari-kehidupan-dengan-banyaknya-teknologi-baru-dan-perkembangan-jaringan-sosial-saat-ini-ada-banyak-manfaat-bagi-pelajar-untuk-menggunakan-media-sosial-ba">9.
+                                            Jaringan sosial telah cepat menjadi bagian dari kehidupan. Dengan banyaknya teknologi baru dan perkembangan jaringan sosial saat ini, ada banyak manfaat bagi pelajar untuk menggunakan media sosial. Banyak pelajar ditantang untuk bisa menyesuaikan diri dengan konsep pembelajaran yang baru dan tugas- tugas khusus. Media sosial membantu memusatkan pengetahuan kolektif seluruh kelas untuk membuat kegiatan belajar dan berkomunikasi menjadi lebih efisien. Media sosial juga dapat membantu untuk menjaga semua nformasi agar terorganisasi dan mudah diakses. Dengan media sosial, data yang pelajar miliki akan aman, akurat, dan bisa saling dibagikan. Makna kata akurat dalam paragraf tersebut adalah.... 
+a. betul
+b. tepat
+c. cermat
+d. cocok
+e. hati- hati</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#yang-bisa-aku-berikan-brainliest-answear-1-orang-yang-cerdas-mengutamakan-kebenaranmenyadari-hal-yang-baik-dan-yang-tidak-baik-dan-membuat-pilihan-yang-tepat-ketika-menggunakan-teknologi-disebut">10.
+                                            Yang bisa aku berikan brainliest answear :)1. Orang yang cerdas, mengutamakan kebenaran,menyadari hal yang baik dan yang tidak baik, dan membuat pilihan yang tepat ketika menggunakan teknologi disebut …a. Warga internet b. warga digital c. warga masyarakat d. kewargaan digital2. Berikut adalah fungsi dari kewargaan digital, kecuali …a. Menciptakan rasa tanggung jawabb. Menciptakan permasalahanc. Membantu proses interaksid. Menciptakan kehidupan yang bermanfaat3. Konsep yang memberikan penyadaran penggunaan teknologi informasi di dunia maya secara bertanggung jawab dengan baik dan benar disebut …a. warga digital b. warga internet c. warga masyarakat d. kewargaan digital4. Berikut yang bukan termasuk komunikasi digital adalah …a. SMS b. e-mail c. chatting d. pos surat5. Proses pembelajaran mengenal teknologi dan pemanfaatannya disebut …a. literasi digital b. literasi teknologi c. belajar teknologi d. pembelajaran TIK6. Berikut adalah usaha keamanan yang dapat diterapkan dalam dunia digital, kecuali …a. Backup data b. mengunci pintu c. menginstal antivirus d. mengaktifkan firewall7. Hukum yang terkait dengan aktivitas warga digital disebut …a. Hukum alam b. hukum siber c. hukum digital d. hukum Negara8. Secara umum kelebihan dari transaksi online sebagai berikut, kecuali …a. Kemudahan akses c. kemudahan membandingkan harga produkb. Kecepatan bertransaksi d. perbedaan kualitas barang yang dikirim9. Keamanan sangat erat kaitannya dengan …a. Hacker b. pencuri c. password d. privasi10. Beberapa kiat untuk mengelola hubungan dalam jaringan dengan positif, kecuali …a. Bersikap baik, sopan , dan hormat kepada siapapunb. Tetap waspada apabila bertemu dengan orang asingc. Anda selalu memiliki hak untuk mengatakan “ Tidak “d. Memberikan komentar dengan sesuka hati11. Berikut yang bukan termasuk jenis intimidasi adalah …a. Intimidasi verbal b. intimidasi social c. intimidasi fisik d. intimidasi kelompok12. Tindakan yang membuat ancaman, menyebarkan informasi palsu, menyerang seseorang secara fisik atau verbal, dan mengucilkan seseorang dalam kelompok, termasuk tindakan …a. ancaman b. intimidasi c. pelecehan d. kekerasan13. Rekam jejak digital adalah semua aktivitas yang dilakukan di …a. e-mail b. internet c. forum d. media social14. Berikut beberapa langkah yang dapat membantu membuat reputasi menjadi positif, kecuali …a. Hak cipta b. public domain c. memilah informasi d. mengaktifkan firewall15. Undang-Undang tentang Hak Cipta tersebut dalam Pasal 1 butir 1 Undang-Undang RI Nomor …a. 26 Tahun 2014 b. 27 Tahun 2014 c. 28 Tahun 2014 d. 29 Tahun 201416. Seorang atau beberapa orang yang secara sendiri-sendiri atau bersama-sama menghasilkan suatu ciptaan yang bersifat khas dan pribadi disebut …a. Karya b. project c. pencipta d. hand made17. Istilah yang diberikan kepada karya cipta yang dapat digunakan oleh orang lain tanpa izin terlebih dahulu, dan hanya untuk tujuan komentar, kritik, pelaporan, dan pengajaran disebut …a. License b. copyright c. public domain d. fair use/re-use-rights18. Berikut adalah bagian dari creative commons, kecuali …a. Attribution b. non commercial c. derivatives d. share alike​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-komunikasi-yang-dilakukan-dengan-carabertatap-muka-di-sebut-dengana-komunikasi-secara-directb-komunikasi-secara-indirectc-komunikasi-melalui-media-komunitasdigitald-komunikasi-melalui-fac">11.
+                                            1. Komunikasi yang dilakukan dengan cara
+bertatap muka di sebut dengan
+a. Komunikasi secara direct
+b. Komunikasi secara indirect
+c. Komunikasi melalui media komunitas
+digital
+d. Komunikasi melalui facebook
+e. Komunikasi tidak langsung
+2. Syarat yang bukan menjadi syarat agar
+terjadinya komunikasi digital adalah ?
+a. Bertatap muka langsung
+b. Memiliki perangkat keras digital
+c. Memiliki sambungan internet
+d. Ada data atau informasi yang disampaikan
+e. Terdapat pengirim dan penerima data
+3. Space penyimpanan yang gratis di berikan
+oleh google drive sebesar berapa GB ?
+a. 10 GB
+b. 12 GB
+c. 5 GB
+d. 15 GB
+e. 20 GB
+4. Blog pertama kali diperkenalkan oleh ?
+a. Steve Jobs d. John Barger
+b. Bang Si Hyuk e. steve chen
+c. Bigetron RA
+5. Yang bukan aplikasi chat mobile yang
+mendukung chatting , video call dan voice call
+adalah ?
+a. Whatsapp d. kakao talk
+b. Telegram d. pesan
+c. Line
+6. E-mail adalah singkatan dari
+a. Elektronik-mail
+b. Ekology – mail
+c. Economi-mail
+d. Efisien – mail
+e. Elektrik-mail
+7. Yang tidak termasuk virus yang menyerang
+keamanan perangkat digital adalah
+a. Macro virus
+b. Worm
+c. Corona virus
+d. Boot sector virus
+e. Multipartite virus
+8. Pada komunikasi daring secara sinkron
+komputer , ponsel pintar dan laptop termasuk
+kedalam komponen ...
+a. Hardware
+b. Software
+c. Perangkat lunak
+d. Brainware
+e. Saluran transmisi
+9. Berikut aplikasi yang tidak tergolong
+synconous communication (serempak) dalam
+daring adalah
+a. Kakao talk
+b. Surel (e-mail)
+c. Skype
+d. Line
+e. Whatsapp
+10. Yang bukan termasuk ke dalam mesin pencari
+adalah
+a. Yahoo search
+b. Google
+c. Instagram
+d. Naver
+e. Ask.coM
+11. Penggunaan etika dalam berkomunikasi
+bertujuan untuk ...
+a. Menunjukkan jati diri sesungguhnya
+b. Untuk meyakinkan lawan chatting
+c. Kewajiban menghormati yang lebih tua
+d. Menyampaikan informasi yang tepat
+e. Tidak menyinggung perasaan lawan
+chatting
+12. Berikut yang tidak termasuk manfaat kelas
+maya adalah ...
+a. Dapat meningkatkan kemampuan
+b. Setiap orang dapat mengaksesnya
+c. Media bertukar informasi
+d. Materi dalam bentuk analog
+e. Materi dapat diulang
+13. Fasilitas milik Google untuk mengupload dan
+mempublikasikan video adalah ...
+a. Video share d. Youtube
+b. Vidio.com e. Google Adword
+c. Google drive
+14. Untuk login ke akun google, caranya dengan
+memasukkan ...
+a. E – mail dan password
+b. Username dan password
+c. E – mail dan username
+d. Nomor hp dan password
+e. Nama dan nomor hp
+15. Teknik pengambilan gambar tepat diatas
+objek disebut ...
+a. High eye view
+b. Bird eye view
+c. Low camera angle
+d. Dutch cameraangle
+e. Medium close up
+16. Ciri – ciri komunikasi daring, kecuali ...
+a. Jangkauan sempit
+b. Hemat biaya
+c. Tidak terbatas tempat
+d. Terintegrasi dengan TIK
+e. Tidak terbatas waktu
+17. Komunikasi daring disebut juga komunikasi ...
+a. Virtual d. Nonverbal
+b. Lisan e. Verbal
+c. Nirkata
+18. Untuk mendaftar menjadi siswapada aplikasi
+schoology, kita harus meng-klik ...
+a. I’m student d. I’m parent
+b. I’m teacher e. I’m profeddor
+c. Sign in
+19. Video yang memaparkan sebuah berita adalah
+jenis video ...
+a. Berita d. Presentasi
+b. Dokumenter e. Pembelajaran
+c. Cerita
+20. Video yang memberikan materi pembelajaran
+agar mudah diserap adalah ...
+a. Berita d. Presentasi
+b. Dokumenter e. Pembelajaran
+c. Cerita
+21. Rancangan yang tersusun di pikiran dan
+kemudian menimbulkan konsep dinamakan ...
+a. Konsep d. cerita
+b. Sinopsis e. ide
+c. Naskah
+22. Komunikasi dapat dikatakan langsung dan
+tidak langsung bergantung pada ...
+a. Tujuan dan fungsi komunikasi
+b. Perangkat jaringan
+c. Aplikasi yang digunakan
+d. Media yang digunakan
+e. Respon yang diberikan secara langsung
+atau tidak
+23. Berikut tidak termasuk aplikasi untuk video
+chat yaitu ...
+a. Gtalk d.Yahoomessenger
+b. Facebook e. hotmail
+c. Skype
+24. Untuk merekam aktivitas di layar secara
+penuh, caranya pilih ...
+a. Record d. volume
+b. Half screen e. Full screen
+c. Audio
+25. Ciri presentasi video, kecuali ...
+a. Mudah dibuat
+b. Menjelaskan keunggulan
+c. Dibuat dengan kamera
+d. Untuk menyampaikan ide gagasan
+e. Untuk menjelekkan orang lain
+Essay:
+1. Sebutkan 2 dampak positif yang kamu
+dapatkan selaku pengguna internet atau
+warga digital ?
+2. Jelaskan apa yang dimaksud dengan LMS
+(Learning Management System) ?
+3. Pada komunikasi dalam jaringan terbagi
+menjadi dua macam. Jelaskan dua macam
+komunikasi daring tersebut ?
+4. Yang dimaksud dengan back door pada
+system keamanan digital adalah ?
+5. Jelaskan Perbedaan belajar konvensional
+dengan e-learning ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ada-yang-bisa-jawab-semua-soal-ini-bagi-yang-bisa-tolong-langsung-jawab-ya-gambar-untuk-nomor-24-11-menurut-konsep-wawasan-nusantara-laut-teritorial-negara-indonesia-diukur-dari-pantai-te">12.
+                                            Ada yang bisa jawab Semua Soal Ini...
+Bagi yang bisa tolong Langsung Jawab Ya....
+( Gambar Untuk Nomor 24 )
+11. Menurut konsep wawasan nusantara, laut teritorial negara Indonesia diukur dari pantai terluar sejauh … mil
+a. 10
+b. 12
+c. 24
+d. 60
+e. 200
+12. Dalam proses integrasi nasional, hambatan yang harus dihadapi oleh bangsa Indonesia dalam kaitannya dengan dunia luar adalah …
+a. westernisasi
+b. globalisasi
+c. politik luar negeri bebas aktif
+d. perdagangan internasional
+e. krisis ekonomi dunia
+13. Berikut ini yang bukan merupakan ancaman integrasi nasional bagi bangsa Indonesia adalah …
+a. disintegrasi bangsa
+b. keresahan sosial
+c. keinginan untuk mengubah pancasila sebagai ideologi
+d. makar terhadap pemerintah sudah sah
+e. demokratis
+Soal PPKn : Ancaman-Ancaman Terhadap Negara Indonesia
+14. Yang bukan merupakan hambatan dalam mencapai itegrasi nasional dapat dilihat sebagai berikut ….
+a. korupsi, kolusi, dan nepotisme
+b. rendahnya mutu SDM
+c. ketidakpercayaan pada pemerintah
+d. kemiskinan
+e. disintegrasi bangsa
+15. Ketahanan nasional tidaklah tetap, tetapi berubah-ubah setiap saat. Hal ini sesuai dengan sifat ketahanan nasional, yaitu sifat …
+a. mandiri
+b. dinamis
+c. manunggal
+d. wibawa
+e. konsultasi dan kerjasama
+16. Setiap usaha dan kegiatan, baik dari dalam negeri maupun luar negeri yang dinilai membahayakan kedaulatan negara, keutuhan wilayah Indonesia, serta keselamatan seluruh bangsa, merupakan pengertian dari …
+a. politik
+b. ideologi
+c. ancaman
+d. demokratisasi
+e. ketahanan nasional
+17. Berikut ini merupakan bentuk-bentuk ancaman militer, kecuali …
+a. sabotase
+b. agresi
+c. spionase
+d. pelanggaran wilayah
+e. aksi demokrasi
+18. Spionase merupakan kegiatan dari intelejen yang dilakukan untuk …
+a. mendapatkan informasi atau rahasia militer atau negara
+b. pengiriman kelompok bersenjata
+c. memasuki wilayah tanpa izin
+d. merusak instansi penting militer
+e. memperlakukan pemberontakan sebagai seni
+19. Berikut ini merupakan ciri-ciri khusus dari aksi terorisme, kecuali …
+a. bergerak dalam kelompok
+b. beroperasi di bawah tanah (rahasia)
+c. blokade terhadap pelabuhan dan pantai
+d. menggunakan perangkat atau senjata yang canggih dan mematikan
+e. umumnya terkait dalam jaringan internasional
+20. Sistem politik internasional mengalami perubahan sejak …
+a. ancaman politik dapat menumbangkan suatu rezim pemerintahan
+b. Uni Soviet runtuh sehingga paham komunis tidak populer lagi
+c. perang saudara terjadi antara kelompok masyarakat bersenjata
+d. kegatan inteljen untuk mencapatkan informasi militer negara
+e. adanya tindakan yang mengizinkan penggunaan wilayah
+21. Politik adalah instrumen utama untuk bisa menggerakkan terjadinya perang. Ini membuktikkan bahwa …
+a. ancaman politik dapat menumbangkan suatu rezim pemerintahan bahkan bisa membinasakan suatu bangsa
+b. ancaman politik dapat menumbangkan suatu rezim pemerintahan bahkan bisa membinasakan suatu bangsa
+c. ekonomi merupakan salah satu penentu posisi tawar setiap negara pergaulan internasional
+d. campur tangan masyarakat internasional di suatu negara melalui politik seperti HAM
+e. kemajuan ilmu pengetahuan dan teknologi sangat pesat dan membawa manfaat yang besar bagi masyarakat
+22. Ancaman eksternal dapat berbentuk …
+a. inflasi
+b. pengagguran
+c. kinerja ekoomi buruk
+d. instruktur tidak memadai
+e. sistem ekonomi yang tidak jelas
+23. Berikut ini berbagai bentuk ancaman internal, kecuali …
+a. tingkat ketergantungan terhadap pihak asing
+b. sistem ekonomi yang tidak jelas
+c. instruktur yang tidak memadai
+d. pengangguran
+e. keselamatan umum
+24. Berikut ini yang bukan merupakan bentuk ancaman non militer yaitu …
+a. ancaman berdimensi ideologi
+b. ancaman berdimensi keselamatan umum
+c. ancaman berdimensi teknologi dan informasi
+d. ancaman berdimensi sabotase
+e. ancaman berdimensi sosial budaya
+ Soal PPKn : Ancaman-Ancaman Terhadap Negara Indonesia
+25. Kondisi dinamika yaitu suatu bangsa yang berisi ketangguhan dan keuletan yang bisa mengembangkan ketahanan, kekuatan nasional dalam mengahdapi dan mengatasi segala hambatan tantangan, dan ancaman baik yang berasal dari dalam maupun dari luar merupakan pengertian dari …
+a. ancaman
+b. ketahanan nasional
+c. pertahanan dan keamanan
+d. ideologi
+e. disintegrasi</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#perkembangan-teknologi-semakin-pesat-dari-waktu-ke-waktu-mulai-dari-mobil-pintar-smart-car-yang-bisa-berjalan-sendiri-ke-berbagai-tujuan-tanpa-pengemudi-manusia-hingga-perangkat-rumah-pintar-smar">13.
+                                            Perkembangan teknologi semakin pesat dari waktu ke waktu. Mulai dari mobil pintar (smart car) yang bisa berjalan sendiri ke berbagai tujuan tanpa pengemudi manusia, hingga perangkat rumah pintar (smart home) semacam Alexa yang bisa otomatis bersuara mengingatkan untuk melakukan aktifitas sesuai jadwal. Seluruh teknologi terbaru ini adalah bagian dari Internet of Things. Internet of Things (IoT) adalah sebuah konsep di mana suatu objek yang memiliki kemampuan untuk mentransfer data melalui jaringan tanpa memerlukan adanya interaksi dari manusia ke manusia atau dari manusia ke komputer. 
+Internet of Things (IoT) adalah struktur di mana objek, orang disediakan dengan identitas eksklusif dan kemampuan untuk pindah data melalui jaringan tanpa memerlukan dua arah antara manusia ke manusia yaitu sumber ke tujuan atau interaksi manusia ke komputer (Burange &amp; Misalkar, 2015). IoT sudah berkembang pesat mulai dari penggabungan teknologi nirkabel, Micro-Electromechanical Systems (MEMS) dan juga Internet. IoT menggunakan beberapa teknologi yang secara garis besar digabungkan menjadi satu kesatuan diantaranya sensor sebagai pembaca data, koneksi internet dengan bebarapa macam topologi jaringan, Radio Frequency Identification (RFID), wireless sensor network dan teknologi yang terus akan bertambah sesuai dengan kebutuhan (C. Wang et al., 2013). IoT juga bisa mencakup teknologi-teknologi sensor lainnya, seperti teknologi nirkabel maupun kode QR yang sering kita temukan di sekitar kita, contoh penerapannya dalam benda yang ada di dunia nyata adalah untuk pengolahan bahan pangan, elektronik, dan berbagai mesin atau teknologi lainnya yang semuanya tersambung ke jaringan lokal maupun global lewat sensor yang tertanam dan selalu menyala aktif. IoT ini mengacu pada mesin atau alat yang bisa diidentifikasikan sebagai representasi virtual dalam strukturnya yang berbasis Internet. 
+Tantangan terbesar yang bisa menjadi hambatan dalam mengkonfigurasi IoT adalah menjembatani kesenjangan antara dunia fisik dan dunia informasi dan bagaimana menyusun jaringan komunikasinya, dikarenakan jaringan yang dibutuhkan oleh IoT sangatlah kompleks. Selain itu, IoT juga memerlukan suatu sistem keamanan yang cukup ketat. Di samping masalah tersebut, biaya pengembangan IoT yang mahal juga sering menjadi faktor penyebab kegagalan, sehingga pembuatan dan pengembangannya bisa berakhir gagal produksi.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-suatu-proses-yang-mendunia-membuat-manusia-saling-terbuka-dan-bergantung-satusama-lainnya-tanpa-batas-waktu-dan-jarak-%e2%80%a62-globalisasi-adalah-terbentuknya-sistem-organisasi-dan-komunikasi-a">14.
+                                            1. Suatu proses yang mendunia, membuat manusia saling terbuka dan bergantung satusama lainnya tanpa batas waktu dan jarak …2. Globalisasi adalah terbentuknya sistem organisasi dan komunikasi antar masyarakat diseluruh dunia untuk mengikuti sistem dan kaidah-kaidah yang sama …3. Meningkatnya masalah bersama dan perubahan dalam konsep ruang dan waktu …4. Penyebaran prinsip multi kebudayaan (multiculturalism) …5. Pemahaman bahwa proses ‘mendunia’ dan globalisasi merupakan proses penyebaranberbagai obyek dan pengalaman kepada semua orang ke seluruh penjuru dunia …6. Globalisasi mendorong ‘rekonfigurasi geografis …7. Mengembangkan pola pikir peserta didik dan tenaga pendidik secara progresif …8. Perubahan masa depan manusia yang lebih baik, mudah, cepat dan aman …9. Suatu perbuatan seseorang yang mulai kehilangan nasionalisme dengan meniru ataumelakukan aktivitas kebarat-baratan …10. Menurunnya atau merosotnya akhlak atau moral seseorang …11. Memilih dan memanfaatkan alat komunikasi secara tepat, sesuai fungsi dan kebutuhan…12. Globalisasi produksi, pembiayaan, tenaga kerja, jaringan informasi, perdagangan …13. Berkembangnya dunia pariwisata …14. Individualisme yang semakin tinggi …15. Memanfaatkan alat transportasi sesuai dengan waktu dan jaraknya …jodohkan pertanyaan berikut Dengan jawaban yang benar A. GlobalisasiPendidikanB. Selo SoemardjanC. WesternisasiD. GlobalisasiTransportasiE. Dampak NegatifGlobalisasiF. GlobalisasiEkonomiG. GlobalisasiH. Ciri-Ciri GlobalisasiI. Globalisasi IPTEKJ. Globalisasi BudayaK. Dampak PositifGlobalisasiL. DemoralisasiM. GlobalisasiKomunikasiN. UniversalisasiO. PenghapusanBatas Territoria​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="1-konsep-sistem-keamanan-jaringan2-mengevaluasi-keamanan-jaringan-pada-server3-mengkonfigurasi-sistem-keamanan-jaringan-pada-linux-debian-6">
+                            1. 1.konsep sistem keamanan jaringan
+2.mengevaluasi keamanan jaringan pada server
+3.mengkonfigurasi sistem keamanan jaringan pada Linux Debian 6</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1.Keamanan jaringan (network security) terdiri dari kebijakan dan praktik untuk mencegah dan memantau akses yang tidak sah, penyalahgunaan, maupun penolakan yang terjadi di jaringan komputer.</p><p></p><p>2.evaluasi keamanan sistem informasi, di dalam modulnya bsi menulis - Meski sebuah sistem informasi sudah dirancang memiliki pengamanan, tetapi dalam perjalanannya keamanan jaringan harus selalu dimonitor. Hal ini disebabkan oleh beberapa faktor yaitu :</p><p>Selalu ditemukannya lubang keamanan yang baru, seperti halnya windows milik microsoft selalu saja ditemukan lubang keamanan baru (security hole) oleh para hacker;</p><p>Kesalahan konfigurasi, bisa mengakibatkan timbulnya celah keamanan pada suatu sistem. Misalnya mode (permission atau kepemilikan) dari berkas yang menyimpan password secara tidak sengaja diubah sehingga dapat diubah oleh orang-orang yang tidak berhak;</p><p>Penambahan perangkat baru (hardware/software) yang menyebabkan menurunnya tingkat security dan berubahnya metode pengoprasian sistem. Itu jelas karena sebuah sistem tetap membutuhkan seorang administrator, dan seoarang admin pasti membutuhkan penyesuaian jika sistemnya diubah atau diganti dengan yang baru.</p><p></p><p>3.-</p><br />
+                                            <h2 class="ez-toc-section" id="sebutkan-konsep-dasar-pada-keamanan-informasi-dan-jaringan%e2%80%8b">
+                            2. Sebutkan konsep dasar pada keamanan informasi dan jaringan?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>prinsip dasar keamanan jaringan </p><p><strong>Penjelasan:</strong></p><p>Prinsip Dasar Keamanan Jaringan</p><p>Prinsip keamanan jaringan dapat dibedakan menjadi tiga, yaitu :</p><p>a. Kerahasiaan (secrecy)</p><p>Secrecy berhubungan dengan hak akses untuk membaca data ,informasi dan suatu sistem computer. Dalam hal ini suatu sistem komputer dapat dikatakan aman jika suatu data atau informasi hanya dapat dibaca oleh pihak yang telah diberi wewenang secara legal.</p><p>b.  Integritas (integrity)</p><p>Integrity berhubungan dengan hak akses untuk mengubah data atau informasi dari</p><p>suatu sistem komputer. Dalam hal ini suatu sistem komputer dapat dikatakan aman jika suatu data atau informasi hanya dapat diubah oleh pihak yang telah diberi hak.</p><p>Contoh : e-mail di intercept di tengah jalan, diubah isinya, kemudian diteruskan ke alamat yang dituju.dengan cara  virus, trojan horse, atau pemakai lain yang mengubah informasi tanpa ijin, “man in the middle attack” dimana seseorang menempatkan diri di tengah pembicaraan dan menyamar sebagai orang lain.</p><p>c.   Ketersediaan (availability)</p><p>Availability berhubungan dengan ketersediaan data atau informasi pada saat yang dibutuhkan. Dalam hal ini suatu sistem komputer dapat dikatakan aman jika suatu data atau informasi yang terdapat pada sistem komputer dapat diakses dan dimanfaatkan oleh pihak yang berhak.</p><p>d.  Authentication</p><p>Aspek ini berhubungan dengan metoda untuk menyatakan bahwa informasi betul- betul asli, orang yang mengakses dan memberikan informasi adalah benar orang yang dimaksud, atau server yang kita hubungi adalah server yang asli.</p><p>e.   Akses Kontrol</p><p>Aspek kontrol merupakan fitur-fitur keamanan yang mengontrol bagaimana user berkomunikasi dengan sistem. Akses kontrol melindungi sistem dari akses yang tidak berhak dan umumnya menentukan tingkat otorisasi setelah prosedur otentikasi berhasil dilengkapi.</p><p></p><p>semoga dapat membantu :)</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-mengenai-konsep-mac-filtering-pada-sistem-keamanan-jaringan-wireless-yang-mendukung-wep">
+                            3. Jelaskan mengenai konsep MAC Filtering pada sistem keamanan jaringan wireless yang mendukung WEP ..??</h2><br />
+                        Mac filtering ada blacklist dan whitelist biasa digunakan agar orang yang tidak diijinkan tidak bisa mengakses wifi ataupun lan<br />
+                                            <h2 class="ez-toc-section" id="contoh-kegiatan-manusia-yang-menyesuaikan-diri-dengan-lingkungan-alam-adalah-a-manusia-dapat-mengolah-tanah-dengan-traktor-b-nelayan-menggunaka-jaring-untuk-menangkap-ikan-c-petani">
+                            4. Contoh kegiatan manusia yang menyesuaikan diri dengan lingkungan alam adalah ....    a. Manusia dapat mengolah tanah dengan traktor.    b. Nelayan menggunaka jaring untuk menangkap ikan.    c. Petani menanam padi saat musim penghujan.    d. Manusia memanean buah dari kebun buah.2. Akibat dari timbulnya masalah sosial dalam masyarakat adalah ....     a. kenyamanan                      c. keresahan     b. kedamaian                         d. keamanan3. Menanam sayur-sayuran seperti kol, wortel, dan buncis biasanya dilakukan oleh penduduk yang tinggal di daerah sekitar ....     a. lembah                                c. danau     b. pegunungan                       d. pesisir4. Salah satu dampak terjadinya kemiskinan adalah ....     a. kesejahteraan masyarakat meningkat     b. gizi buruk pada balita     c. luasnya lapangan pekerjaan     d. kualitas pendidikan meningkat5. Akibat yang timbul dari adanya angka kelahiran yang tinggi dan angka kematian yang     rendah adalah ....Pertumbuhan penduduk yang tinggiPertumbuhan penduduk yang rendahPersebaran penduduk yang tidak merataPenigkatan pendapatan penduduk 6. Berikut ini merupakan negara yang menjajah Indonesia paling lama adalah ....    a. Portugis                                  c. Jepang    b. Spanyol                                  d. Belanda7. Tokoh yang mencetuskan sistem tanam paksa pada masa penjajahan Bcelanda adalah ....     a. Daendeles                             c. Van den Bosch     b. Pieter Both                            d. Douwes Dekker8. Tanggal berdirinya organisasi Budi Utomo dijadikan sebagai  ....     a. Hari Kebangkitan Nasional     b. Hari Pahlawan     c. Hari Pendidikand Nasional     d. Hari Sumpah Pemuda9. Perhatikan beberapa tokoh berikut ini !     (1) Mr. Muh. Yamin     (2) Prof. Dr. Mr. Soepomo     (3) Ir. Soekarno     (4) dr. Rajiman WediodiningratTokoh Indonesia yang menawarkan konsep dasar negara pada sidang BPUPKI tanggal 28      Mei – 1 Juni 1945 ditunjukan pada nomor ....(1), (2), dan (3)(1), (2), dan (4)(1), (3), dan (4)(2), (3), dan (4) . Perhatikan pernyataan berikut ini !       (1) Menghabiskan uang negara       (2) Merebut kemerdekaan Indonesia       (3) Meningkatkan kualitas hidup       (4) Mencapai kesejahteraan masyarakat  10. Tujuan pembanguan saran dan prasarana di berbagai bidang ditunjukkan pada         Nomor ....          a. (1) dan (2)                          c. (2) dan (3)          b. (1) dan (3)                          d. (3) dan (4)  11. Kegiatan mengolah barang jadi atau setengah jadi menggunakan sarana dan peralatan          tertentu disebut dengan kegiatan ....Perdagangan                   c. PerindustrianPendistribusian               d. Perkantoran 12. Berikut ini jenis pekerjaan yang menghasilkan jasa adalah ....          a. pedagang                            c. peternak          b. petani                                  d. Sopir 13. Toko yang melayani pembelian dalam jumlah barang yang besar disebut ....          a. toko grosir                          c. Swalayan          b. mini market                        d. toko kelontong14.  Koperasi adalah usaha bersama yang didirikan dengan tujuan untuk ....          a. membantu pemerintah          b. memberikan pinjaman          c. mencari keuntungan sebanyak-banyaknya          d. menyejahterakan anggotanya15. Jenis pekerjaan berikut ini yang menghasilkan barang adalah ....          a. pedagang                            c. Dokter          b. petani                                  d. sopir16. Perusahaan yang terdiri dari anggota aktif dan anggota pasif adalah ....          a. firma                                     c. PT          b. CV                                          d. BUMN17. Kegiatan berikut ini yang termasuk distribusi adalah ....          a. pabrik membuat barang untuk dipakai dalam negeri          b. pabrik garmen mengekspor produknya ke KanadaPerusahaan batik membuat baju batikPabrik tekstil mempekerjakan beberapa karyawan baru18. Berikut yang termasuk keuntungan dari adanya kegiatan konsumsi, yaitu ....          a.  meningkatkan keuntungan bagi produsen          b.  mengakibatkan pola hidup boros pada masyarakat          c. konsumsi yang tidak seimbang mengakibatkan ketimpangan pola konsumsi          d.  menimbulkan resesi ekonomi19. Organisasi pergerakan nasional pertama yang berdiri di Indonesia adalah ....          a. Tri Koro Dharma                      c. Indische Partij          b. Budi Utomo                              d. Jong Sumatranen Bond20. Kenampakan alam Indonesia meliputi wilayah ... dan ....          a. pegunungan dan lautan          c. daratan dan perkebunan          b. daratan dan lautan                  d. lautan dan perairan II.  Isilah titik-titik di bawah ini dengan jawaban yang tepat !1.Manusia melakukan kegiatan ekonomi bertujuan untuk ....2.Cultur Stelsel disebut juga sistem ....3.Asas koperasi adalah ....4.Letak wilayah Indonesia secara geografis diantara dua samudera,yaitu ... dan ....5.Sungai terpanjang di Pulau Jawa yaitu ....​</h2><br />
+                        <p><strong>I. PILIHAN GANDA     </strong></p><p>     1. C. Petani menanam padi saat musim penghujan</p><p>     2. C. Keresahan</p><p>     3. B. Pegunungan</p><p>     4. B. Gizi buruk pada balita </p><p>     5. C. Persebaran penduduk yang tidak merata</p><p>     6. D. Belanda</p><p>     7. C. Van den Bosch</p><p>     8. B. Hari pahlawan</p><p>     9. A. (1), (2), dan (3)</p><p>    10. D. (3) dan (4)</p><p>    11. C. Perindustrian</p><p>    12. D. Sopir</p><p>    13. A. Toko grosir</p><p>    14. D. menyejahterakan anggotanya</p><p>    15. B. Petani</p><p>    16. B. CV</p><p>    17. B. pabrik garmen mengekspor produknya ke Kanada</p><p>    18. A. meningkatkan keuntungan bagi produsen</p><p>    19. B. Budi Utomo</p><p>    20. B. Daratan dan lautan</p><p></p><p><strong>II. ISILAH</strong></p>Tujuan melakukan kegiatan ekonomi adalah untuk memenuhi kebutuhan dengan memanfaatkan sumber daya yang langka.manfaat kegiata ekonomi yang lainnya yaitu untuk membantu sesama manusia misalnya pada perayaan ulang tahun sekolah,kamu dapat menyelenggarakan pasar murah.Cultuurstelsel (secara harfiah berarti Sistem Kultivasi atau secara kurang tepat diterjemahkan sebagai Sistem Budi Daya) (Inggris: Cultivation System) yang oleh sejarawan Indonesia disebut sebagai Sistem Tanam Paksa adalah peraturan yang dikeluarkan oleh Gubernur Jenderal Johannes van den Bosch pada tahun 1830.KekeluargaanSamudra Hindia dan Samudra Pasifik Bengawan Solo<p></p><p>Semoga Membantu</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-kabel-di-bawah-ini-yang-tidak-digunakan-dalam-sistem-jaringan-komputer-adalah-a-twin-pairb-tupc-utpd-co-cable2-suatu-rute-atau-aturan-main-yang-mengatur-kimunikasi-data-disebut-a">
+                            5. 1. Kabel di bawah ini yang tidak digunakan dalam sistem jaringan komputer adalah... 
+A. Twin-pair
+B. TUP
+C. UTP
+D. Co-cable
+2. Suatu rute atau aturan main yang mengatur kimunikasi data disebut.... 
+A. Protokol
+B. Address IP
+C. TCP
+D. NNTP
+3. sebutkan untuk pengguna internet adalah... 
+A. Cracker
+B. Cader
+C. Netters
+D. Hacker
+4. Konsep jaringan komputer lahir pada tahun 1940 di... 
+A. Inggris
+B. Amerika 
+C. Prancis
+D. Jerman
+5. Berikut ini yang bukan keuntungan dari jaringan komputer adalah... 
+A. Resource sharing
+B. Reliabilitas tinggi
+C. Keamanan tidaj terjamin
+D. Menghemat uang
+6. Tempat-tempat yang menyediakan koneksi LAN dengan teknologi Wi-fi adalah.... 
+A. Server
+B. Workstation
+C. Network
+D. Hotspot
+7.berikut ini adalah persyaratan yang harus dipenuhi dalam mengakses internet melalui TV kabel, kecuali... 
+A. Internet card
+B. Kabel modern
+C. Ethernet card 
+D. Perangkat komputer standar
+8. Perangkat keras komputer disebut juga.... 
+A. Softwere 
+B. Hardwere
+C. Sparewere
+D. Brainwere
+9. Berikut ini sumber daya yang tidak dapat digunakan dalam sebuah jaringan adalah.... 
+A. Printer
+B. Scanner
+C. USB Falsh
+D. Floppy disk
+10. Berikut ini dibutuhkan untuk membangun sebuah jaringan, kecuali... 
+A. NIC
+B. Konektor RJ 45
+C. Kabel antena
+D. HUB
+11. Untuk memperluas jaringan LAN dibutuhkan alat berupa... 
+A. Gateway
+B. HUB
+C. Kabel UTP
+D. UPS
+Tolong di jawab ya plis.... Jawabnya yang bener jangan asal-asalan  ya plis....  Secepatnya ya.... </h2><br />
+                        1.c<br />2.a<br />3.c<br />4.b<br />5.c<br />6.a<br />7.d<br />8.b<br />9.c<br />10.<br />11.auntuk nomor 10 jawabannya C<br />
+                                            <h2 class="ez-toc-section" id="sebutkan-fakta-dan-opini-dari-berita-ini-tajuk-rencana-menyoal-kembali-ketimpangan-kompas-laporan-lembaga-non-pemerintah-bahwa-ketimpangan-masih-lebar-di-tengah-berbagai-upaya-menurunkan-menunjuk">
+                            6. SEBUTKAN FAKTA DAN OPINI DARI BERITA INI 
+TAJUK RENCANA: Menyoal Kembali Ketimpangan (Kompas) Laporan lembaga non- pemerintah bahwa ketimpangan masih lebar di tengah berbagai upaya menurunkan menunjukkan adanya masalah struktural. Laporan ketimpangan Indonesia oleh International NGO Forum on Indonesian Development (INFID) dan Oxfam menegaskan kembali, sulit mengatasi ketimpangan kemakmuran jika masalah mendasar tak disentuh. Laporan itu menegaskan kembali perekonomian Indonesia terlalu didikte pasar setelah krisis keuangan dan ekonomi tahun 1997. Bantuan Dana Moneter Internasional (IMF) dan Bank Dunia saat itu mensyaratkan penyesuaian struktural dalam kemasan penyehatan ekonomi. Terjadi liberalisasi dalam bentuk swastanisasi layanan publik, liberalisasi sektor keuangan dan perbankan, serta penghapusan subsidi komoditas mendasar, termasuk penghapusan perlindungan efektif budidaya beras dan gula. Dalam perkembangan kemudian, terutama setelah lepas dari IMF, pemerintah terus membangun jaring pengaman sosial, seperti pendidikan gratis, asuransi semesta kesehatan, serta bantuan kredit usaha kecil dan menengah. Kelompok buruh dilindungi melalui undang-undang ketenagakerjaan yang oleh penganut ekonomi pasar dianggap tidak fleksibel dan mengurangi daya saing Indonesia. Meski demikian, mulai 2009, indeks rasio gini naik yang berarti ketimpangan memburuk. Dari sebelumnya 0,35 menjadi 0,37 dan sejak 2011 menjadi 0,41 yang bertahan hingga 2015, tertinggi sejak Indonesia merdeka. Upaya pemerintahan Presiden Joko Widodo menurunkan ketimpangan menghasilkan rasio gini 0,394 pada 2016. Laporan INFID dan Oxfam mengidentifikasi dominannya kepentingan politik kelompok atau orang, politik upah buruh murah, dan sistem perpajakan belum berhasil mendistribusi kemakmuran. Reformasi 1998 belum berhasil membangun kelembagaan politik menghapus praktik korupsi, kolusi, dan nepotisme. Kelindan kepentingan politik dan ekonomi pasar semakin kasatmata, elite mampu mengubah aturan untuk kepentingan sendiri. Ketimpangan menjadi masalah banyak negara dan menimbulkan keresahan sosial. Negara yang berusaha mengekang ekonomi pasar dan swastanisasi akan berhadapan dengan perangkat internasional, seperti General Agreement on Trade in Services, General Agreement on Tariffs and Trade, dan Trade in Intellectual Property Rights. Pada sisi lain, kesadaran ketimpangan menghambat perekonomian juga mendorong sejumlah pihak mencari konsep pembangunan yang menghargai hak kolektif komunitas di masyarakat, perempuan, dan warga miskin. Kita juga tidak menginginkan perlindungan berlebihan pada sektor usaha sehingga menyebabkan ketidakefisienan. Mencari keseimbangan antara ekonomi pasar dan menjamin kemakmuran adil dan beradab, seperti diamanatkan konstitusi kita, jelas memerlukan kejernihan pikiran, hati nurani, dan keberanian untuk berubah</h2><br />
+                        Fakta: Kalimat 1 - 6 ; 8 - 12 ; 15 - 16<br /><br />Opini: Kalimat 7 ; 13 - 14 ; 17 - 18<br />
+                                            <h2 class="ez-toc-section" id="la-guruparagraf-berikut-untuk-soal-nomor-2-dan-3-jaringan-sosial-telah-cepat-menjadi-bagiandari-kehidupan-dengan-banyaknya-teknologi-barudan-perkembangan-jaringan-sosial-saat-ini-adabanyak-manfaat">
+                            7. la guru!Paragraf berikut untuk soal nomor 2 dan 3.Jaringan sosial telah cepat menjadi bagiandari kehidupan. Dengan banyaknya teknologi barudan perkembangan jaringan sosial saat ini, adabanyak manfaat bagi pelajar untuk menggunakanmedia sosial. Banyak pelajar ditantang untuk bisamenyesuaikan diri dengan konsep pembelajaran yangbaru dan tugas-tugas khusus. Media sosial membantumemusatkan pengetahuan kolektif seluruh kelasuntuk membuat kegiatan belajar dan berkomunikasimenjadi lebih efisien. Media sosial juga dapatmembantu untuk menjaga semua informasi agarterorganisasi dan mudah diakses. Dengan mediasosial, data yang pelajar miliki akan aman, akurat,dan bisa saling dibagikan.Disadur dari: https://www.progresstech.co.id/blog/manfaat-media-sosial-pelajarl, diunduh 27 Januari 2020Gagasan pokok paragraf tersebut adalah ....pentingnya jaringan sosial dalammasyarakatb. perkembangan teknologi informasiC. manfaat media sosial bagi pelajard. pembelajaran dengan sistemkelebihan media sosiala.iharapkanningkatkaya secaraga terjadan sosiale.​</h2><br />
+                        JAWAB:<p></p><p>B.perkembangan teknologi informasi</p><br />
+                                            <h2 class="ez-toc-section" id="1-berikut-adalah-salah-satu-keuntungan-penggunaan-jaringan-internet-adalah-a-produktivitas-kerjab-kualitas-jaringanc-efektivitas-kerja-d-keseragaman-informasi-2-berikut-adalah-beberapa-jenis">
+                            8. 1. berikut adalah salah satu keuntungan penggunaan jaringan internet adalah.... A. produktivitas kerjaB. kualitas jaringanC. efektivitas kerja D. keseragaman informasi 2. berikut adalah beberapa jenis kabel yang sering digunakan dalam koneksi jaringan kecuali.... A. coaxialB. wireless C. UTPD. fiber optik 3. jaringan sistem informasi dalam sebuah perusahaan atau organisasi yang juga menggunakan teknologi client server adalah.... A. jaringan LAN B. jaringan protokolC. jaringan server D. jaringan intranet4. selain memiliki kelebihan, ternyata intranet juga memiliki beberapa kekurangan seperti berikut ini kecuali.... A. perlunya pelatihan khusus untuk mendidik penggunaan jaringanB. dibutuhkan biaya khusus untuk mentransfer dataC. mudah terjadi kesalahan pengiriman data dan informasiD. dibutuhkan sistem keamanan data dan informasi5. berikut adalah penggolongan jaringan komputer berdasarkan wilayah kecuali.... A. LANB. RANC. WAND. MAN6. kelompok pengguna internet yang menggunakan halaman website sebagai forum diskusi dengan topik tertentu disebut..... A. milisB. news groveC. telnetD. gopher7. komputer yang hanya memiliki hak untuk mengakses data/internet dalam sebuah jaringan komputer disebut.... A. networkB. clientC. protokolD. server8. layanan yang digunakan untuk transfer file antar komputer di internet dengan konsep client server disebut.... A. FTPB. WNNC. HTTPD. ISP9. ............ merupakan kejahatan yang terjadi di internet10. aplikasi e-mail diciptakan oleh....... 11. program penelitian ARPA diciptakan pada tahun...... 12. jaringan yang bersifat internal perusahaan atau organisasi disebut.... 13. salah satu contoh yang digunakan dalam jaringan nirkabel adalah...... 14. ARPANA pertama kali dikembangkan di Negara...... 15. proyek DARPA berhasil menciptakan prosesor yang disebut..... </h2><br />
+                        1. a<br />2. a<br />3. d<br />4. a<br />5. b<br />6. a<br />7. b<br />8. a<br />9. cyber crime<br />10. -<br />11. 1970 (kalau gak salah)<br />12. intranet<br />13. wireless fidelity (WiFi)<br />14. Amerika Serikat<br />15. -<br />
+                                            <h2 class="ez-toc-section" id="jaringan-sosial-telah-cepat-menjadi-bagian-dari-kehidupan-dengan-banyaknya-teknologi-baru-dan-perkembangan-jaringan-sosial-saat-ini-ada-banyak-manfaat-bagi-pelajar-untuk-menggunakan-media-sosial-ba">
+                            9. Jaringan sosial telah cepat menjadi bagian dari kehidupan. Dengan banyaknya teknologi baru dan perkembangan jaringan sosial saat ini, ada banyak manfaat bagi pelajar untuk menggunakan media sosial. Banyak pelajar ditantang untuk bisa menyesuaikan diri dengan konsep pembelajaran yang baru dan tugas- tugas khusus. Media sosial membantu memusatkan pengetahuan kolektif seluruh kelas untuk membuat kegiatan belajar dan berkomunikasi menjadi lebih efisien. Media sosial juga dapat membantu untuk menjaga semua nformasi agar terorganisasi dan mudah diakses. Dengan media sosial, data yang pelajar miliki akan aman, akurat, dan bisa saling dibagikan. Makna kata akurat dalam paragraf tersebut adalah.... 
+a. betul
+b. tepat
+c. cermat
+d. cocok
+e. hati- hati</h2><br />
+                        <p>Jawaban:</p><p>Tepat</p><p>Penjelasan:</p><p>Maaf kalo salah:)</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="yang-bisa-aku-berikan-brainliest-answear-1-orang-yang-cerdas-mengutamakan-kebenaranmenyadari-hal-yang-baik-dan-yang-tidak-baik-dan-membuat-pilihan-yang-tepat-ketika-menggunakan-teknologi-disebut">
+                            10. Yang bisa aku berikan brainliest answear :)1. Orang yang cerdas, mengutamakan kebenaran,menyadari hal yang baik dan yang tidak baik, dan membuat pilihan yang tepat ketika menggunakan teknologi disebut …a. Warga internet b. warga digital c. warga masyarakat d. kewargaan digital2. Berikut adalah fungsi dari kewargaan digital, kecuali …a. Menciptakan rasa tanggung jawabb. Menciptakan permasalahanc. Membantu proses interaksid. Menciptakan kehidupan yang bermanfaat3. Konsep yang memberikan penyadaran penggunaan teknologi informasi di dunia maya secara bertanggung jawab dengan baik dan benar disebut …a. warga digital b. warga internet c. warga masyarakat d. kewargaan digital4. Berikut yang bukan termasuk komunikasi digital adalah …a. SMS b. e-mail c. chatting d. pos surat5. Proses pembelajaran mengenal teknologi dan pemanfaatannya disebut …a. literasi digital b. literasi teknologi c. belajar teknologi d. pembelajaran TIK6. Berikut adalah usaha keamanan yang dapat diterapkan dalam dunia digital, kecuali …a. Backup data b. mengunci pintu c. menginstal antivirus d. mengaktifkan firewall7. Hukum yang terkait dengan aktivitas warga digital disebut …a. Hukum alam b. hukum siber c. hukum digital d. hukum Negara8. Secara umum kelebihan dari transaksi online sebagai berikut, kecuali …a. Kemudahan akses c. kemudahan membandingkan harga produkb. Kecepatan bertransaksi d. perbedaan kualitas barang yang dikirim9. Keamanan sangat erat kaitannya dengan …a. Hacker b. pencuri c. password d. privasi10. Beberapa kiat untuk mengelola hubungan dalam jaringan dengan positif, kecuali …a. Bersikap baik, sopan , dan hormat kepada siapapunb. Tetap waspada apabila bertemu dengan orang asingc. Anda selalu memiliki hak untuk mengatakan “ Tidak “d. Memberikan komentar dengan sesuka hati11. Berikut yang bukan termasuk jenis intimidasi adalah …a. Intimidasi verbal b. intimidasi social c. intimidasi fisik d. intimidasi kelompok12. Tindakan yang membuat ancaman, menyebarkan informasi palsu, menyerang seseorang secara fisik atau verbal, dan mengucilkan seseorang dalam kelompok, termasuk tindakan …a. ancaman b. intimidasi c. pelecehan d. kekerasan13. Rekam jejak digital adalah semua aktivitas yang dilakukan di …a. e-mail b. internet c. forum d. media social14. Berikut beberapa langkah yang dapat membantu membuat reputasi menjadi positif, kecuali …a. Hak cipta b. public domain c. memilah informasi d. mengaktifkan firewall15. Undang-Undang tentang Hak Cipta tersebut dalam Pasal 1 butir 1 Undang-Undang RI Nomor …a. 26 Tahun 2014 b. 27 Tahun 2014 c. 28 Tahun 2014 d. 29 Tahun 201416. Seorang atau beberapa orang yang secara sendiri-sendiri atau bersama-sama menghasilkan suatu ciptaan yang bersifat khas dan pribadi disebut …a. Karya b. project c. pencipta d. hand made17. Istilah yang diberikan kepada karya cipta yang dapat digunakan oleh orang lain tanpa izin terlebih dahulu, dan hanya untuk tujuan komentar, kritik, pelaporan, dan pengajaran disebut …a. License b. copyright c. public domain d. fair use/re-use-rights18. Berikut adalah bagian dari creative commons, kecuali …a. Attribution b. non commercial c. derivatives d. share alike​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>a.b.yang bersifat khas dan pribadi disebut …</p><p></p><p>a. Karya b. project c. pencipta d. hand made</p><p></p><p>17. Istilah yang diberikan kepada karya cipta yang dapat digunakan oleh orang lain tanpa izin terlebih </p><p></p><p>dahulu, dan hanya untuk tujuan komentar, kritik, pelaporan, dan pengajaran disebut …</p><p></p><p>a. License b. copyright c. public domain d. fair use/re-use-rights</p><p><strong>Penjelasan:</strong></p><p>yang bersifat khas dan pribadi disebut …</p><p></p><p>a. Karya b. project c. pencipta d. hand made</p><p></p><p>17. Istilah yang diberikan kepada karya cipta yang dapat digunakan oleh orang lain tanpa izin terlebih </p><p></p><p>dahulu, dan hanya untuk tujuan komentar, kritik, pelaporan, dan pengajaran disebut …</p><p></p><p>a. License b. copyright c. public domain d. fair use/re-use-rights</p><br />
+                                            <h2 class="ez-toc-section" id="1-komunikasi-yang-dilakukan-dengan-carabertatap-muka-di-sebut-dengana-komunikasi-secara-directb-komunikasi-secara-indirectc-komunikasi-melalui-media-komunitasdigitald-komunikasi-melalui-fac">
+                            11. 1. Komunikasi yang dilakukan dengan cara
+bertatap muka di sebut dengan
+a. Komunikasi secara direct
+b. Komunikasi secara indirect
+c. Komunikasi melalui media komunitas
+digital
+d. Komunikasi melalui facebook
+e. Komunikasi tidak langsung
+2. Syarat yang bukan menjadi syarat agar
+terjadinya komunikasi digital adalah ?
+a. Bertatap muka langsung
+b. Memiliki perangkat keras digital
+c. Memiliki sambungan internet
+d. Ada data atau informasi yang disampaikan
+e. Terdapat pengirim dan penerima data
+3. Space penyimpanan yang gratis di berikan
+oleh google drive sebesar berapa GB ?
+a. 10 GB
+b. 12 GB
+c. 5 GB
+d. 15 GB
+e. 20 GB
+4. Blog pertama kali diperkenalkan oleh ?
+a. Steve Jobs d. John Barger
+b. Bang Si Hyuk e. steve chen
+c. Bigetron RA
+5. Yang bukan aplikasi chat mobile yang
+mendukung chatting , video call dan voice call
+adalah ?
+a. Whatsapp d. kakao talk
+b. Telegram d. pesan
+c. Line
+6. E-mail adalah singkatan dari
+a. Elektronik-mail
+b. Ekology – mail
+c. Economi-mail
+d. Efisien – mail
+e. Elektrik-mail
+7. Yang tidak termasuk virus yang menyerang
+keamanan perangkat digital adalah
+a. Macro virus
+b. Worm
+c. Corona virus
+d. Boot sector virus
+e. Multipartite virus
+8. Pada komunikasi daring secara sinkron
+komputer , ponsel pintar dan laptop termasuk
+kedalam komponen ...
+a. Hardware
+b. Software
+c. Perangkat lunak
+d. Brainware
+e. Saluran transmisi
+9. Berikut aplikasi yang tidak tergolong
+synconous communication (serempak) dalam
+daring adalah
+a. Kakao talk
+b. Surel (e-mail)
+c. Skype
+d. Line
+e. Whatsapp
+10. Yang bukan termasuk ke dalam mesin pencari
+adalah
+a. Yahoo search
+b. Google
+c. Instagram
+d. Naver
+e. Ask.coM
+11. Penggunaan etika dalam berkomunikasi
+bertujuan untuk ...
+a. Menunjukkan jati diri sesungguhnya
+b. Untuk meyakinkan lawan chatting
+c. Kewajiban menghormati yang lebih tua
+d. Menyampaikan informasi yang tepat
+e. Tidak menyinggung perasaan lawan
+chatting
+12. Berikut yang tidak termasuk manfaat kelas
+maya adalah ...
+a. Dapat meningkatkan kemampuan
+b. Setiap orang dapat mengaksesnya
+c. Media bertukar informasi
+d. Materi dalam bentuk analog
+e. Materi dapat diulang
+13. Fasilitas milik Google untuk mengupload dan
+mempublikasikan video adalah ...
+a. Video share d. Youtube
+b. Vidio.com e. Google Adword
+c. Google drive
+14. Untuk login ke akun google, caranya dengan
+memasukkan ...
+a. E – mail dan password
+b. Username dan password
+c. E – mail dan username
+d. Nomor hp dan password
+e. Nama dan nomor hp
+15. Teknik pengambilan gambar tepat diatas
+objek disebut ...
+a. High eye view
+b. Bird eye view
+c. Low camera angle
+d. Dutch cameraangle
+e. Medium close up
+16. Ciri – ciri komunikasi daring, kecuali ...
+a. Jangkauan sempit
+b. Hemat biaya
+c. Tidak terbatas tempat
+d. Terintegrasi dengan TIK
+e. Tidak terbatas waktu
+17. Komunikasi daring disebut juga komunikasi ...
+a. Virtual d. Nonverbal
+b. Lisan e. Verbal
+c. Nirkata
+18. Untuk mendaftar menjadi siswapada aplikasi
+schoology, kita harus meng-klik ...
+a. I’m student d. I’m parent
+b. I’m teacher e. I’m profeddor
+c. Sign in
+19. Video yang memaparkan sebuah berita adalah
+jenis video ...
+a. Berita d. Presentasi
+b. Dokumenter e. Pembelajaran
+c. Cerita
+20. Video yang memberikan materi pembelajaran
+agar mudah diserap adalah ...
+a. Berita d. Presentasi
+b. Dokumenter e. Pembelajaran
+c. Cerita
+21. Rancangan yang tersusun di pikiran dan
+kemudian menimbulkan konsep dinamakan ...
+a. Konsep d. cerita
+b. Sinopsis e. ide
+c. Naskah
+22. Komunikasi dapat dikatakan langsung dan
+tidak langsung bergantung pada ...
+a. Tujuan dan fungsi komunikasi
+b. Perangkat jaringan
+c. Aplikasi yang digunakan
+d. Media yang digunakan
+e. Respon yang diberikan secara langsung
+atau tidak
+23. Berikut tidak termasuk aplikasi untuk video
+chat yaitu ...
+a. Gtalk d.Yahoomessenger
+b. Facebook e. hotmail
+c. Skype
+24. Untuk merekam aktivitas di layar secara
+penuh, caranya pilih ...
+a. Record d. volume
+b. Half screen e. Full screen
+c. Audio
+25. Ciri presentasi video, kecuali ...
+a. Mudah dibuat
+b. Menjelaskan keunggulan
+c. Dibuat dengan kamera
+d. Untuk menyampaikan ide gagasan
+e. Untuk menjelekkan orang lain
+Essay:
+1. Sebutkan 2 dampak positif yang kamu
+dapatkan selaku pengguna internet atau
+warga digital ?
+2. Jelaskan apa yang dimaksud dengan LMS
+(Learning Management System) ?
+3. Pada komunikasi dalam jaringan terbagi
+menjadi dua macam. Jelaskan dua macam
+komunikasi daring tersebut ?
+4. Yang dimaksud dengan back door pada
+system keamanan digital adalah ?
+5. Jelaskan Perbedaan belajar konvensional
+dengan e-learning ?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1. a</p><p>2. a</p><p>3. d</p><p>4. justin hall</p><p>5. d</p><p>6. a</p><p></p><p><strong>Penjelasan:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="ada-yang-bisa-jawab-semua-soal-ini-bagi-yang-bisa-tolong-langsung-jawab-ya-gambar-untuk-nomor-24-11-menurut-konsep-wawasan-nusantara-laut-teritorial-negara-indonesia-diukur-dari-pantai-te">
+                            12. Ada yang bisa jawab Semua Soal Ini...
+Bagi yang bisa tolong Langsung Jawab Ya....
+( Gambar Untuk Nomor 24 )
+11. Menurut konsep wawasan nusantara, laut teritorial negara Indonesia diukur dari pantai terluar sejauh … mil
+a. 10
+b. 12
+c. 24
+d. 60
+e. 200
+12. Dalam proses integrasi nasional, hambatan yang harus dihadapi oleh bangsa Indonesia dalam kaitannya dengan dunia luar adalah …
+a. westernisasi
+b. globalisasi
+c. politik luar negeri bebas aktif
+d. perdagangan internasional
+e. krisis ekonomi dunia
+13. Berikut ini yang bukan merupakan ancaman integrasi nasional bagi bangsa Indonesia adalah …
+a. disintegrasi bangsa
+b. keresahan sosial
+c. keinginan untuk mengubah pancasila sebagai ideologi
+d. makar terhadap pemerintah sudah sah
+e. demokratis
+Soal PPKn : Ancaman-Ancaman Terhadap Negara Indonesia
+14. Yang bukan merupakan hambatan dalam mencapai itegrasi nasional dapat dilihat sebagai berikut ….
+a. korupsi, kolusi, dan nepotisme
+b. rendahnya mutu SDM
+c. ketidakpercayaan pada pemerintah
+d. kemiskinan
+e. disintegrasi bangsa
+15. Ketahanan nasional tidaklah tetap, tetapi berubah-ubah setiap saat. Hal ini sesuai dengan sifat ketahanan nasional, yaitu sifat …
+a. mandiri
+b. dinamis
+c. manunggal
+d. wibawa
+e. konsultasi dan kerjasama
+16. Setiap usaha dan kegiatan, baik dari dalam negeri maupun luar negeri yang dinilai membahayakan kedaulatan negara, keutuhan wilayah Indonesia, serta keselamatan seluruh bangsa, merupakan pengertian dari …
+a. politik
+b. ideologi
+c. ancaman
+d. demokratisasi
+e. ketahanan nasional
+17. Berikut ini merupakan bentuk-bentuk ancaman militer, kecuali …
+a. sabotase
+b. agresi
+c. spionase
+d. pelanggaran wilayah
+e. aksi demokrasi
+18. Spionase merupakan kegiatan dari intelejen yang dilakukan untuk …
+a. mendapatkan informasi atau rahasia militer atau negara
+b. pengiriman kelompok bersenjata
+c. memasuki wilayah tanpa izin
+d. merusak instansi penting militer
+e. memperlakukan pemberontakan sebagai seni
+19. Berikut ini merupakan ciri-ciri khusus dari aksi terorisme, kecuali …
+a. bergerak dalam kelompok
+b. beroperasi di bawah tanah (rahasia)
+c. blokade terhadap pelabuhan dan pantai
+d. menggunakan perangkat atau senjata yang canggih dan mematikan
+e. umumnya terkait dalam jaringan internasional
+20. Sistem politik internasional mengalami perubahan sejak …
+a. ancaman politik dapat menumbangkan suatu rezim pemerintahan
+b. Uni Soviet runtuh sehingga paham komunis tidak populer lagi
+c. perang saudara terjadi antara kelompok masyarakat bersenjata
+d. kegatan inteljen untuk mencapatkan informasi militer negara
+e. adanya tindakan yang mengizinkan penggunaan wilayah
+21. Politik adalah instrumen utama untuk bisa menggerakkan terjadinya perang. Ini membuktikkan bahwa …
+a. ancaman politik dapat menumbangkan suatu rezim pemerintahan bahkan bisa membinasakan suatu bangsa
+b. ancaman politik dapat menumbangkan suatu rezim pemerintahan bahkan bisa membinasakan suatu bangsa
+c. ekonomi merupakan salah satu penentu posisi tawar setiap negara pergaulan internasional
+d. campur tangan masyarakat internasional di suatu negara melalui politik seperti HAM
+e. kemajuan ilmu pengetahuan dan teknologi sangat pesat dan membawa manfaat yang besar bagi masyarakat
+22. Ancaman eksternal dapat berbentuk …
+a. inflasi
+b. pengagguran
+c. kinerja ekoomi buruk
+d. instruktur tidak memadai
+e. sistem ekonomi yang tidak jelas
+23. Berikut ini berbagai bentuk ancaman internal, kecuali …
+a. tingkat ketergantungan terhadap pihak asing
+b. sistem ekonomi yang tidak jelas
+c. instruktur yang tidak memadai
+d. pengangguran
+e. keselamatan umum
+24. Berikut ini yang bukan merupakan bentuk ancaman non militer yaitu …
+a. ancaman berdimensi ideologi
+b. ancaman berdimensi keselamatan umum
+c. ancaman berdimensi teknologi dan informasi
+d. ancaman berdimensi sabotase
+e. ancaman berdimensi sosial budaya
+ Soal PPKn : Ancaman-Ancaman Terhadap Negara Indonesia
+25. Kondisi dinamika yaitu suatu bangsa yang berisi ketangguhan dan keuletan yang bisa mengembangkan ketahanan, kekuatan nasional dalam mengahdapi dan mengatasi segala hambatan tantangan, dan ancaman baik yang berasal dari dalam maupun dari luar merupakan pengertian dari …
+a. ancaman
+b. ketahanan nasional
+c. pertahanan dan keamanan
+d. ideologi
+e. disintegrasi</h2><br />
+                        nomor 13 yaitu demokratis nomor 17 aksi demokrasi Nomor 18 a spionase Spion mobil itu mengawasi mendapatkan informasi penting external nama apa namanya itu itu inflasi nomor berapa lupa inflasi <br />
+                                            <h2 class="ez-toc-section" id="perkembangan-teknologi-semakin-pesat-dari-waktu-ke-waktu-mulai-dari-mobil-pintar-smart-car-yang-bisa-berjalan-sendiri-ke-berbagai-tujuan-tanpa-pengemudi-manusia-hingga-perangkat-rumah-pintar-smar">
+                            13. Perkembangan teknologi semakin pesat dari waktu ke waktu. Mulai dari mobil pintar (smart car) yang bisa berjalan sendiri ke berbagai tujuan tanpa pengemudi manusia, hingga perangkat rumah pintar (smart home) semacam Alexa yang bisa otomatis bersuara mengingatkan untuk melakukan aktifitas sesuai jadwal. Seluruh teknologi terbaru ini adalah bagian dari Internet of Things. Internet of Things (IoT) adalah sebuah konsep di mana suatu objek yang memiliki kemampuan untuk mentransfer data melalui jaringan tanpa memerlukan adanya interaksi dari manusia ke manusia atau dari manusia ke komputer. 
+Internet of Things (IoT) adalah struktur di mana objek, orang disediakan dengan identitas eksklusif dan kemampuan untuk pindah data melalui jaringan tanpa memerlukan dua arah antara manusia ke manusia yaitu sumber ke tujuan atau interaksi manusia ke komputer (Burange &amp; Misalkar, 2015). IoT sudah berkembang pesat mulai dari penggabungan teknologi nirkabel, Micro-Electromechanical Systems (MEMS) dan juga Internet. IoT menggunakan beberapa teknologi yang secara garis besar digabungkan menjadi satu kesatuan diantaranya sensor sebagai pembaca data, koneksi internet dengan bebarapa macam topologi jaringan, Radio Frequency Identification (RFID), wireless sensor network dan teknologi yang terus akan bertambah sesuai dengan kebutuhan (C. Wang et al., 2013). IoT juga bisa mencakup teknologi-teknologi sensor lainnya, seperti teknologi nirkabel maupun kode QR yang sering kita temukan di sekitar kita, contoh penerapannya dalam benda yang ada di dunia nyata adalah untuk pengolahan bahan pangan, elektronik, dan berbagai mesin atau teknologi lainnya yang semuanya tersambung ke jaringan lokal maupun global lewat sensor yang tertanam dan selalu menyala aktif. IoT ini mengacu pada mesin atau alat yang bisa diidentifikasikan sebagai representasi virtual dalam strukturnya yang berbasis Internet. 
+Tantangan terbesar yang bisa menjadi hambatan dalam mengkonfigurasi IoT adalah menjembatani kesenjangan antara dunia fisik dan dunia informasi dan bagaimana menyusun jaringan komunikasinya, dikarenakan jaringan yang dibutuhkan oleh IoT sangatlah kompleks. Selain itu, IoT juga memerlukan suatu sistem keamanan yang cukup ketat. Di samping masalah tersebut, biaya pengembangan IoT yang mahal juga sering menjadi faktor penyebab kegagalan, sehingga pembuatan dan pengembangannya bisa berakhir gagal produksi.</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Kecerdasan Buatan (Artificial Intelligence/AI) − IoT membuat hampir semua mesin yang ada menjadi “Smart”. Ini berarti IoT bisa meningkatkan segala aspek kehidupan kita dengan pengembangan teknologi yang didasarkan pada AI. Jadi, pengembangan teknologi yang ada dilakukan dengan pengumpulan data, algoritma kecerdasan buatan, dan jaringan yang tersedia. Sebenarnya ya contohnya bisa jadi mesin yang tergolong sederhana semacam meningkatkan/mengembangkan lemari es/kulkas Anda sehingga bisa mendeteksi jika stok susu dan sereal favorit Anda sudah hampir habis, bahkan bisa juga membuat pesanan ke supermarket secara otomatis jika stok mau habis. Penerapan kecerdasan buatan ini memang sangatlah menarik.</p><p><strong>JADIKAN JAWABAN TERBAIK YA!</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-suatu-proses-yang-mendunia-membuat-manusia-saling-terbuka-dan-bergantung-satusama-lainnya-tanpa-batas-waktu-dan-jarak-%e2%80%a62-globalisasi-adalah-terbentuknya-sistem-organisasi-dan-komunikasi-a">
+                            14. 1. Suatu proses yang mendunia, membuat manusia saling terbuka dan bergantung satusama lainnya tanpa batas waktu dan jarak …2. Globalisasi adalah terbentuknya sistem organisasi dan komunikasi antar masyarakat diseluruh dunia untuk mengikuti sistem dan kaidah-kaidah yang sama …3. Meningkatnya masalah bersama dan perubahan dalam konsep ruang dan waktu …4. Penyebaran prinsip multi kebudayaan (multiculturalism) …5. Pemahaman bahwa proses ‘mendunia’ dan globalisasi merupakan proses penyebaranberbagai obyek dan pengalaman kepada semua orang ke seluruh penjuru dunia …6. Globalisasi mendorong ‘rekonfigurasi geografis …7. Mengembangkan pola pikir peserta didik dan tenaga pendidik secara progresif …8. Perubahan masa depan manusia yang lebih baik, mudah, cepat dan aman …9. Suatu perbuatan seseorang yang mulai kehilangan nasionalisme dengan meniru ataumelakukan aktivitas kebarat-baratan …10. Menurunnya atau merosotnya akhlak atau moral seseorang …11. Memilih dan memanfaatkan alat komunikasi secara tepat, sesuai fungsi dan kebutuhan…12. Globalisasi produksi, pembiayaan, tenaga kerja, jaringan informasi, perdagangan …13. Berkembangnya dunia pariwisata …14. Individualisme yang semakin tinggi …15. Memanfaatkan alat transportasi sesuai dengan waktu dan jaraknya …jodohkan pertanyaan berikut Dengan jawaban yang benar A. GlobalisasiPendidikanB. Selo SoemardjanC. WesternisasiD. GlobalisasiTransportasiE. Dampak NegatifGlobalisasiF. GlobalisasiEkonomiG. GlobalisasiH. Ciri-Ciri GlobalisasiI. Globalisasi IPTEKJ. Globalisasi BudayaK. Dampak PositifGlobalisasiL. DemoralisasiM. GlobalisasiKomunikasiN. UniversalisasiO. PenghapusanBatas Territoria​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1. globalisasi</p><p>2. Selo Soemardjan</p><p>3. ciri ciri globalisasi</p><p>4. damoak positif globalisasi</p><p>5. universalisasi</p><p>6. penghapusan batas territoria</p><p>7.  globalisasi pendidikan</p><p>8. globalisasi iptek</p><p>9. westernisasi</p><p>10. demoralisasi</p><p>11. globalisasi komunikasi</p><p>12. globalisasi ekonomi</p><p>13. globalisasi budaya</p><p>14. dampak negatif globalisasi</p><p>15. globalisasi transportasi</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/egoJ7sTrjPw?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>ti</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/aktivitas-kayang-diperuntukkan-untuk-pengembangan.html">Aktivitas Kayang Diperuntukkan Untuk Pengembangan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/tabel-kebutuhan.html">Tabel Kebutuhan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/buku-ppg.html">Buku Ppg</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/kata-benda-dalam-bahasa-jerman.html">Kata Benda Dalam Bahasa Jerman</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/lagu-lihat-kebunku-termasuk-jenis-lagu-berpola-irama.html">Lagu Lihat Kebunku Termasuk Jenis Lagu Berpola Irama</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/pola-permainan-bola-voli.html">Pola Permainan Bola Voli</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/data-yang-menunjukkan-garam-terhidrolisis-parsial-dan-bersifat-asam-adalah.html">Data Yang Menunjukkan Garam Terhidrolisis Parsial Dan Bersifat Asam Adalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/soal-pencemaran-lingkungan-kelas-7.html">Soal Pencemaran Lingkungan Kelas 7</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/struktur-bumi-pdf.html">Struktur Bumi Pdf</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/kapal-berlayar.html">Kapal Berlayar</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/grafik-fungsi-nilai-mutlak.html">Grafik Fungsi Nilai Mutlak</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/kerangka-teks-prosedur.html">Kerangka Teks Prosedur</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/bagaimana-cara-melakukan-pola-gerak-dominan-keseimbangan-pada-handstand.html">Bagaimana Cara Melakukan Pola Gerak Dominan Keseimbangan Pada Handstand</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/mekanisme-pasar-dan-elastisitas.html">Mekanisme Pasar Dan Elastisitas</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/fungsi-coil-spring-yang-mengelilingi-kampas-kopling.html">Fungsi Coil Spring Yang Mengelilingi Kampas Kopling</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/sudut-pandang-sikap-mendukung-pro.html">Sudut Pandang Sikap Mendukung Pro</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/median-data-tunggal-dan-kelompok.html">Median Data Tunggal Dan Kelompok</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/perut-kitab.html">Perut Kitab</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/ubah-dan-lanjutkan-deskripsi-berikut-sesuai-dengan-kondisi-sekolahmu.html">Ubah Dan Lanjutkan Deskripsi Berikut Sesuai Dengan Kondisi Sekolahmu</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/ppt-unsur-senyawa-dan-campuran.html">Ppt Unsur Senyawa Dan Campuran</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://organicstudy.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://organicstudy.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

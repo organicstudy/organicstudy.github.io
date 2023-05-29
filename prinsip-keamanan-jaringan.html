@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prinsip Keamanan Jaringan - QnA</title>
+    <meta name="description" content="Prinsip Keamanan Jaringan, , , , , , , 0, Prinsip Utama Keamanan Jaringan untuk Mengamankan Perangkat IoT, phintraco.com, 2733 x 1480, png, , 20, prinsip-keamanan-jaringan, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Prinsip Keamanan Jaringan - QnA" />
+    <meta property="og:description" content="Prinsip Keamanan Jaringan, , , , , , , 0, Prinsip Utama Keamanan Jaringan untuk Mengamankan Perangkat IoT, phintraco.com, 2733 x 1480, png, , 20, prinsip-keamanan-jaringan, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Prinsip Keamanan Jaringan - QnA" />
+    <meta name="twitter:description" content="Prinsip Keamanan Jaringan, , , , , , , 0, Prinsip Utama Keamanan Jaringan untuk Mengamankan Perangkat IoT, phintraco.com, 2733 x 1480, png, , 20, prinsip-keamanan-jaringan, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://organicstudy.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://organicstudy.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://organicstudy.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://organicstudy.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://organicstudy.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Prinsip Keamanan Jaringan</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">akimat4305</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Prinsip+Keamanan+Jaringan" alt="Prinsip Keamanan Jaringan">
+                    </div>
+                    <p></p>
+                    <p>Prinsip keamanan jaringan</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#prinsip-keamanan-jaringan">1.
+                                            Prinsip keamanan jaringan</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#3-jelaskan-prinsip-prinsip-dalam-keamanan-jaringan-yang-berhubungan-dengan-keamanan-arsip-elektronik-menurut-anda-dengan-penggunaan-virtual-private-network-vpn-apakah-dapat-menjamin-keamanan-jari">2.
+                                            3  Jelaskan prinsip-prinsip dalam keamanan jaringan yang berhubungan dengan keamanan arsip elektronik? Menurut Anda, dengan penggunaan Virtual Private Network (VPN) apakah dapat menjamin keamanan jaringan? </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#prinsip-dasar-jaring-pengaman-sosial%e2%80%8b">3.
+                                            prinsip dasar jaring pengaman sosial​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-faktor-faktor-di-bawah-ini-menyebabkan-indonesia-menjadi-penting-bagi-perdagangan-dan-pelayaran-antara-asia-dan-eropa-kecuali-a-kondisi-geografisc-faktor-keamananb-kepadatan-pendudukd">4.
+                                            1.	Faktor-faktor di bawah ini menyebabkan Indonesia menjadi penting bagi perdagangan dan pelayaran antara Asia dan Eropa, kecuali ....
+a.	kondisi geografis	c. faktor keamanan
+b.	kepadatan penduduk	d. penghasil rempah-rempah
+2.	Setelah berhasil menguasai Malaka dan Maluku, Portugis ingin juga menguasai Aceh yang kaya akan lada. Usaha Portugis di Sumatera tersebut gagal karena ....
+a.	lokasinya terlalu jauh
+b.	Portugis tidak berani masuk pedalaman
+c.	Aceh terlalu kuat dan pengawasan wilayah sangat ketat
+d.	kalah bersaing dengan bangsa Eropa yang lain
+3.	Tujuan bangsa Spanyol datang ke Indonesia adalah seperti tersebut di bawah ini, kecuali ....
+a.	mencari kekayaan	c. mencari daerah jajahan
+b.	menyebarkan agama Nasrani	d. mencari rekan untuk kongsi dagang
+4.	Salah satu alasan bangsa-bangsa Barat berlom balomba datang di Kepulauan Indonesia adalah ….
+a.	tersedianya sumber daya alam dan jaringan perdagangan
+b.	mudahnya penguasa-penguasa lokal untuk diadu domba
+c.	bangsa Barat sangat berutang budi pada bangsa Indonesia
+d.	bangsa Barat ingin mengajari bangsa Indonesia cara menanam tanaman ekspor
+5.	Penampilan VOC berubah dari sebuah kongsi dagang menjadi sebuah badan yang seolah-olah berdaulat dan bisa memerintah karena . . . .
+a.	hak dan wewenang yang dimiliki memang memungkinkan untuk itu
+b.	pejabat kolonial banyak yang berasal dari penguasa lokal
+c.	penguasa lokal memanfaatkan diri untuk menjadi pejabat kolonial
+d.	hubungan antara para pejabat colonial dengan penguasa lokal terlanjur akrab
+6.	J.P. Coen dianggap berperan dalam meletakkan dasar-dasar dari kolonialisme Belanda karena . . . .
+a.	dialah yang pertama kali mendarat di Banten tahun 1596
+b.	membangun pelabuhan Jakarta sebagai pusat aktivitas VOC tahun 1619
+c.	dialah yang menemukan daerah-daerah yang menjadi produsen rempah
+d.	berencana mendatangkan keluarga-keluarga Belanda ke Indonesia
+7.	Perhatian pemerintah kolonial pada mulanya tertuju di Kepulauan Maluku, baru kemudian berpindah ke Jawa dan Sumatra. Perubahan ini antara lain disebabkan . . . .
+a.	rempah-rempah yang menjadi komoditas perdagangan saat itu sudah habis
+b.	Maluku terlalu jauh letaknya dalam konstelasi jalur perdagangan Asia
+c.	terjadi rebutan hegemoni perdagangan di sekitar Kepulauan Maluku
+d.	Belanda beberapa kali mengalami kekalahan dalam peperangan di kawasan timur Indonesia
+8.	Salah satu faktor yang menyebabkan kebangkrutan VOC adalah . . 
+a.	utang dan korupsi yang dilakukan pejabatpejabat VOC
+b.	sumber-sumber komoditas yang ada di Indonesia sudah habis
+c.	kebijakan yang diterapkan pejabat VOC di Indonesia salah sasaran
+d.	perdagangan rempah diambil alih oleh penguasa-penguasa lokal
+9.	Prinsip dasar yang menjadi tulang punggung kebijakan Raffles di Indonesia adalah . . 
+a.	bangsa Indonesia adalah bangsa kuli yang wajib diperas tenaganya
+b.	seluruh tanah milik pemerintah dibagikan kepada rakyat untuk ditanami tanaman ekspor
+c.beban pajak yang ditetapkan gubernur jenderal sebelumnya ditiadakan
+d.	semua tanah rakyat menjadi milik pemerintah
+10.Salah satu faktor yang menyebabkan tingginya keuntungan yang diraih Belanda dalam kebijakan cultuurstelsel adalah . .
+a.	dukungan rakyat untuk menanam tanaman baru
+b.	adanya manipulasi dalam realisasi kebijakan van den Bosch
+c.	kesadaran penduduk dalam membayar pajak
+d.	harga hasil bumi dibayar pemerintah sesuai harga pasar</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sosetamanusd-tanpa-istirahat-dan-langsung-mandi22-peran-indonesia-di-kawasan-asean-di-bidang-politikaa-menerapkan-tariff-khusus-terhadap-barang-dan-jasa-sesama-negara-aseanb-mendorong-penanaman-m">5.
+                                            sosetamanusD. Tanpa istirahat, dan langsung mandi22. Peran Indonesia di kawasan ASEAN di bidang politikaA. menerapkan tariff khusus terhadap barang dan jasa sesama negara ASEANB. mendorong penanaman modal di negara-negara ASEANC. mendorong pemerintah negara ASEAN untuk memajukan prinsip-prinsip demokrasiD. mengikuti pertukaran pelajar dan pertukaran budaya antar negara-negara ASEAN25. Salah satu tujuan negara-negara ASEAN melakukan kerja sama di bidang politik adalahA. menciptakan keamanan dan perdamaian antar negara-negara ASEANB. menciptakan stabilitas ekonomi dan perdagangan negara-negara ASEANmendukung kegiatan penelitian di bidang pertanian yang terletak di FilipinaD. memperkuat persenjataan dan saling berlomba menciptakan senjata nuklir24. Contoh kerja sama negara-negara ASEAN di bidang pendidikan adalah ....A. mendirikan pabrik pupuk bersama antar negara-negara ASEANB. bekerja sama dalam penanggulangan bencana alamC. membantu negara-negara ASEAN yang mengalami konflikD. pembentukan jaringan perguruan tinggi se ASEAN25. Perhatikan tabel berikut ini !NoPernyataan11 Pengembangan sumber daya manusia.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-siswa-dapat-berperan-serta-dalam-melestarikan-tumbuhan-dengan-cara-a-menanam-padi-di-sawahb-memangkas-rumput-liarc-menebang-pohon-di-hutand-menanam-bunga-di-taman-sekolah2-lahan-pertan">6.
+                                            1.Siswa dapat berperan serta dalam melestarikan tumbuhan dengan cara ... *
+A. menanam padi di sawah
+B. memangkas rumput liar
+C. menebang pohon di hutan
+D. menanam bunga di taman sekolah
+2.Lahan pertanian atau perkebuan di daerah miring, seperti perbukitan sebaiknya dibuat ..... untuk mencegah terjadinya erosi dan longsor *
+A. sedimentasi
+B. hutan bakau
+C. tembok beton
+D. sengkedan
+3.Cara penangkapan ikan yang tidak diperbolehkan adalah menggunakan ... *
+A. jaring
+B. pancing
+C. keramba
+D. bahan peledak
+4.Peristiwa abrasi dipengaruhi oleh ...
+A. air laut
+B. air hujan
+C. gelombang bumi
+D. gelombang laut
+5.Untuk menjaga keseimbangan alam, penebangan pohon di hutan harus disertai dengan usaha ... *
+A. pengerajin kayu
+B. penanaman kembali
+C. pengangkutan dengan teratur
+D. pengamanan hutan dari pencuri kayu
+6.Kayu sebagai bahan dasar pembuatan kertas adalah contoh sumber daya alam yang dapat ditemukan di ... *
+A. laut
+B. sungai
+C. hutan
+D. danau
+7.Untuk membajak sawah, pertanian dengan teknologi tradisional memanfaatkan tenaga ... *
+A. manusia
+B. mesin
+C. kerbau
+D. angin
+8.Berikut ini yang bukan termasuk teknik pengawetan makanan adalah ... *
+A. pengasinan
+B. pembakaran
+C. pengalengan
+D. penggunaan bahan pengawet
+9.Teknologi berikut yang tergolong tepat untuk menangkap ikan adalah menggunakan ... *
+A.jala
+B.pukat harimau
+C.bahan peledak
+D.racun
+10.Sumber daya alam berikut yang dapat dimanfaatkan secara langsung adalah ... *
+A. minyak bumi
+B. air
+C. pohon
+D. tanah
+11.Sampah yang dapat dimanfaatkan sebagai pupuk kompos adalah sampah ... 
+A. plastik
+B. kertas
+C. kaleng
+D. daun
+12.Mengurangi atau menghemat pemakaian barang-barang yang ada di sekitar dapat mengurangi jumlah sampah. Hal tersebut merupakan contoh prinsip pengolahan sampah ... *
+A. reuse
+B. recycle
+C. reduce
+D. reform
+13.Lingkungan yang rusak akan mendatangkan ... *
+A. keuntungan bagi para pengusaha
+B. hasil alam yang melimpah
+C. kekayaan alam
+D. bencana alam
+14.Sampah basah disebut juga sampah ... *
+A.organik
+B. beracun
+C. anorganik
+D. berbahaya
+15.Sampah anorganik dapat diolah dengan cara ... *
+A. menimbun di tanah
+B.menjadikan pupuk kompos
+C. mencampurkannya pada media tanah
+D. menggunakan menjadi benda yang bernilai ekonomis
+16.Berikut ini yang bukan merupakan penyebab kepunahan hewan adalah ... *
+A. penangkaran hewan dan reboisasi
+B. perburuan liar dan perusakan habitat
+C. kebakaran hutan dan pencemaran sungai
+D. perluasan pertanian dan pencemaran laut
+17.Jika nelayan menangkap ikan dengan menggunakan racun, hal tersebut dapat membahayakan manusia karena ... *
+5 poin
+A. ikan yang dimakan tetap segar
+B. bentuk ikan menjadi berubah
+C. rasa daging ikan menjadi tidak enak
+D. ikan tidak mengandung racun tetapi air tempat hidup ikan tersebut mengandung racun
+Salah satu cara memulihkan hutan gundul adalah dengan cara ... *
+A. pengerikan
+B. pengerukan
+C. penghijauan
+D. pemupukan
+Laut menghasilkan sumber daya alam berupa ... *
+A. pohon bakau
+B.kayu mahoni
+C. ikan
+D. padi</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sistem-pembayaran-diharapkan-dapat-dilaksanakan-dengan-sebaik-baiknya-sehingga-tercipta-5istem-pembayaran-yang-tercipta-sistem-pembayaran-yang-cepat-aman-dan-efisien-untuk-mewujudkan-sistem-pembaya">7.
+                                            Sìstem pembayaran diharapkan dapat dilaksanakan dengan sebaik-baiknya sehingga tercipta 5istem pembayaran yang tercipta sistem pembayaran yang cepat, aman, dan èfisien. Untuk mewujudkan sistem pembayaran yang ^ndal pelaksanaan sistem pembayaran harus sesuai dengan prinsip-prinsip yang telah ƌitentukan. Berikut pernyataan sistem pembayaran sesuai dengan prinsip efisiensi adalah ... .A. meskipun biaya administrasi meningkat, konsumen dapat melakukan transaksi kliring antarbank lain dengan amanB. untuk memberikan kenyamanan kepada konsumen yang akan melakukan transaksi dalam jumlah besar dan dilakukan seketika BI memberikan fasilitas BI-RTGSC. Bank Indonesia menciptakan sebuah sistem jaringan antarbank yaitu GPN sehingga masyarakat dapat melaksanakan transaksi melalui ATM dengan lebih mudah dan biaya murah meskipun dengan bank yang berbedaD. agar transaksi lebih mudah, terjaga, dan data lebih aman BI menerapkan sistem QRIS dalam sistem pembayaran.E. penyelanggara sistem keuangan wajib memberikan informasi mengenai fitur dan produk secara detail kepada konsumen termasuk apabila ada perubahan peraturanMohon bantuannya, ya...​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#minta-tolong-rangkumkan-ini-kak-nasib-perubahan-marxisme-dalam-hubungan-internasionalproletariat-internasional-dianggap-sebagai-subjek-sejarah-yang-akan-mewujudkan-tujuan-tujuan-ini-tetapi-meningkatn">8.
+                                            Minta tolong rangkumkan ini kak.Nasib perubahan Marxisme dalam Hubungan InternasionalProletariat internasional dianggap sebagai subjek sejarah yang akan mewujudkan tujuan-tujuan ini, tetapi meningkatnya nasionalisme dan meningkatnya risiko bahaya perang di Eropa membuat Marx dan Engels mempertimbangkan kembali sifat jalan menuju emansipasi universal. Marxisme hanya memiliki sedikit jika ada untuk ditawarkan kepada analis yang serius. menyebabkan perang besar. Paradigma produksi menganalisis struktur kelas dan konflik kelas daripada loyalitas nasional yang gigih, kekuasaan negara dan . Kegagalan untuk memahami fenomena ini berarti bahwa . dunia kosmopolitan yang lebih damai. keyakinan bahwa sosialisme pertama-tama akan didirikan di dalam satu atau lebih negara-bangsa. Revolusioner sebagai Komisaris Urusan Luar Negeri Rusia sebelum menutup toko sering disebut sebagai bukti naif kaum Marxis mengenai kenyataan persisten urusan internasional. Kecepatan rezim Soviet menggunakan metode diplomasi tradisional untuk mempromosikan kelangsungan hidup dan keamanannya tampaknya menegaskan sudut pandang realis. Dominasi Soviet di Eropa Timur memprovokasi tuntutan nasionalis untuk penentuan nasib sendiri yang mewujudkan tujuan mereka dalam banyak kasus. Teori ketergantungan sangat penting karena dua alasan yaitu Analisis Robert Cox tentang kekuatan sosial, negara, dan keterbatasan teori hubungan internasional statecentric. Cox menyatakan bahwa produksi membentuk bidang lain seperti sifat kekuasaan negara dan interaksi strategis jauh lebih besar daripada yang disadari oleh teori hubungan internasional tradisional, tetapi juga dibentuk olehnya. Para anggotanya telah menganalisis bagaimana hegemoni dipertahankan melalui bentuk-bentuk kerja sama yang erat antara elit yang kuat di dalam dan di luar kawasan inti sistem dunia dan melalui jaringan yang berkembang dari lembaga ekonomi dan politik internasional yang bertanggung jawab atas pemerintahan global (Gill 1993b; lihat juga Cox) 1983).internasional berinteraksi untuk menghasilkan bentuk tertentu dari hegemoni global dan ketidaksetaraan terkait kekuasaan, sumber daya, dan peluang. Ini juga berfokus pada 'resistensi yang ditimbulkan'. Sistem sosio-ekonomi ini telah  menopang karakter masing-masing negara dan hubungan mereka satu sama lain: tidak ada analisis hubungan internasional yang mungkin tanpa mengacu pada kapitalisme, formasi sosial yang dihasilkannya, dan sistem dunia tempat mereka terbentuk '(Halliday 1994: 61 ; lihat juga Rosenberg 1994). modern dan bentuk produksi kapitalis.Beragam analisis perkembangan bentuk modern hubungan internasional selama beberapa abad terakhir menekankan betapa sedikit yang akan dipahami dengan mengandalkan penjelasan realis. Tulisan Rosenberg (1994) dan Teschke (2003) adalah contoh yang kuat tentang bagaimana materialisme historis digunakan untuk menunjukkan bahwa sistem geopolitik berlabuh dalam hubungan produktif tertentu dan untuk menganalisis cara-cara di mana sistem negara modern dan bentuk produksi kapitalis.Rekonstruksi materialisme sejarah mengarah pada argumen yang kompleks tentang ciri-ciri universal komunikasi, dan atas dasar ini Habermas telah membangun 'etika wacana' atau 'teori wacana moralitas'. Cara paling lugas untuk menjelaskan pendekatan wacana adalah bahwa banyak manusia di dunia modern telah kehilangan kepercayaan bahwa prinsip-prinsip moral tertentu itu benar karena mereka berlabuh pada kebenaran agama yang lebih dalam atau karena mereka bertumpu pada otoritas tradisi. Dua poin perlu dibuat tentang hasil rekonstruksi materialisme sejarah Habermas. Pertama, Habermas telah lama menolak klaim klasik Marxis tentang keunggulan produksi dan sentralitas konflik kelas dalam segala bentuk kehidupan. Kedua, terlepas dari kritiknya terhadap Marxisme, Habermas masih berkomitmen secara luas pada proyek Pencerahan untuk menciptakan dunia kosmopolitan di mana manusia menikmati kebebasan yang lebih besar.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#prakarya-kelas-vii-wajibsoaljawablah-pertanyaan-yang-menurut-anda-benar-a-b-c-dan-d1-sebagai-makhluk-ciptaan-tuhan-yang-maha-esa-kita-harus-bersyukur-dan-bangga-jadi-warga-indonesia-karena">9.
+                                            PRAKARYA KELAS VII
+* Wajib
+SOAL
+JAWABLAH PERTANYAAN YANG MENURUT ANDA BENAR A, B, C DAN D
+1. Sebagai makhluk ciptaan tuhan yang maha Esa kita harus bersyukur dan bangga jadi warga indonesia karena ..... kecuali: *
+A. letak Indonesia yang strategis
+B. memiliki kekayaan alam yang melimpah
+C. memiliki iklim yang dingin
+D. alam nya yang indah dan beraneka ragam budaya
+2. Perkembangan kerajinan sangat pesat sekali, dulu kerajinan itu berguna sebagai *
+A. hiasan
+B. alat kebutuhan hidup sehari hari
+C. bahan expor
+D. bahan interior
+3. Suatu jenis bahan berupa potongan potongan komponen yang membentuk jaringan memanjang yang utuh ternasuk pengertian dari *
+A. textil
+B. fiber
+C serat
+D. Produsen
+4. Bahan serat alam sudah dikenal dan digunakan sejak tahun 2640 sebelum masehi. Negara yang pertama sekali mengolah serat alam adalah *
+A. India
+B. Cina
+C. Indonesia
+D. Malaysia
+5. Bahan yang berasal dari tumbuhan di bawah ini adalah...
+A. Kepompong
+B. Serat wol
+C. Sutra
+D. Kapas
+6. Kain berkilau, lembut, dan halus yang biasa dipakai untuk pesta adalah... *
+A. Sutra
+B. Polyester
+C. Wol
+D. Tetron
+7. Sabut kelapa berasal dari tumbuhan bagian... *
+A. Biji
+B. Buah
+C. Daun
+D. Batang
+8. Proses pertama dalam pengolahan bahan serat adalah... *
+A. Pemintalan
+B. Pencelupan warna
+C. Menenun
+D. Penggulungan benang
+9. Pembuatan sketsa dilakukan pada tahap... *
+A. Setelah ditentukan bahan dan jenis
+B. Setelah pembuatan suatu benda
+C. Sebelum menentukan sebuah benda
+D.Penggalian ide dari berbagai sumber
+10. Susunlah tahaoan pengilahan dan pandan berduri menjadi bahan yang siap untuk dianyam di ba wah ini..1. Merebus daun pandan dan mencucinya 2. Memotong-motong daun pandan3. Mengambik daun pandan dan membuang duri-durinya4. Dikeringkan di tempat yang sejuk5. Kemudian dilemaskan dan daun pandan siap untuk dianyam *
+A. 1-2-3-4-5
+B. 1-3-2-5-4
+C. 2-1-3-4-5
+D. 3-2-1-4-5
+11. Filamen merupakan serat yang berbetuk jaringan berasal dari... *
+A. Bulu domba
+B. Bulu alpaca
+C. Bulu kelinci
+D. Kepompong ulat sutra
+12. Benda kerajinan harus memiliki keserasian antara bentuk dan wujud benda dengan nilai gunanya, hal ini merupakan prinsip dalam.. *
+A. Kegunaan
+B. Keluwesan
+C. Kenyamanan
+D. Keamanan
+13. Gunting, pisau, dan jarum merupakan... *
+A. Alat dan bahan
+B. Bahan
+C. Alat
+D. Bahan dasar
+14. Produksi serat alam makin hari makin menurun disebabkan... *
+A. Karena cuaca tidak menentu
+B. Selalu diproduksi
+C. Bahan seratnya mudah rusak
+D. Semua benar
+15. Tempat pensil, tas, sendal, alas panas dapat dibuat dari serat... *
+A. Daun pandan
+B. Kepompong
+C. Bambu
+D. Wol
+16. Karakteristik 1. Daya serap yang tinggi 2. Rentang terhadap jamur 3. Mudah kusut 4. Bahan terasa dingin 5. Mudah terbakar. Karakteristik diatas merupakan karakteristik dari serat... *
+A. Rami
+B. Sutera
+C. Nenas
+D. Kapas
+17. salah satu bahan kerajinan Indonesia yang dikenal di manca negara adalah... *
+A. Guci
+B. Batu cincin
+C. Anyaman
+D. Batik
+18. Suatu keterampilan yang dibuat dengan teknik merajut, silang menyilang dengan bahan dasar rotan, bambu dan daun disebut... *
+A. Anyaman
+B. Makrame
+C. Menjahit
+D. Menenun
+19. Benda yang indah mempunyai daya tarik lebih dibandingkan benda yang biasa-biasa saja, merupakan syarat rancangan benda kerajinan dari... *
+A. Utility
+B. Comfortable
+C. Astetic
+D. Safety
+20. Kemasan merupakan sentuhan terakhir dari sebuah proses pembuatan produk, tujuan pengemasan produk kerajinan adalah... *
+A. Tidak gampang rusak
+B. Agar terlihat lebih indah dan menarik
+C. Meningkatkan nilai jual
+D. Semua benar</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-suatu-proses-yang-mendunia-membuat-manusia-saling-terbuka-dan-bergantung-satusama-lainnya-tanpa-batas-waktu-dan-jarak-%e2%80%a62-globalisasi-adalah-terbentuknya-sistem-organisasi-dan-komunikasi-a">10.
+                                            1. Suatu proses yang mendunia, membuat manusia saling terbuka dan bergantung satusama lainnya tanpa batas waktu dan jarak …2. Globalisasi adalah terbentuknya sistem organisasi dan komunikasi antar masyarakat diseluruh dunia untuk mengikuti sistem dan kaidah-kaidah yang sama …3. Meningkatnya masalah bersama dan perubahan dalam konsep ruang dan waktu …4. Penyebaran prinsip multi kebudayaan (multiculturalism) …5. Pemahaman bahwa proses ‘mendunia’ dan globalisasi merupakan proses penyebaranberbagai obyek dan pengalaman kepada semua orang ke seluruh penjuru dunia …6. Globalisasi mendorong ‘rekonfigurasi geografis …7. Mengembangkan pola pikir peserta didik dan tenaga pendidik secara progresif …8. Perubahan masa depan manusia yang lebih baik, mudah, cepat dan aman …9. Suatu perbuatan seseorang yang mulai kehilangan nasionalisme dengan meniru ataumelakukan aktivitas kebarat-baratan …10. Menurunnya atau merosotnya akhlak atau moral seseorang …11. Memilih dan memanfaatkan alat komunikasi secara tepat, sesuai fungsi dan kebutuhan…12. Globalisasi produksi, pembiayaan, tenaga kerja, jaringan informasi, perdagangan …13. Berkembangnya dunia pariwisata …14. Individualisme yang semakin tinggi …15. Memanfaatkan alat transportasi sesuai dengan waktu dan jaraknya …jodohkan pertanyaan berikut Dengan jawaban yang benar A. GlobalisasiPendidikanB. Selo SoemardjanC. WesternisasiD. GlobalisasiTransportasiE. Dampak NegatifGlobalisasiF. GlobalisasiEkonomiG. GlobalisasiH. Ciri-Ciri GlobalisasiI. Globalisasi IPTEKJ. Globalisasi BudayaK. Dampak PositifGlobalisasiL. DemoralisasiM. GlobalisasiKomunikasiN. UniversalisasiO. PenghapusanBatas Territoria​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ujian-mid-semester-ganjil-prakarya-41-suatu-jenis-bahan-barupa-potongan-%e2%80%93-potongan-komponn-yang-membentuk-jaringan-memanjang-utuh-disebut%e2%80%a64-poina-tekstilb-kerajianc">11.
+                                            UJIAN MID SEMESTER GANJIL                PRAKARYA 41.	Suatu jenis bahan barupa potongan – potongan komponn yang membentuk jaringan memanjang utuh disebut…(4 Poin)a. Tekstilb. Kerajianc. Seratd. kain52.	Yang bukan termasuk serat alam adalah…(4 Poin)a. Serat hewanb. Polimer sintesisC. Serat tumbuhand. Mineral6Question(4 Poin)a. kapasb. kapukc. gonid. pina74.	Berikut adalah serat yang berasal dari hewan, kecuali…(4 Poin)a. wolb. polyesterc. suterad. bulu85.	Pengolahan kapas menjadi benang serat di sebut….(4 Poin)a. Pemintalanb. Penenunanc. Pencelupand. Penggulungan96.	Berikut ini yang bukan merupakan produk tekstil adalah…(4 Poin)a. Benangb.Seratc. Ukirand. Kain107.	Tahap awal pengolahan bahan serat adalah…(4 Poin)a. Penenunan benang menjadi kainb. Pencelupan warnac. Penggulungan benangd. Pemintalan benang118.	Melekatkan kain atau benda lain dengan menggunakan jarum dan benang disebut dengan…(4 Poin)a. Merajutb. Makramec. Menjahitd. Mengikat129.	Agar bentuk benda kerajinan dapat terlihat dari luar, kemasan yang digunakan sebaiknya berbahan…(4 Poin)a. Kayub. Mikac. Kertas kartond. Kardus1310.    Kerajinan fungsi pakai pada prinsipnya adalah sebagai….(4 Poin)a. Kebutuhanb. Ornamenc. Mainand. Penghias1411.  Pengrajin adalah orang yang bekerja membuat….(4 Poin)a. Lukisanb. Filmc. Musikd. Kerajinan1512.   Gambar di atas merupakan produk kerajinan dengan teknik…(4 Poin)a. Anyamb. rajutc. sulamd. jahit1613.  Proses yang dilakukan betujuan untuk menutupi detail – detail corak batik tulis dengan lilin panas menggunakan canting disebut…(4 Poin)a. Pengloyoranb. Mbironic. Penjemurand. Nyoga1714.  Kerajinan tekstil berupa tenun tradisional yang biasa dilakukan pada alat tenun vertikal adalah…(4 Poin)a. Batikb. Sulamc. Tapestrid. Jahit aplikasi1815.  Kerajinan tekstil berupa tenun tradisional yang biasa dilakukan pada alat tenun vertikal adalah…(4 Poin)a. Batikb. Sulamc. Tapestrid. Jahit aplikasi1916. Pengolahan sederhana untuk bahan serat tumbuhan dapat diolah dengan…(4 Poin)a. Perendamamb. Pencelupanc. Pengeringand. Pengolahan2017. Serat bulu domba memiliki kelebihan diantaranya…(4 Poin)a. Bersih, ringan, dan tebalb. Ringan, halus, dan beratc. Banyak, lembut, dan hangatd. Berat, hangat, dan lembut2118.  Yang bukan termasuk tujuan penyajian / pengemasan kerajinan tekstil adalah…(4 Poin)a. Kemasan harus aman dan bermanfaatb. Kemasan menurunkan keuntunganc. Kemasan melindungi produk didalamnyad. Kemasan dapat mendukung program pemasaran2219.    Perhatikan pernyataan di bawah ini !	1) warna transparan	2) tampilan berkerut	3) cukup elastis	4) kekuatan cukup baik	Berdasarkan pernyataan di atas yang termasuk sifat rayon adalah…(4 Poin)a. 1 dan 2c. 2 dan 4b. 1 dan 3d. 1 dan 42320. Hiasan yang dibuat di atas kain atau bahan lain dengan jarum jahit dan benang disebut…(4 Poin)a. batikb. kain percac. sablond. border2421. Salah satu karya eni terapan yang paling dikenal di nusantara dan berbahan dasar kain mori serta mrnggunakan lilin yang dipanaskan adalah....(4 Poin)a. jahit aplikasib. batikc. tapestryd. sulam2522. Berikut ini yang bukan merupakan jenis yang terdapat pada jahit aplikasi adalah…(4 Poin)a. lipat potongb. standarc. potong atasd. potong motif2623. Perhatikan alat – alat di bawah ini !	1) pemidangan	2) pensil / kapur jahit	3) gunting	4) spanram	Yang tidak termasuk alat jahit aplikai adalah…(4 Poin)a. 1 dan 3b. 2 dan 3c. 2 dan 3d. 2 dan 42724. Alat yang digunakan untuk membantu mngabungkan kain satu dengan lainnya agar tidak bergeser dari tempatnya adalah…(4 Poin)a. pemidanganb. jarum pentulc. tudung jarid. cukil2825. Kain tenun yang terkenal dan dikenakan pada saat upacara adat batak adalah….(4 Poin)a. Tenun Ulosc. Tenun Pandai sikekb. Tenun Sumbad. Tenun TorajaMOHONN CEPAT DIJAWAB YA MAKASIH..✌️​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#batas-wilayah-asean-di-bagian-utara-adalah-5-poina-dataran-chinab-samudera-hindia-dan-timor-lestec-samudera-pasifik-dan-papua-nuginid-samudera-pasifik-dan-hindia2-gambar-pada-logo-asean-di-b">12.
+                                            Batas wilayah ASEAN di bagian utara adalah ... *5 poina. Dataran Chinab. Samudera Hindia dan Timor Lestec. Samudera Pasifik dan Papua Nuginid. Samudera Pasifik dan Hindia2. Gambar pada logo ASEAN di bawah ini melambangkan ... *5 poinGambar Tanpa Teksa. Persatuan antar negara-negara ASEANb. Jumlah negara-negara anggota ASEANc. Keadilan di antara negara-negara ASEANd. Perdamaian yang terjalin di antara negara-negara ASEAN3. Amati logo ASEAN di bawah ini. Urutan negara-negara anggota ASEAN yang benar sesuai gambar adalah ... *5 poinGambar Tanpa Teksa. Brunei Darussalam, Vietnam, Thailand, Singapura, Filipina, Kamboja, Myanmar, Malaysia, Indonesia, Laos.b. Myanmar, Vietnam, Thailand, Singapura, Filipina, Brunei Darussalam, Malaysia, Laos, Indonesia, Kamboja.c. Brunei Darussalam, Vietnam, Thailand, Singapura, Filipina, Myanmar, Malaysia, Laos, Indonesia, Kamboja.d. Myanmar, Thailand, Vietnam, Kamboja, Laos, Brunei Darussalam, Malaysia, Singapura, Indonesia, Filipina.4. Di bawah ini Yang termauk karakteristik politik keamanan ASEAN yaitu ... *5 poina. Masyarakat yang mengacu pada peraturan dengan kesamaan nilai dan normab. Masyarakat mengutamakan keamanan dan perdamaian golongan tertentuc. Masyarakat hidup di bawah pimpinan yang memegang prinsip komunismed. Masyarakat yang mengacu pada peraturan yang tetap dan tidak bisa diubah6. Makna proklamasi kemerdekaan dalam upaya mengembangkan kehidupan kebangsaan yang sejahtera adalah ... *5 poina. Meyakinkan kepada masyarakat bahwa penjajah tidak akan kembali lagi dan bangsa Indonesia bisa tidak perlu khawatir dengan ancaman penjajah.b. Memanfaatkan setiap kesempatan untuk bisa menyatakan kemerdekaan kapanpun dan dimanapun.c. Mensejahterakan dan menyadarkan bangsa Indonesia betapa penting proklamasi bagi kehidupan bangsa dan bernegara.d. Mengumumkan kepada masyarakat bahwa perjuangan sudah selesai dan rakyat bisa hidup bebas tanpa bekerja7. Ir. Soekarno memproklamasikan kemerdekaan pada tanggal ... *5 poina. 28 Oktober 1945b. 18 Agustus 1945c. 17 Agustus 1945d. 21 April 19458. Arti proklamasi bagi bangsa Indonesia adalah ... *5 poina. Melepaskan diri dari belenggu penjajahan bangsa lain dan bisa hidup sederajat dengan bangsa-bangsa lain.b. Membebaskan bangsa lain agar tidak bisa masuk lagi ke Indonesia dan menjajah negara lain.c. Menjadi negara yang berdaulat dan kembali pada sistem pemerintahan yang dipimpin oleh kerajaan.d. Menjadi bangsa yang mandiri dan tidak perlu diatur lagi oleh aturan apapun termasuk undang-undang.9. Dibawah ini merupakan penyebab terjadinya perubahan budaya di Indonesia, kecuali ... *5 poina. Bertambahnya pendudukb. Adanya penemuan baruc. Terjadinya konflik/peperangand. Tidak adanya jaringan internet10. ini merupakan dampak positif berkembangnya ilmu pengetahuan dan teknologi di bidang ekonomi, kecuali ... * 5 poin a. Pertumbuhan ekonomi yang semakin tinggi. b. Maraknya budaya barat yang tidak sesuai dengan norma di Indonesia c. Terjadinya industrialisasi. d. Produktifitas dunia industri semakin meningkat.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#20-di-bawah-ini-yang-tidak-termasuk-tugas-tni-adalah-a-mengayomi-dan-melayani-masyarakatb-melaksanakan-operasi-militer-selain-perangc-ikut-serta-dalam-pemeliharaan-perdamaian-regionald-me">13.
+                                            20. Di bawah ini yang Tidak termasuk tugas TNI adalah ....
+a. Mengayomi dan melayani masyarakat
+b. Melaksanakan operasi militer selain perang
+c. Ikut serta dalam pemeliharaan perdamaian regional
+d. Mempertahankan kedaulatan negara
+21. Di bawah ini yang tidak termasuk tugas TNI dalam melaksanakan operasi militer selain perang yaitu ...
+a. Melakukan tugas kemanusiaan ( Civic mission )
+b. Memberantas pemberontakan gerakan separatis bersenajata
+c. Melawan invasi dan agresi
+d. Melakukan tugas perdamaian
+22. Perdagangan dan penggunaan Narkoba di kalangan remaja merupakan ancaman bagi kelangsungan hidup bangsa terutama karena ...
+a. Mengancam kedaulatan Negara
+b. Mengancam keutuhan wilayah Negara
+c. Mengancam keselamatan warga Negara
+d. Menurunkan kewibawaan dan citra bangsa
+23. Ketetapan MPR nomor VI/MPR/2000 merupakan kebijakan baru bidang pertahanan dan keamanan yang mengatur tentang .....
+a. Pemisahan TNI dan POLRI
+b. Peran TNI dan POLRI
+c. Mekanisme peran warga negara dalam bela Negara
+d. Peran warga negara dalam pertahanan negara
+24. Pada tahun 1961 dibentuk lembaga / organisasi yang berkaitan dengan upaya pembelaan negara yaitu ..
+a. Kelaskaran yang kemudian berkembang menjadi barisan cadangan
+b. Pager desa dan mobilisasi pelajar
+c. Perwira cadangan
+d. Pertahanan sipil
+25. Pertahanan Sipil sebagai kekuatan pokok perlindungan masyarakat merupakan bentuk berpartisipasi rakyat secara langsung dalam ...
+a. Bidang keamanan dan ketertiban masyarakat
+b. Menghadapi ancaman pertahanan Negara
+c. Menghadapi akibat bencana alam dan keadaan luar biasa
+d. Menghadapi penegakan hukum
+26. Menjaga dan melindungi kedaulatan negara, keutuhan wilayah negara, dan keselamatan bangsa dari segala bentuk ancaman meruapakan ...
+a. Prinsip pertahanan Negara
+b. Tujuan pertahanan Negara
+c. Pengertian pertahanan Negara
+d. Hakekat pertahanan negara
+27. Di bawah ini yang tidak termasuk pengabdian sesuai profesi dalam penyelenggaraan upaya bela negara yaitu ...
+a. Tim SAR
+b.Dokter dan tenaga medis lainnya
+c. Resimen Mahasiswa
+d.POLRI
+28. Undang-undang nomor 29 tahun 1954 berkaitan dengan upaya belana negara yang mengatur tentang ...
+a. Pokok-pokok pertahanan Negara
+b. Pertahanan dan keamanan rakyat yang bersifat semesta
+c. Mekanisme upaya bela negara melalui kegiatan pertahanan Negara
+d. Pokok-pokok perlawanan rakyat
+29. Menurut UU nomor 3 tahun 2002, ancaman militer dapat berbentuk ....Kecuali ..
+a. Spionase untuk mendapatkan rahasia militer
+b. Gerakan separatis dan kerusuhan yang melibatkan masyarakat
+c. Perang saudara antar kelompok dengan menggunakan senjata
+d. Aksi teror bersenjata oleh jaringan terorisme internasional
+30. Pecalang yang dibentuk berdasarkan adat daerah merupakan…
+a. Organisasi pertahanan di Bali
+b. Organisasi dalam bidang pariwisata di Bali
+c. Lembaga adat urusan keamanan di Bali
+d. Lembaga adat urusan karya seni di Bali</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-pemerintah-indonesia-dan-thailand-sepakat-meningkatkan-kerja-sama-di-bidang-pertanian-terutama-alih-teknologi-informasi-dan-teknologi-perdagangan-pelatihan-teknik-dan-penelitian-dalam-bidang-pe">14.
+                                            1.	Pemerintah Indonesia dan Thailand sepakat meningkatkan kerja sama di bidang pertanian, terutama alih teknologi informasi dan teknologi, perdagangan, pelatihan, teknik dan penelitian dalam bidang pertanian. Kesepakatan itu dituangkan dalam MOU yang ditandatangani oleh Menteri Pertanian dari kedua negara. Kerja sama antara Indonesia dan Thailand ini termasuk dalam kerja sama .... *10 poina. Multilateralb. Regionalc. Bilaterald. ASEAN2.	Tujuan kerja sama negara anggota ASEAN dalam bidang IPTEK adalah .... *10 poina. mewujudkan perdamaian di kawasan ASEANb. meningkatkan sumber daya manusia yang memiliki kualitas dan daya saing duniac. memperbaiki kualitas pendidikan masyarakat ASEANd. mengembangkan sektor pariwisata negara-negara ASEAN3.	Untuk mempercepat pertumbuhan ekonomi, perdamaian, dan stabilitas sosial merupakan .... *10 poina. Prinsip ASEANb. Tujuan ASEANc. Azas ASEANd. Perkembangan ASEAN4.	Contoh kerjasama ASEAN di bidang pendidikan adalah .... *10 poina. Pemberantasan narkoba di ASEANb. Pementasan tari tradisional negara-negara ASEANc. Pemberian beasiswa dosen untuk berkuliah di negara ASEANd. Pelatihan militer bersama5.	Manfaat kerjasama ASEAN di bidang budaya adalah .... *10 poina. Menjaga stabilitas ekonomi negara-negara anggotab. Mengurangi perselisihan antara negara-negara ASEANc. Memberi kesempatan bagi para atlet untuk berprestasid. Melestarikan dan memperkenalkan budaya ke negara-negara lain6.	Contoh kerjasama ASEAN di bidang teknologi adalah .... *10 poina. Pengembangan jaringan kota pintar ASEANb. Pemberian bantuan dan sumbangan bagi korban bencana alamc. Pertukaran pelajard. Perjanjian ekstradisi7.	Manfaat kerjasama ASEAN di bidang ekonomi adalah .... *10 poina. Meningkatkan pendapatan penduduk di negara-negara anggotab. Meningkatkan kesehatan penduduk di negara-negara anggotac. Menjaga stabilitas keamanan kawasan Asia Tenggarad. Mengurangi pengaruh budaya barat8.	Berikut ini adalah tujuan berdirinya ASEAN, kecuali .... *10 poina. Mempercepat pertumbuhan ekonomi dan kemajuan sosial budaya di Asia tenggarab. Memajukan perdamaian dan stabilitas kawasan dengan tetap menghormati keadilan dan penegakan hukumc. Memajukan persiapan perang negara-negara ASEAN melawan penjajah dari kawasan Benua Asiad. Memajukan kerjasama dalam bidang IPTEK9.	Pembentukan kelompok peneliti antarnegara merupakan salah satu kerjasama ASEAN di bidang ....*10 poina. Politikb. Ekonomic. Sosiald. Pendidikan10.	Manfaat pengembangan kota pintar (Smart City) ASEAN adalah .... *10 poina. Menjaga situasi keamananb. Meningkatkan kesehatan pendudukc. Meningkatkan penguasaan teknologid. Mengurangi pencemaran lingkungan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-upaya-mitigasi-bencana-gempabumi-dengan-prinsip-pembuatan-rumah-tahan-gempa-melalui-a-%e2%80%8brumah-sederhana-berbentuk-panggungb-%e2%80%8bbahan-bangunan-sekuat-mungkinc-%e2%80%8bkonstruksi">15.
+                                            1. Upaya mitigasi bencana gempabumi dengan prinsip pembuatan rumah tahan gempa melalui ....
+A.​rumah sederhana berbentuk panggung
+B.​bahan bangunan sekuat mungkin
+C.​konstruksi penahan beban harus memadai
+D.​struktur pondasi sangat dalam dari bata merah
+E.​struktur pondasi cakar ayam yang kuat
+​
+2. Prinsip pengelolaan hutan berdasarkan prinsip pembangunan berkelanjutan adalah ....
+A.​melakukan pemanfaatan dan membiarkan hutan tanpa sentuhan
+B.​menindak pelaku pengerusakan dan pembajakan kawasan hutan
+C.​memberi kebebasan dalam mengeksploitasi hutan dan lingkungan
+D.​menjamin ketersediaan di masa kini dan masa yang akan datang
+E.​mengutamakan efektifitas dan efisiensi dalam pengelolaan hutan
+3. Pernyataan:
+(1)​tanah subur dan sumber air melimpah;
+(2)​kenyamanan dan keamanan tempat tinggal;
+(3)​memperbaiki jaringan transportasi;
+(4)​kekeringan dan paceklik di desa;
+(5)​generasi muda memajukan pendidikan.
+​Faktor pendorong interaksi desa dan kota terdapat pada angka ....
+A.​(1), (2), dan (3)
+B.​(1), (2), dan (4)
+C.​(1), (3), dan (5)
+D.​(2), (4), dan (5)
+E.​(3), (4), dan (5)
+4. Karakteristik wilayah:
+(1)​memiliki garis pantai yang panjang;
+(2)​morfologi pegunungan di pesisir;
+(3)​merupakan negara kepulauan;
+(4)​memiliki laut dengan palung yang dalam dan ombak yang besar;
+(5)​terletak di antara Samudera Pasifik dan Samudera Hindia.
+​Karakteristik wilayah yang tepat sebagai pendukung poros maritim dunia terdapat pada angka ....
+A.​(1), (2), dan (3)
+B.​(1), (3), dan (4)
+C.​(1), (3), dan (5)
+D.​(2), (3), dan (4)
+E.​(3), (4), dan (5)
+​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#berikut-yang-bukan-merupakan-ciri-ciri-limbah-keras-4-poina-mudah-diurai-di-dalam-tanahb-tidak-mudah-berubah-bentukc-sulit-diolahd-berwujud-keras-serta-padatpertanyaan-ini-wajib-diisipe">16.
+                                            Berikut yang bukan merupakan ciri-ciri limbah keras... *
+4 poin
+A. Mudah diurai di dalam tanah
+B. Tidak mudah berubah bentuk
+C. Sulit diolah
+D. Berwujud keras serta padat
+Pertanyaan ini wajib diisi
+Perkembangan sistem informasi tersaji dalam periode-periode berikut, kecuali... *
+4 poin
+A. 3000 SM
+B. 2900 SM
+C. 500 SM
+D. 4500 SM
+Sebelum diolah menjadi bahan kerajinan, limbah keras tentu saja harus terlebih dahulu melalui beberapa proses. Berikut yang bukan merupakan proses pendahuluan pengolahan limbah keras *
+4 poin
+A. Sanitasi
+B. Pembakaran
+C. Penghancuran
+D. Reboisasi
+Berikut yang bukan merupakan prinsip pengolahan limbah keras *
+4 poin
+A. Reduce
+B. Reuse
+C. Redundant
+D. Recycle
+Pada masa ini, bangsa Cina berhasil menemukan kertas. Kertasyang ditemukan adalah kertas yang kita kenal sekarang. Kertas inidibuat dari serat bambu yang dihaluskan, disaring, dicuci, kemudiandiratakan dan dikeringkan. Penemuan ini juga memungkinkan sistempencetakan yang dilakukan dengan menggunakan blok kayu yangditoreh dan dilumuri dengan tinta. Sistem ini sekarang dikenal denganistilah sistem cap. berikut merupakan Perkembangan sistem informasi tersaji dalam periode-periode keberapa ... *
+4 poin
+A. 3000 SM
+B. 105 SM
+C. 2900 SM
+D. 500 SM
+Beberapa alat komunikasi tradisionalpada masa kuno sebagai berikut, KECUALI.... *
+4 poin
+A. kentongan, lonceng
+B. daun lontar,prasasti
+C. burung merpati, terompet keong
+D. pesan suara, telegram
+Dahulu bunyi ini digunakansebagai alat komunikasi untuk menandai dimulai atau berakhirnya kegiatan-kegiatan tertentu, bunyi ini berasal dari alat .... tradisional *
+4 poin
+A. kentongan, lonceng
+B. daun lontar, prasasti
+C. terompet dari tanduk hewan
+D. terompet dari bahan lunak
+Piktografi digunakan pada masa.... dan didaerah mana ?.... *
+4 poin
+3000 SM. di sumeria
+2900 SM di Sumeria
+105 SM di aceh
+5000 SM di Indonesia
+Penemuan radio diawali dengan ditemukannya gelombang radiooleh Heinrich Herzt pada tahun.... *
+4 poin
+1886 tahun
+1887 tahun
+1889 tahun
+1897 tahun
+peralatan komunikasi yang digunakan untuk mengirim dokumen dengan menggunakan suatu perangkatyang mampu beroperasi melalui jaringan telepon dengan hasil yang sangat serupa dengan aslinya. pada masa modrn apa nama alat komunikasi ini ? *
+4 poin
+surat kabar/koran
+televisi/radio
+faksimili
+telegram
+Alat ini biasa digunakan oleh satuankepolisian, tentara, dan juga pihak satuan pengaman (satpam). alat ini disebut ?.... *
+4 poin
+handphone
+handy talky
+voice note
+pesan suara dengan whatsapp
+yang digunakan untuk mencengkram dan memotongbenda.... *
+4 poin
+obeng,
+pisau, palu
+gergaji, gunting seng
+tang, gunting
+Bel menghasilkan bunyi dengan bantuan arus listrik DC. Alat ini memerlukanbaterai. Bahan yang digunakan diambil dari lingkungan sekitar. apa saja bahan alat utama yang dibutuh kan ?.... *
+4 poin
+palu, gergaji, gunting seng, dan meteran
+ketam, palu obeng, sekru
+pisau, ketam, meteran,
+semua benar
+yang tidak termasuk hewan ternak kesayangan adalah... *
+4 poin
+kucing, kelinci
+hamster, burung merpati
+lintah, cacing
+kerbau, sapi
+yang harus diperhatikan dalam memelihara ternak hewan kesayangan adalah.... *
+4 poin
+pakan
+kandang
+obat-obatan, nutrisi
+semua benar
+Sehubungan dengan masalah kesehatan, beberapa hal harus diperhatikan,yaitu: kecuali.... *
+4 poin
+lahan yang hendak didirikan kandang harus bebas dari penyakit menular,
+kandang harus kuat, aman, nyaman, dan bebas penyakit;
+periksa kesehatan ternak yang baru dibeli.
+jaga kandang dan lingkungannya agar selalu lembab, dan banyak hama.
+Keuntungan menggunakan serbuk kayu pada pemeliharaan hamster ialah.... kecuali *
+4 poin
+Berfungsi sebagai alas kandang agar hamster bisa lebih nyaman dan empuk
+sebagai penghangat bagi hamster terutama di saat udara sedang dingin
+supaya lebih hemat
+Sebagai bahan untuk membuat sarang.
+Berikut ini diuraikan pengertian dari serealia, kacang-kacangan, dan umbi, Serealia adalah jenis tumbuhan golongan tanaman padi-padian/rumput-rumputan (Gramineae) yang dibudidayakan untuk menghasilkanbulir-bulir berisi biji-bijian sebagai sumber karbohidrat/pati. Biji tumbuhanserealia adalah buah tipe khusus yang disebut.... *
+4 poin
+karyopsis
+kandum
+kacang merah
+beras merah
+jenis serealia yang menjadi bahan pokok kita adalah .... *
+4 poin
+beras
+oatmeal
+beras meras
+kandum
+pengoahan yang baik akan menghasilkan makanan yang baik pula, sebagian orang mengenal bahan serealia yang sangat baik untuk orang penderita penyakit gula adalah .... *
+4 poin
+beras putih
+beras merah
+beras hitam
+semua benar
+Jagung merupakan tanaman semusim(annual). Satu siklus hidupnya diselesaikan dalam waktu berapa lama... *
+4 poin
+80-150 hari
+80-280 hari
+80-360 hari
+50-100 hari
+Beberapa manfaat gandumbagi kesehatan tubuh sebagai berikut. kecuali.... *
+4 poin
+Mengonsumsi gandum akan membuat tubuh merasa kenyang lebih lama.
+Mengonsumsi gandum secara teratur akan menurunkan kadar kolesterol dalam tubuh.
+Mengonsumsi gandum dengan berlebihan dapat menurunkan berat badan
+ Tolong donggg:)</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#dalam-sistem-keamanan-jaringan-seseorang-tidak-bisa-mengelak-mengenai-aktivitas-yang-dilakukan-dalam-jaringan-prinsip-ini-disebuta-akses-kontrolb-integrityc-non-repudiationd-authentificatione-v">17.
+                                            Dalam sistem keamanan jaringan seseorang tidak bisa mengelak mengenai aktivitas yang dilakukan dalam jaringan. Prinsip Ini Disebut?A. Akses KontrolB. IntegrityC. Non RepudiationD. AuthentificationE. Verification​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-siswa-dapat-berperan-serta-dalam-melestarikan-tumbuhan-dengan-cara-a-menanam-padi-di-sawahb-memangkas-rumput-liarc-menebang-pohon-di-hutand-menanam-bunga-di-taman-sekolah2-lahan-pertan">18.
+                                            1.Siswa dapat berperan serta dalam melestarikan tumbuhan dengan cara ... *
+A. menanam padi di sawah
+B. memangkas rumput liar
+C. menebang pohon di hutan
+D. menanam bunga di taman sekolah
+2.Lahan pertanian atau perkebuan di daerah miring, seperti perbukitan sebaiknya dibuat ..... untuk mencegah terjadinya erosi dan longsor *
+A. sedimentasi
+B. hutan bakau
+C. tembok beton
+D. sengkedan
+3.Cara penangkapan ikan yang tidak diperbolehkan adalah menggunakan ... *
+A. jaring
+B. pancing
+C. keramba
+D. bahan peledak
+4.Peristiwa abrasi dipengaruhi oleh ...
+A. air laut
+B. air hujan
+C. gelombang bumi
+D. gelombang laut
+5.Untuk menjaga keseimbangan alam, penebangan pohon di hutan harus disertai dengan usaha ... *
+A. pengerajin kayu
+B. penanaman kembali
+C. pengangkutan dengan teratur
+D. pengamanan hutan dari pencuri kayu
+6.Kayu sebagai bahan dasar pembuatan kertas adalah contoh sumber daya alam yang dapat ditemukan di ... *
+A. laut
+B. sungai
+C. hutan
+D. danau
+7.Untuk membajak sawah, pertanian dengan teknologi tradisional memanfaatkan tenaga ... *
+A. manusia
+B. mesin
+C. kerbau
+D. angin
+8.Berikut ini yang bukan termasuk teknik pengawetan makanan adalah ... *
+A. pengasinan
+B. pembakaran
+C. pengalengan
+D. penggunaan bahan pengawet
+9.Teknologi berikut yang tergolong tepat untuk menangkap ikan adalah menggunakan ... *
+A.jala
+B.pukat harimau
+C.bahan peledak
+D.racun
+10.Sumber daya alam berikut yang dapat dimanfaatkan secara langsung adalah ... *
+A. minyak bumi
+B. air
+C. pohon
+D. tanah
+11.Sampah yang dapat dimanfaatkan sebagai pupuk kompos adalah sampah ... 
+A. plastik
+B. kertas
+C. kaleng
+D. daun
+12.Mengurangi atau menghemat pemakaian barang-barang yang ada di sekitar dapat mengurangi jumlah sampah. Hal tersebut merupakan contoh prinsip pengolahan sampah ... *
+A. reuse
+B. recycle
+C. reduce
+D. reform
+13.Lingkungan yang rusak akan mendatangkan ... *
+A. keuntungan bagi para pengusaha
+B. hasil alam yang melimpah
+C. kekayaan alam
+D. bencana alam
+14.Sampah basah disebut juga sampah ... *
+A.organik
+B. beracun
+C. anorganik
+D. berbahaya
+15.Sampah anorganik dapat diolah dengan cara ... *
+A. menimbun di tanah
+B.menjadikan pupuk kompos
+C. mencampurkannya pada media tanah
+D. menggunakan menjadi benda yang bernilai ekonomis
+16.Berikut ini yang bukan merupakan penyebab kepunahan hewan adalah ... *
+A. penangkaran hewan dan reboisasi
+B. perburuan liar dan perusakan habitat
+C. kebakaran hutan dan pencemaran sungai
+D. perluasan pertanian dan pencemaran laut
+17.Jika nelayan menangkap ikan dengan menggunakan racun, hal tersebut dapat membahayakan manusia karena ... *
+A. ikan yang dimakan tetap segar
+B. bentuk ikan menjadi berubah
+C. rasa daging ikan menjadi tidak enak
+D. ikan tidak mengandung racun tetapi air tempat hidup ikan tersebut mengandung racun
+18.Salah satu cara memulihkan hutan gundul adalah dengan cara ... *
+A. pengerikan
+B. pengerukan
+C. penghijauan
+D. pemupukan
+19.Laut menghasilkan sumber daya alam berupa ... *
+A. pohon bakau
+B.kayu mahoni
+C. ikan
+D.padi</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="prinsip-keamanan-jaringan">
+                            1. Prinsip keamanan jaringan</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1) kerahasian ,2) lntergritas ,3) ketersediaan ,4)authentication ,5) akses kontrol</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="3-jelaskan-prinsip-prinsip-dalam-keamanan-jaringan-yang-berhubungan-dengan-keamanan-arsip-elektronik-menurut-anda-dengan-penggunaan-virtual-private-network-vpn-apakah-dapat-menjamin-keamanan-jari">
+                            2. 3  Jelaskan prinsip-prinsip dalam keamanan jaringan yang berhubungan dengan keamanan arsip elektronik? Menurut Anda, dengan penggunaan Virtual Private Network (VPN) apakah dapat menjamin keamanan jaringan? </h2><br />
+                        <p>Penjelasan prinsip-prinsip pada keamanan jaringan yang berhubungan dengan keamanan arsip elektronik adalah menggunakan jaringan yang <strong>privasi.</strong> Pemanfaatan Virtual Private Network (VPN) belum dapat menjamin keamanan jaringan karena dengan VPN kita dapat menjaga <strong>privasi jaringan</strong> namun tidak sepenuhnya menjamin keamanan jaringan.</p><p><strong>Pembahasan</strong></p><p>Fitur VPN Android sebenarnya sama dengan perangkat lain. Jaringan pribadi virtual atau VPN adalah layanan yang memungkinkan pengguna mengakses situs web secara pribadi melalui server jaringan lain. Dengan kata lain, <strong>VPN</strong>  menghubungkan komputer atau ponsel Anda ke perangkat lain di lokasi lain dan memungkinkan Anda  mengakses Internet melalui koneksi itu. Jaringan pribadi virtual atau <strong>VPN </strong>awalnya  dibuat dengan tujuan menghubungkan jaringan antar gedung perkantoran dengan aman dan membuatnya tersedia dari rumah atau di tempat lain. Namun,  VPN sekarang banyak diadopsi oleh masyarakat  umum. Tentu saja, tujuannya adalah untuk memiliki koneksi yang aman dan pribadi ke Internet dan memiliki akses jarak jauh ke jaringan.</p><p></p>Pelajari lebih lanjut<p>Pelajari lebih lanjut materi tentang penjelasan VPN: https://brainly.co.id/tugas/483541</p><p></p><p><strong>#BelajarBersamaBrainly #SPJ1</strong></p><br />
+                                            <h2 class="ez-toc-section" id="prinsip-dasar-jaring-pengaman-sosial%e2%80%8b">
+                            3. prinsip dasar jaring pengaman sosial​</h2><br />
+                        <p>JAWABAN:Program JPS adalah program yang dirancang untuk membantu rakyat miskin yang terkena dampak akibat krisis ekonomi dan dilaksanakan melalui tahapan penyelamatan dan pemulihan menuju pada kondisi yang normal.</p><p><strong>Jawaban:</strong></p><p>JPS adalah perogram yang di rancang untuk membantu rakyat miskin yang terkena dampak akibat krisis ekonomi dan dilaksanakan melalui tahapan penyelamatan dan pemulihan menuju pada kondisi yang normal.</p><p><strong>Penjelasan:</strong></p><p>semoga membantu.</p><p><strong>F</strong><strong>O</strong><strong>L</strong><strong>L</strong><strong>O</strong><strong>W</strong><strong> </strong><strong>A</strong><strong>K</strong><strong>U</strong><strong> </strong><strong>Y</strong><strong>A</strong><strong>.</strong></p><br />
+                                            <h2 class="ez-toc-section" id="1-faktor-faktor-di-bawah-ini-menyebabkan-indonesia-menjadi-penting-bagi-perdagangan-dan-pelayaran-antara-asia-dan-eropa-kecuali-a-kondisi-geografisc-faktor-keamananb-kepadatan-pendudukd">
+                            4. 1.	Faktor-faktor di bawah ini menyebabkan Indonesia menjadi penting bagi perdagangan dan pelayaran antara Asia dan Eropa, kecuali ....
+a.	kondisi geografis	c. faktor keamanan
+b.	kepadatan penduduk	d. penghasil rempah-rempah
+2.	Setelah berhasil menguasai Malaka dan Maluku, Portugis ingin juga menguasai Aceh yang kaya akan lada. Usaha Portugis di Sumatera tersebut gagal karena ....
+a.	lokasinya terlalu jauh
+b.	Portugis tidak berani masuk pedalaman
+c.	Aceh terlalu kuat dan pengawasan wilayah sangat ketat
+d.	kalah bersaing dengan bangsa Eropa yang lain
+3.	Tujuan bangsa Spanyol datang ke Indonesia adalah seperti tersebut di bawah ini, kecuali ....
+a.	mencari kekayaan	c. mencari daerah jajahan
+b.	menyebarkan agama Nasrani	d. mencari rekan untuk kongsi dagang
+4.	Salah satu alasan bangsa-bangsa Barat berlom balomba datang di Kepulauan Indonesia adalah ….
+a.	tersedianya sumber daya alam dan jaringan perdagangan
+b.	mudahnya penguasa-penguasa lokal untuk diadu domba
+c.	bangsa Barat sangat berutang budi pada bangsa Indonesia
+d.	bangsa Barat ingin mengajari bangsa Indonesia cara menanam tanaman ekspor
+5.	Penampilan VOC berubah dari sebuah kongsi dagang menjadi sebuah badan yang seolah-olah berdaulat dan bisa memerintah karena . . . .
+a.	hak dan wewenang yang dimiliki memang memungkinkan untuk itu
+b.	pejabat kolonial banyak yang berasal dari penguasa lokal
+c.	penguasa lokal memanfaatkan diri untuk menjadi pejabat kolonial
+d.	hubungan antara para pejabat colonial dengan penguasa lokal terlanjur akrab
+6.	J.P. Coen dianggap berperan dalam meletakkan dasar-dasar dari kolonialisme Belanda karena . . . .
+a.	dialah yang pertama kali mendarat di Banten tahun 1596
+b.	membangun pelabuhan Jakarta sebagai pusat aktivitas VOC tahun 1619
+c.	dialah yang menemukan daerah-daerah yang menjadi produsen rempah
+d.	berencana mendatangkan keluarga-keluarga Belanda ke Indonesia
+7.	Perhatian pemerintah kolonial pada mulanya tertuju di Kepulauan Maluku, baru kemudian berpindah ke Jawa dan Sumatra. Perubahan ini antara lain disebabkan . . . .
+a.	rempah-rempah yang menjadi komoditas perdagangan saat itu sudah habis
+b.	Maluku terlalu jauh letaknya dalam konstelasi jalur perdagangan Asia
+c.	terjadi rebutan hegemoni perdagangan di sekitar Kepulauan Maluku
+d.	Belanda beberapa kali mengalami kekalahan dalam peperangan di kawasan timur Indonesia
+8.	Salah satu faktor yang menyebabkan kebangkrutan VOC adalah . . 
+a.	utang dan korupsi yang dilakukan pejabatpejabat VOC
+b.	sumber-sumber komoditas yang ada di Indonesia sudah habis
+c.	kebijakan yang diterapkan pejabat VOC di Indonesia salah sasaran
+d.	perdagangan rempah diambil alih oleh penguasa-penguasa lokal
+9.	Prinsip dasar yang menjadi tulang punggung kebijakan Raffles di Indonesia adalah . . 
+a.	bangsa Indonesia adalah bangsa kuli yang wajib diperas tenaganya
+b.	seluruh tanah milik pemerintah dibagikan kepada rakyat untuk ditanami tanaman ekspor
+c.beban pajak yang ditetapkan gubernur jenderal sebelumnya ditiadakan
+d.	semua tanah rakyat menjadi milik pemerintah
+10.Salah satu faktor yang menyebabkan tingginya keuntungan yang diraih Belanda dalam kebijakan cultuurstelsel adalah . .
+a.	dukungan rakyat untuk menanam tanaman baru
+b.	adanya manipulasi dalam realisasi kebijakan van den Bosch
+c.	kesadaran penduduk dalam membayar pajak
+d.	harga hasil bumi dibayar pemerintah sesuai harga pasar</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1. B</p><p>2. </p><p>3. D</p><p>4. A</p><p>5. A, karena VOC sendiri mempunyai hak octroi</p><p>6. B</p><p>7. </p><p>8. A</p><p>9. D (sistem sewa tanah) </p><p>10. B, banyaknya peraturan yang dilanggar oleh Belanda pada saat pelaksanaannya. contohnya jika petani mengalami gagal panen, belanda akan menanggung kerugiannya, namun pada praktiknya semua kerugian ditanggung oleh petani sendiri. </p><p></p><p>ada beberapa nomor yang tidak saya jawab karena ragu. </p><p></p><p>semoga membantu. </p><p>1.b</p><p>2.c</p><p>3.b</p><p>4.a</p><p>8.a</p><p>10.b </p><p>Cuman itu yg aku tau</p><p>Kalau ad yg salah maaf ya</p><br />
+                                            <h2 class="ez-toc-section" id="sosetamanusd-tanpa-istirahat-dan-langsung-mandi22-peran-indonesia-di-kawasan-asean-di-bidang-politikaa-menerapkan-tariff-khusus-terhadap-barang-dan-jasa-sesama-negara-aseanb-mendorong-penanaman-m">
+                            5. sosetamanusD. Tanpa istirahat, dan langsung mandi22. Peran Indonesia di kawasan ASEAN di bidang politikaA. menerapkan tariff khusus terhadap barang dan jasa sesama negara ASEANB. mendorong penanaman modal di negara-negara ASEANC. mendorong pemerintah negara ASEAN untuk memajukan prinsip-prinsip demokrasiD. mengikuti pertukaran pelajar dan pertukaran budaya antar negara-negara ASEAN25. Salah satu tujuan negara-negara ASEAN melakukan kerja sama di bidang politik adalahA. menciptakan keamanan dan perdamaian antar negara-negara ASEANB. menciptakan stabilitas ekonomi dan perdagangan negara-negara ASEANmendukung kegiatan penelitian di bidang pertanian yang terletak di FilipinaD. memperkuat persenjataan dan saling berlomba menciptakan senjata nuklir24. Contoh kerja sama negara-negara ASEAN di bidang pendidikan adalah ....A. mendirikan pabrik pupuk bersama antar negara-negara ASEANB. bekerja sama dalam penanggulangan bencana alamC. membantu negara-negara ASEAN yang mengalami konflikD. pembentukan jaringan perguruan tinggi se ASEAN25. Perhatikan tabel berikut ini !NoPernyataan11 Pengembangan sumber daya manusia.​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>22). C. mendorong pemerintah negara ASEAN untuk memajukan prinsip-prinsip demokrasi</p><p>25). C. menciptakan stabilitas ekonomi dan perdagangan negara-negara ASEAN</p><p>24). D. pembentukan jaringan perguruan tinggi se ASEAN</p><p><strong>Penjelasan:</strong></p><p>semoga membantu ^Δ^</p><br />
+                                            <h2 class="ez-toc-section" id="1-siswa-dapat-berperan-serta-dalam-melestarikan-tumbuhan-dengan-cara-a-menanam-padi-di-sawahb-memangkas-rumput-liarc-menebang-pohon-di-hutand-menanam-bunga-di-taman-sekolah2-lahan-pertan">
+                            6. 1.Siswa dapat berperan serta dalam melestarikan tumbuhan dengan cara ... *
+A. menanam padi di sawah
+B. memangkas rumput liar
+C. menebang pohon di hutan
+D. menanam bunga di taman sekolah
+2.Lahan pertanian atau perkebuan di daerah miring, seperti perbukitan sebaiknya dibuat ..... untuk mencegah terjadinya erosi dan longsor *
+A. sedimentasi
+B. hutan bakau
+C. tembok beton
+D. sengkedan
+3.Cara penangkapan ikan yang tidak diperbolehkan adalah menggunakan ... *
+A. jaring
+B. pancing
+C. keramba
+D. bahan peledak
+4.Peristiwa abrasi dipengaruhi oleh ...
+A. air laut
+B. air hujan
+C. gelombang bumi
+D. gelombang laut
+5.Untuk menjaga keseimbangan alam, penebangan pohon di hutan harus disertai dengan usaha ... *
+A. pengerajin kayu
+B. penanaman kembali
+C. pengangkutan dengan teratur
+D. pengamanan hutan dari pencuri kayu
+6.Kayu sebagai bahan dasar pembuatan kertas adalah contoh sumber daya alam yang dapat ditemukan di ... *
+A. laut
+B. sungai
+C. hutan
+D. danau
+7.Untuk membajak sawah, pertanian dengan teknologi tradisional memanfaatkan tenaga ... *
+A. manusia
+B. mesin
+C. kerbau
+D. angin
+8.Berikut ini yang bukan termasuk teknik pengawetan makanan adalah ... *
+A. pengasinan
+B. pembakaran
+C. pengalengan
+D. penggunaan bahan pengawet
+9.Teknologi berikut yang tergolong tepat untuk menangkap ikan adalah menggunakan ... *
+A.jala
+B.pukat harimau
+C.bahan peledak
+D.racun
+10.Sumber daya alam berikut yang dapat dimanfaatkan secara langsung adalah ... *
+A. minyak bumi
+B. air
+C. pohon
+D. tanah
+11.Sampah yang dapat dimanfaatkan sebagai pupuk kompos adalah sampah ... 
+A. plastik
+B. kertas
+C. kaleng
+D. daun
+12.Mengurangi atau menghemat pemakaian barang-barang yang ada di sekitar dapat mengurangi jumlah sampah. Hal tersebut merupakan contoh prinsip pengolahan sampah ... *
+A. reuse
+B. recycle
+C. reduce
+D. reform
+13.Lingkungan yang rusak akan mendatangkan ... *
+A. keuntungan bagi para pengusaha
+B. hasil alam yang melimpah
+C. kekayaan alam
+D. bencana alam
+14.Sampah basah disebut juga sampah ... *
+A.organik
+B. beracun
+C. anorganik
+D. berbahaya
+15.Sampah anorganik dapat diolah dengan cara ... *
+A. menimbun di tanah
+B.menjadikan pupuk kompos
+C. mencampurkannya pada media tanah
+D. menggunakan menjadi benda yang bernilai ekonomis
+16.Berikut ini yang bukan merupakan penyebab kepunahan hewan adalah ... *
+A. penangkaran hewan dan reboisasi
+B. perburuan liar dan perusakan habitat
+C. kebakaran hutan dan pencemaran sungai
+D. perluasan pertanian dan pencemaran laut
+17.Jika nelayan menangkap ikan dengan menggunakan racun, hal tersebut dapat membahayakan manusia karena ... *
+5 poin
+A. ikan yang dimakan tetap segar
+B. bentuk ikan menjadi berubah
+C. rasa daging ikan menjadi tidak enak
+D. ikan tidak mengandung racun tetapi air tempat hidup ikan tersebut mengandung racun
+Salah satu cara memulihkan hutan gundul adalah dengan cara ... *
+A. pengerikan
+B. pengerukan
+C. penghijauan
+D. pemupukan
+Laut menghasilkan sumber daya alam berupa ... *
+A. pohon bakau
+B.kayu mahoni
+C. ikan
+D. padi</h2><br />
+                        <p>1. d</p><p>2. </p><p>3. d</p><p>4. </p><p>5. </p><p>6. c</p><p>7. c</p><p>8. d</p><p>9. a</p><p>10. </p><p>11. </p><p>12.</p><p>13.</p><p>14.</p><p>15.</p><p>16. a</p><p>17. c/d </p><p>18. c</p><p>19. c</p><p><strong>Penjelasan:</strong></p><p>maaf hanya itu yg aku tau maaf juga kalau ada yg salah</p><br />
+                                            <h2 class="ez-toc-section" id="sistem-pembayaran-diharapkan-dapat-dilaksanakan-dengan-sebaik-baiknya-sehingga-tercipta-5istem-pembayaran-yang-tercipta-sistem-pembayaran-yang-cepat-aman-dan-efisien-untuk-mewujudkan-sistem-pembaya">
+                            7. Sìstem pembayaran diharapkan dapat dilaksanakan dengan sebaik-baiknya sehingga tercipta 5istem pembayaran yang tercipta sistem pembayaran yang cepat, aman, dan èfisien. Untuk mewujudkan sistem pembayaran yang ^ndal pelaksanaan sistem pembayaran harus sesuai dengan prinsip-prinsip yang telah ƌitentukan. Berikut pernyataan sistem pembayaran sesuai dengan prinsip efisiensi adalah ... .A. meskipun biaya administrasi meningkat, konsumen dapat melakukan transaksi kliring antarbank lain dengan amanB. untuk memberikan kenyamanan kepada konsumen yang akan melakukan transaksi dalam jumlah besar dan dilakukan seketika BI memberikan fasilitas BI-RTGSC. Bank Indonesia menciptakan sebuah sistem jaringan antarbank yaitu GPN sehingga masyarakat dapat melaksanakan transaksi melalui ATM dengan lebih mudah dan biaya murah meskipun dengan bank yang berbedaD. agar transaksi lebih mudah, terjaga, dan data lebih aman BI menerapkan sistem QRIS dalam sistem pembayaran.E. penyelanggara sistem keuangan wajib memberikan informasi mengenai fitur dan produk secara detail kepada konsumen termasuk apabila ada perubahan peraturanMohon bantuannya, ya...​</h2><br />
+                        <p>Sistem pembayaran yang sesuai dengan prinsip efisieansi ditunjukkan oleh <strong>pilihan jawaban C</strong>. Pilihan jawaban C menunjukkan prinsip efisiensi dalam transaksi antar Bank sehingga memungkinkan transaksi melalui ATM dengan lebih mudah dan murah meskipun dengan bank yang berbeda</p>Pembahasan <p><strong>Prinsip efisiensi</strong> dalam sistem pembayaran sangat mengutamakan tentang pentingnya sistem yang cepat, aman, dan hemat biaya. Dalam konteks sistem pembayaran, efisiensi dapat dimaknai sebagai upaya untuk mempercepat penyelesaian transaksi dan menurunkan biaya transaksi. Untuk mencapai prinsip efisiensi tersebut sangat penting untuk mengembangkan infrastruktur teknologi dan jaringan yang efektif dan efisien. </p>Pelajari lebih lanjut <p>Materi tentang sistem pembayaran https://brainly.co.id/tugas/21515478</p><p></p><p>#BelajarBersamaBrainly #SPJ1</p><br />
+                                            <h2 class="ez-toc-section" id="minta-tolong-rangkumkan-ini-kak-nasib-perubahan-marxisme-dalam-hubungan-internasionalproletariat-internasional-dianggap-sebagai-subjek-sejarah-yang-akan-mewujudkan-tujuan-tujuan-ini-tetapi-meningkatn">
+                            8. Minta tolong rangkumkan ini kak.Nasib perubahan Marxisme dalam Hubungan InternasionalProletariat internasional dianggap sebagai subjek sejarah yang akan mewujudkan tujuan-tujuan ini, tetapi meningkatnya nasionalisme dan meningkatnya risiko bahaya perang di Eropa membuat Marx dan Engels mempertimbangkan kembali sifat jalan menuju emansipasi universal. Marxisme hanya memiliki sedikit jika ada untuk ditawarkan kepada analis yang serius. menyebabkan perang besar. Paradigma produksi menganalisis struktur kelas dan konflik kelas daripada loyalitas nasional yang gigih, kekuasaan negara dan . Kegagalan untuk memahami fenomena ini berarti bahwa . dunia kosmopolitan yang lebih damai. keyakinan bahwa sosialisme pertama-tama akan didirikan di dalam satu atau lebih negara-bangsa. Revolusioner sebagai Komisaris Urusan Luar Negeri Rusia sebelum menutup toko sering disebut sebagai bukti naif kaum Marxis mengenai kenyataan persisten urusan internasional. Kecepatan rezim Soviet menggunakan metode diplomasi tradisional untuk mempromosikan kelangsungan hidup dan keamanannya tampaknya menegaskan sudut pandang realis. Dominasi Soviet di Eropa Timur memprovokasi tuntutan nasionalis untuk penentuan nasib sendiri yang mewujudkan tujuan mereka dalam banyak kasus. Teori ketergantungan sangat penting karena dua alasan yaitu Analisis Robert Cox tentang kekuatan sosial, negara, dan keterbatasan teori hubungan internasional statecentric. Cox menyatakan bahwa produksi membentuk bidang lain seperti sifat kekuasaan negara dan interaksi strategis jauh lebih besar daripada yang disadari oleh teori hubungan internasional tradisional, tetapi juga dibentuk olehnya. Para anggotanya telah menganalisis bagaimana hegemoni dipertahankan melalui bentuk-bentuk kerja sama yang erat antara elit yang kuat di dalam dan di luar kawasan inti sistem dunia dan melalui jaringan yang berkembang dari lembaga ekonomi dan politik internasional yang bertanggung jawab atas pemerintahan global (Gill 1993b; lihat juga Cox) 1983).internasional berinteraksi untuk menghasilkan bentuk tertentu dari hegemoni global dan ketidaksetaraan terkait kekuasaan, sumber daya, dan peluang. Ini juga berfokus pada 'resistensi yang ditimbulkan'. Sistem sosio-ekonomi ini telah  menopang karakter masing-masing negara dan hubungan mereka satu sama lain: tidak ada analisis hubungan internasional yang mungkin tanpa mengacu pada kapitalisme, formasi sosial yang dihasilkannya, dan sistem dunia tempat mereka terbentuk '(Halliday 1994: 61 ; lihat juga Rosenberg 1994). modern dan bentuk produksi kapitalis.Beragam analisis perkembangan bentuk modern hubungan internasional selama beberapa abad terakhir menekankan betapa sedikit yang akan dipahami dengan mengandalkan penjelasan realis. Tulisan Rosenberg (1994) dan Teschke (2003) adalah contoh yang kuat tentang bagaimana materialisme historis digunakan untuk menunjukkan bahwa sistem geopolitik berlabuh dalam hubungan produktif tertentu dan untuk menganalisis cara-cara di mana sistem negara modern dan bentuk produksi kapitalis.Rekonstruksi materialisme sejarah mengarah pada argumen yang kompleks tentang ciri-ciri universal komunikasi, dan atas dasar ini Habermas telah membangun 'etika wacana' atau 'teori wacana moralitas'. Cara paling lugas untuk menjelaskan pendekatan wacana adalah bahwa banyak manusia di dunia modern telah kehilangan kepercayaan bahwa prinsip-prinsip moral tertentu itu benar karena mereka berlabuh pada kebenaran agama yang lebih dalam atau karena mereka bertumpu pada otoritas tradisi. Dua poin perlu dibuat tentang hasil rekonstruksi materialisme sejarah Habermas. Pertama, Habermas telah lama menolak klaim klasik Marxis tentang keunggulan produksi dan sentralitas konflik kelas dalam segala bentuk kehidupan. Kedua, terlepas dari kritiknya terhadap Marxisme, Habermas masih berkomitmen secara luas pada proyek Pencerahan untuk menciptakan dunia kosmopolitan di mana manusia menikmati kebebasan yang lebih besar.​</h2><br />
+                        <p><strong>Penjelasan:</strong></p><p>Nasib perubahan Marxisme dalam Hubungan Internasional</p><p>Proletariat internasional dianggap sebagai subjek sejarah yang akan mewujudkan tujuan-tujuan ini, tetapi meningkatnya nasionalisme dan meningkatnya risiko bahaya perang di Eropa membuat Marx dan Engels mempertimbangkan kembali sifat jalan menuju emansipasi universal. Marxisme hanya memiliki sedikit jika ada untuk ditawarkan kepada analis yang serius. menyebabkan perang besar. </p><p>Kegagalan untuk memahami fenomena ini berarti bahwa . dunia kosmopolitan yang lebih damai. keyakinan bahwa sosialisme pertama-tama akan didirikan di dalam satu atau lebih negara-bangsa. </p><p></p><p>Rekonstruksi materialisme sejarah mengarah pada argumen yang kompleks tentang ciri-ciri universal komunikasi, dan atas dasar ini Habermas telah membangun 'etika wacana' atau 'teori wacana moralitas'. Cara paling lugas untuk menjelaskan pendekatan wacana adalah bahwa banyak manusia di dunia modern telah kehilangan kepercayaan bahwa prinsip-prinsip moral tertentu itu benar karena mereka berlabuh pada kebenaran agama yang lebih dalam atau karena mereka bertumpu pada otoritas tradisi. Dua poin perlu dibuat tentang hasil rekonstruksi materialisme sejarah Habermas. Pertama, Habermas telah lama menolak klaim klasik Marxis tentang keunggulan produksi dan sentralitas konflik kelas dalam segala bentuk kehidupan. Kedua, terlepas dari kritiknya terhadap Marxisme, Habermas masih berkomitmen secara luas pada proyek Pencerahan untuk menciptakan dunia kosmopolitan di mana manusia menikmati kebebasan yang lebih besar.</p><p></p><p><strong>Maaf</strong><strong> </strong><strong>kalau salah</strong><strong> </strong></p><br />
+                                            <h2 class="ez-toc-section" id="prakarya-kelas-vii-wajibsoaljawablah-pertanyaan-yang-menurut-anda-benar-a-b-c-dan-d1-sebagai-makhluk-ciptaan-tuhan-yang-maha-esa-kita-harus-bersyukur-dan-bangga-jadi-warga-indonesia-karena">
+                            9. PRAKARYA KELAS VII
+* Wajib
+SOAL
+JAWABLAH PERTANYAAN YANG MENURUT ANDA BENAR A, B, C DAN D
+1. Sebagai makhluk ciptaan tuhan yang maha Esa kita harus bersyukur dan bangga jadi warga indonesia karena ..... kecuali: *
+A. letak Indonesia yang strategis
+B. memiliki kekayaan alam yang melimpah
+C. memiliki iklim yang dingin
+D. alam nya yang indah dan beraneka ragam budaya
+2. Perkembangan kerajinan sangat pesat sekali, dulu kerajinan itu berguna sebagai *
+A. hiasan
+B. alat kebutuhan hidup sehari hari
+C. bahan expor
+D. bahan interior
+3. Suatu jenis bahan berupa potongan potongan komponen yang membentuk jaringan memanjang yang utuh ternasuk pengertian dari *
+A. textil
+B. fiber
+C serat
+D. Produsen
+4. Bahan serat alam sudah dikenal dan digunakan sejak tahun 2640 sebelum masehi. Negara yang pertama sekali mengolah serat alam adalah *
+A. India
+B. Cina
+C. Indonesia
+D. Malaysia
+5. Bahan yang berasal dari tumbuhan di bawah ini adalah...
+A. Kepompong
+B. Serat wol
+C. Sutra
+D. Kapas
+6. Kain berkilau, lembut, dan halus yang biasa dipakai untuk pesta adalah... *
+A. Sutra
+B. Polyester
+C. Wol
+D. Tetron
+7. Sabut kelapa berasal dari tumbuhan bagian... *
+A. Biji
+B. Buah
+C. Daun
+D. Batang
+8. Proses pertama dalam pengolahan bahan serat adalah... *
+A. Pemintalan
+B. Pencelupan warna
+C. Menenun
+D. Penggulungan benang
+9. Pembuatan sketsa dilakukan pada tahap... *
+A. Setelah ditentukan bahan dan jenis
+B. Setelah pembuatan suatu benda
+C. Sebelum menentukan sebuah benda
+D.Penggalian ide dari berbagai sumber
+10. Susunlah tahaoan pengilahan dan pandan berduri menjadi bahan yang siap untuk dianyam di ba wah ini..1. Merebus daun pandan dan mencucinya 2. Memotong-motong daun pandan3. Mengambik daun pandan dan membuang duri-durinya4. Dikeringkan di tempat yang sejuk5. Kemudian dilemaskan dan daun pandan siap untuk dianyam *
+A. 1-2-3-4-5
+B. 1-3-2-5-4
+C. 2-1-3-4-5
+D. 3-2-1-4-5
+11. Filamen merupakan serat yang berbetuk jaringan berasal dari... *
+A. Bulu domba
+B. Bulu alpaca
+C. Bulu kelinci
+D. Kepompong ulat sutra
+12. Benda kerajinan harus memiliki keserasian antara bentuk dan wujud benda dengan nilai gunanya, hal ini merupakan prinsip dalam.. *
+A. Kegunaan
+B. Keluwesan
+C. Kenyamanan
+D. Keamanan
+13. Gunting, pisau, dan jarum merupakan... *
+A. Alat dan bahan
+B. Bahan
+C. Alat
+D. Bahan dasar
+14. Produksi serat alam makin hari makin menurun disebabkan... *
+A. Karena cuaca tidak menentu
+B. Selalu diproduksi
+C. Bahan seratnya mudah rusak
+D. Semua benar
+15. Tempat pensil, tas, sendal, alas panas dapat dibuat dari serat... *
+A. Daun pandan
+B. Kepompong
+C. Bambu
+D. Wol
+16. Karakteristik 1. Daya serap yang tinggi 2. Rentang terhadap jamur 3. Mudah kusut 4. Bahan terasa dingin 5. Mudah terbakar. Karakteristik diatas merupakan karakteristik dari serat... *
+A. Rami
+B. Sutera
+C. Nenas
+D. Kapas
+17. salah satu bahan kerajinan Indonesia yang dikenal di manca negara adalah... *
+A. Guci
+B. Batu cincin
+C. Anyaman
+D. Batik
+18. Suatu keterampilan yang dibuat dengan teknik merajut, silang menyilang dengan bahan dasar rotan, bambu dan daun disebut... *
+A. Anyaman
+B. Makrame
+C. Menjahit
+D. Menenun
+19. Benda yang indah mempunyai daya tarik lebih dibandingkan benda yang biasa-biasa saja, merupakan syarat rancangan benda kerajinan dari... *
+A. Utility
+B. Comfortable
+C. Astetic
+D. Safety
+20. Kemasan merupakan sentuhan terakhir dari sebuah proses pembuatan produk, tujuan pengemasan produk kerajinan adalah... *
+A. Tidak gampang rusak
+B. Agar terlihat lebih indah dan menarik
+C. Meningkatkan nilai jual
+D. Semua benar</h2><br />
+                        <p> </p><p>1. c</p><p>2. b</p><p>3. c</p><p>4. b</p><p>5.d</p><p>6. b</p><p>7. b</p><p>8. a</p><p>9. a</p><p>10. d</p><p>11. d</p><p>12. a</p><p>13. c</p><p>14. d</p><p>15. a</p><p>16. d</p><p>17. d</p><p>18. a</p><p>19. c</p><p>20. d</p><p></p><p>maaf kalo salah:^)</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-suatu-proses-yang-mendunia-membuat-manusia-saling-terbuka-dan-bergantung-satusama-lainnya-tanpa-batas-waktu-dan-jarak-%e2%80%a62-globalisasi-adalah-terbentuknya-sistem-organisasi-dan-komunikasi-a">
+                            10. 1. Suatu proses yang mendunia, membuat manusia saling terbuka dan bergantung satusama lainnya tanpa batas waktu dan jarak …2. Globalisasi adalah terbentuknya sistem organisasi dan komunikasi antar masyarakat diseluruh dunia untuk mengikuti sistem dan kaidah-kaidah yang sama …3. Meningkatnya masalah bersama dan perubahan dalam konsep ruang dan waktu …4. Penyebaran prinsip multi kebudayaan (multiculturalism) …5. Pemahaman bahwa proses ‘mendunia’ dan globalisasi merupakan proses penyebaranberbagai obyek dan pengalaman kepada semua orang ke seluruh penjuru dunia …6. Globalisasi mendorong ‘rekonfigurasi geografis …7. Mengembangkan pola pikir peserta didik dan tenaga pendidik secara progresif …8. Perubahan masa depan manusia yang lebih baik, mudah, cepat dan aman …9. Suatu perbuatan seseorang yang mulai kehilangan nasionalisme dengan meniru ataumelakukan aktivitas kebarat-baratan …10. Menurunnya atau merosotnya akhlak atau moral seseorang …11. Memilih dan memanfaatkan alat komunikasi secara tepat, sesuai fungsi dan kebutuhan…12. Globalisasi produksi, pembiayaan, tenaga kerja, jaringan informasi, perdagangan …13. Berkembangnya dunia pariwisata …14. Individualisme yang semakin tinggi …15. Memanfaatkan alat transportasi sesuai dengan waktu dan jaraknya …jodohkan pertanyaan berikut Dengan jawaban yang benar A. GlobalisasiPendidikanB. Selo SoemardjanC. WesternisasiD. GlobalisasiTransportasiE. Dampak NegatifGlobalisasiF. GlobalisasiEkonomiG. GlobalisasiH. Ciri-Ciri GlobalisasiI. Globalisasi IPTEKJ. Globalisasi BudayaK. Dampak PositifGlobalisasiL. DemoralisasiM. GlobalisasiKomunikasiN. UniversalisasiO. PenghapusanBatas Territoria​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1. globalisasi</p><p>2. Selo Soemardjan</p><p>3. ciri ciri globalisasi</p><p>4. damoak positif globalisasi</p><p>5. universalisasi</p><p>6. penghapusan batas territoria</p><p>7.  globalisasi pendidikan</p><p>8. globalisasi iptek</p><p>9. westernisasi</p><p>10. demoralisasi</p><p>11. globalisasi komunikasi</p><p>12. globalisasi ekonomi</p><p>13. globalisasi budaya</p><p>14. dampak negatif globalisasi</p><p>15. globalisasi transportasi</p><br />
+                                            <h2 class="ez-toc-section" id="ujian-mid-semester-ganjil-prakarya-41-suatu-jenis-bahan-barupa-potongan-%e2%80%93-potongan-komponn-yang-membentuk-jaringan-memanjang-utuh-disebut%e2%80%a64-poina-tekstilb-kerajianc">
+                            11. UJIAN MID SEMESTER GANJIL                PRAKARYA 41.	Suatu jenis bahan barupa potongan – potongan komponn yang membentuk jaringan memanjang utuh disebut…(4 Poin)a. Tekstilb. Kerajianc. Seratd. kain52.	Yang bukan termasuk serat alam adalah…(4 Poin)a. Serat hewanb. Polimer sintesisC. Serat tumbuhand. Mineral6Question(4 Poin)a. kapasb. kapukc. gonid. pina74.	Berikut adalah serat yang berasal dari hewan, kecuali…(4 Poin)a. wolb. polyesterc. suterad. bulu85.	Pengolahan kapas menjadi benang serat di sebut….(4 Poin)a. Pemintalanb. Penenunanc. Pencelupand. Penggulungan96.	Berikut ini yang bukan merupakan produk tekstil adalah…(4 Poin)a. Benangb.Seratc. Ukirand. Kain107.	Tahap awal pengolahan bahan serat adalah…(4 Poin)a. Penenunan benang menjadi kainb. Pencelupan warnac. Penggulungan benangd. Pemintalan benang118.	Melekatkan kain atau benda lain dengan menggunakan jarum dan benang disebut dengan…(4 Poin)a. Merajutb. Makramec. Menjahitd. Mengikat129.	Agar bentuk benda kerajinan dapat terlihat dari luar, kemasan yang digunakan sebaiknya berbahan…(4 Poin)a. Kayub. Mikac. Kertas kartond. Kardus1310.    Kerajinan fungsi pakai pada prinsipnya adalah sebagai….(4 Poin)a. Kebutuhanb. Ornamenc. Mainand. Penghias1411.  Pengrajin adalah orang yang bekerja membuat….(4 Poin)a. Lukisanb. Filmc. Musikd. Kerajinan1512.   Gambar di atas merupakan produk kerajinan dengan teknik…(4 Poin)a. Anyamb. rajutc. sulamd. jahit1613.  Proses yang dilakukan betujuan untuk menutupi detail – detail corak batik tulis dengan lilin panas menggunakan canting disebut…(4 Poin)a. Pengloyoranb. Mbironic. Penjemurand. Nyoga1714.  Kerajinan tekstil berupa tenun tradisional yang biasa dilakukan pada alat tenun vertikal adalah…(4 Poin)a. Batikb. Sulamc. Tapestrid. Jahit aplikasi1815.  Kerajinan tekstil berupa tenun tradisional yang biasa dilakukan pada alat tenun vertikal adalah…(4 Poin)a. Batikb. Sulamc. Tapestrid. Jahit aplikasi1916. Pengolahan sederhana untuk bahan serat tumbuhan dapat diolah dengan…(4 Poin)a. Perendamamb. Pencelupanc. Pengeringand. Pengolahan2017. Serat bulu domba memiliki kelebihan diantaranya…(4 Poin)a. Bersih, ringan, dan tebalb. Ringan, halus, dan beratc. Banyak, lembut, dan hangatd. Berat, hangat, dan lembut2118.  Yang bukan termasuk tujuan penyajian / pengemasan kerajinan tekstil adalah…(4 Poin)a. Kemasan harus aman dan bermanfaatb. Kemasan menurunkan keuntunganc. Kemasan melindungi produk didalamnyad. Kemasan dapat mendukung program pemasaran2219.    Perhatikan pernyataan di bawah ini !	1) warna transparan	2) tampilan berkerut	3) cukup elastis	4) kekuatan cukup baik	Berdasarkan pernyataan di atas yang termasuk sifat rayon adalah…(4 Poin)a. 1 dan 2c. 2 dan 4b. 1 dan 3d. 1 dan 42320. Hiasan yang dibuat di atas kain atau bahan lain dengan jarum jahit dan benang disebut…(4 Poin)a. batikb. kain percac. sablond. border2421. Salah satu karya eni terapan yang paling dikenal di nusantara dan berbahan dasar kain mori serta mrnggunakan lilin yang dipanaskan adalah....(4 Poin)a. jahit aplikasib. batikc. tapestryd. sulam2522. Berikut ini yang bukan merupakan jenis yang terdapat pada jahit aplikasi adalah…(4 Poin)a. lipat potongb. standarc. potong atasd. potong motif2623. Perhatikan alat – alat di bawah ini !	1) pemidangan	2) pensil / kapur jahit	3) gunting	4) spanram	Yang tidak termasuk alat jahit aplikai adalah…(4 Poin)a. 1 dan 3b. 2 dan 3c. 2 dan 3d. 2 dan 42724. Alat yang digunakan untuk membantu mngabungkan kain satu dengan lainnya agar tidak bergeser dari tempatnya adalah…(4 Poin)a. pemidanganb. jarum pentulc. tudung jarid. cukil2825. Kain tenun yang terkenal dan dikenakan pada saat upacara adat batak adalah….(4 Poin)a. Tenun Ulosc. Tenun Pandai sikekb. Tenun Sumbad. Tenun TorajaMOHONN CEPAT DIJAWAB YA MAKASIH..✌️​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>41. c. serat</p><p>52. b. polimer sintesis</p><p>6.  a. kapas</p><p>74. b. polyester</p><p>85. a. pemintalan</p><p>96. c. ukiran</p><p>107. d. pemintalan benang</p><p>118. c. menjahit</p><p>129. b. mika</p><p>1310. a. kebutuhan</p><p>1411. d. kerajinan</p><p>1613. a. pengloyoran</p><p>1714. b. sulam</p><p>1815. b. sulam</p><p>1916. c. pengeringan</p><p>2017. a. bersih, ringan, dan tebal</p><p>2118. b. kemasan menurunkan keuntungan</p><p>2219. c. 2 dan 4</p><p>2320. b. kain perca</p><p>2421. b. batik</p><p>2522. a. lipat potong</p><p>2623. b.2 dan 3, dan c. 2 dan 3</p><p>2724. b. jarum pentul</p><p>2825. b. tenun sumba</p><p><strong>Penjelasan:</strong></p><p>ma'af kalau salah</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="batas-wilayah-asean-di-bagian-utara-adalah-5-poina-dataran-chinab-samudera-hindia-dan-timor-lestec-samudera-pasifik-dan-papua-nuginid-samudera-pasifik-dan-hindia2-gambar-pada-logo-asean-di-b">
+                            12. Batas wilayah ASEAN di bagian utara adalah ... *5 poina. Dataran Chinab. Samudera Hindia dan Timor Lestec. Samudera Pasifik dan Papua Nuginid. Samudera Pasifik dan Hindia2. Gambar pada logo ASEAN di bawah ini melambangkan ... *5 poinGambar Tanpa Teksa. Persatuan antar negara-negara ASEANb. Jumlah negara-negara anggota ASEANc. Keadilan di antara negara-negara ASEANd. Perdamaian yang terjalin di antara negara-negara ASEAN3. Amati logo ASEAN di bawah ini. Urutan negara-negara anggota ASEAN yang benar sesuai gambar adalah ... *5 poinGambar Tanpa Teksa. Brunei Darussalam, Vietnam, Thailand, Singapura, Filipina, Kamboja, Myanmar, Malaysia, Indonesia, Laos.b. Myanmar, Vietnam, Thailand, Singapura, Filipina, Brunei Darussalam, Malaysia, Laos, Indonesia, Kamboja.c. Brunei Darussalam, Vietnam, Thailand, Singapura, Filipina, Myanmar, Malaysia, Laos, Indonesia, Kamboja.d. Myanmar, Thailand, Vietnam, Kamboja, Laos, Brunei Darussalam, Malaysia, Singapura, Indonesia, Filipina.4. Di bawah ini Yang termauk karakteristik politik keamanan ASEAN yaitu ... *5 poina. Masyarakat yang mengacu pada peraturan dengan kesamaan nilai dan normab. Masyarakat mengutamakan keamanan dan perdamaian golongan tertentuc. Masyarakat hidup di bawah pimpinan yang memegang prinsip komunismed. Masyarakat yang mengacu pada peraturan yang tetap dan tidak bisa diubah6. Makna proklamasi kemerdekaan dalam upaya mengembangkan kehidupan kebangsaan yang sejahtera adalah ... *5 poina. Meyakinkan kepada masyarakat bahwa penjajah tidak akan kembali lagi dan bangsa Indonesia bisa tidak perlu khawatir dengan ancaman penjajah.b. Memanfaatkan setiap kesempatan untuk bisa menyatakan kemerdekaan kapanpun dan dimanapun.c. Mensejahterakan dan menyadarkan bangsa Indonesia betapa penting proklamasi bagi kehidupan bangsa dan bernegara.d. Mengumumkan kepada masyarakat bahwa perjuangan sudah selesai dan rakyat bisa hidup bebas tanpa bekerja7. Ir. Soekarno memproklamasikan kemerdekaan pada tanggal ... *5 poina. 28 Oktober 1945b. 18 Agustus 1945c. 17 Agustus 1945d. 21 April 19458. Arti proklamasi bagi bangsa Indonesia adalah ... *5 poina. Melepaskan diri dari belenggu penjajahan bangsa lain dan bisa hidup sederajat dengan bangsa-bangsa lain.b. Membebaskan bangsa lain agar tidak bisa masuk lagi ke Indonesia dan menjajah negara lain.c. Menjadi negara yang berdaulat dan kembali pada sistem pemerintahan yang dipimpin oleh kerajaan.d. Menjadi bangsa yang mandiri dan tidak perlu diatur lagi oleh aturan apapun termasuk undang-undang.9. Dibawah ini merupakan penyebab terjadinya perubahan budaya di Indonesia, kecuali ... *5 poina. Bertambahnya pendudukb. Adanya penemuan baruc. Terjadinya konflik/peperangand. Tidak adanya jaringan internet10. ini merupakan dampak positif berkembangnya ilmu pengetahuan dan teknologi di bidang ekonomi, kecuali ... * 5 poin a. Pertumbuhan ekonomi yang semakin tinggi. b. Maraknya budaya barat yang tidak sesuai dengan norma di Indonesia c. Terjadinya industrialisasi. d. Produktifitas dunia industri semakin meningkat.​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1.C.samudra fasifik sampau papua nugini</p><p>maaf kalo salah</p><br />
+                                            <h2 class="ez-toc-section" id="20-di-bawah-ini-yang-tidak-termasuk-tugas-tni-adalah-a-mengayomi-dan-melayani-masyarakatb-melaksanakan-operasi-militer-selain-perangc-ikut-serta-dalam-pemeliharaan-perdamaian-regionald-me">
+                            13. 20. Di bawah ini yang Tidak termasuk tugas TNI adalah ....
+a. Mengayomi dan melayani masyarakat
+b. Melaksanakan operasi militer selain perang
+c. Ikut serta dalam pemeliharaan perdamaian regional
+d. Mempertahankan kedaulatan negara
+21. Di bawah ini yang tidak termasuk tugas TNI dalam melaksanakan operasi militer selain perang yaitu ...
+a. Melakukan tugas kemanusiaan ( Civic mission )
+b. Memberantas pemberontakan gerakan separatis bersenajata
+c. Melawan invasi dan agresi
+d. Melakukan tugas perdamaian
+22. Perdagangan dan penggunaan Narkoba di kalangan remaja merupakan ancaman bagi kelangsungan hidup bangsa terutama karena ...
+a. Mengancam kedaulatan Negara
+b. Mengancam keutuhan wilayah Negara
+c. Mengancam keselamatan warga Negara
+d. Menurunkan kewibawaan dan citra bangsa
+23. Ketetapan MPR nomor VI/MPR/2000 merupakan kebijakan baru bidang pertahanan dan keamanan yang mengatur tentang .....
+a. Pemisahan TNI dan POLRI
+b. Peran TNI dan POLRI
+c. Mekanisme peran warga negara dalam bela Negara
+d. Peran warga negara dalam pertahanan negara
+24. Pada tahun 1961 dibentuk lembaga / organisasi yang berkaitan dengan upaya pembelaan negara yaitu ..
+a. Kelaskaran yang kemudian berkembang menjadi barisan cadangan
+b. Pager desa dan mobilisasi pelajar
+c. Perwira cadangan
+d. Pertahanan sipil
+25. Pertahanan Sipil sebagai kekuatan pokok perlindungan masyarakat merupakan bentuk berpartisipasi rakyat secara langsung dalam ...
+a. Bidang keamanan dan ketertiban masyarakat
+b. Menghadapi ancaman pertahanan Negara
+c. Menghadapi akibat bencana alam dan keadaan luar biasa
+d. Menghadapi penegakan hukum
+26. Menjaga dan melindungi kedaulatan negara, keutuhan wilayah negara, dan keselamatan bangsa dari segala bentuk ancaman meruapakan ...
+a. Prinsip pertahanan Negara
+b. Tujuan pertahanan Negara
+c. Pengertian pertahanan Negara
+d. Hakekat pertahanan negara
+27. Di bawah ini yang tidak termasuk pengabdian sesuai profesi dalam penyelenggaraan upaya bela negara yaitu ...
+a. Tim SAR
+b.Dokter dan tenaga medis lainnya
+c. Resimen Mahasiswa
+d.POLRI
+28. Undang-undang nomor 29 tahun 1954 berkaitan dengan upaya belana negara yang mengatur tentang ...
+a. Pokok-pokok pertahanan Negara
+b. Pertahanan dan keamanan rakyat yang bersifat semesta
+c. Mekanisme upaya bela negara melalui kegiatan pertahanan Negara
+d. Pokok-pokok perlawanan rakyat
+29. Menurut UU nomor 3 tahun 2002, ancaman militer dapat berbentuk ....Kecuali ..
+a. Spionase untuk mendapatkan rahasia militer
+b. Gerakan separatis dan kerusuhan yang melibatkan masyarakat
+c. Perang saudara antar kelompok dengan menggunakan senjata
+d. Aksi teror bersenjata oleh jaringan terorisme internasional
+30. Pecalang yang dibentuk berdasarkan adat daerah merupakan…
+a. Organisasi pertahanan di Bali
+b. Organisasi dalam bidang pariwisata di Bali
+c. Lembaga adat urusan keamanan di Bali
+d. Lembaga adat urusan karya seni di Bali</h2><br />
+                        20.B<br />21.D<br />singkat ajalah capekk!!! <br />
+                                            <h2 class="ez-toc-section" id="1-pemerintah-indonesia-dan-thailand-sepakat-meningkatkan-kerja-sama-di-bidang-pertanian-terutama-alih-teknologi-informasi-dan-teknologi-perdagangan-pelatihan-teknik-dan-penelitian-dalam-bidang-pe">
+                            14. 1.	Pemerintah Indonesia dan Thailand sepakat meningkatkan kerja sama di bidang pertanian, terutama alih teknologi informasi dan teknologi, perdagangan, pelatihan, teknik dan penelitian dalam bidang pertanian. Kesepakatan itu dituangkan dalam MOU yang ditandatangani oleh Menteri Pertanian dari kedua negara. Kerja sama antara Indonesia dan Thailand ini termasuk dalam kerja sama .... *10 poina. Multilateralb. Regionalc. Bilaterald. ASEAN2.	Tujuan kerja sama negara anggota ASEAN dalam bidang IPTEK adalah .... *10 poina. mewujudkan perdamaian di kawasan ASEANb. meningkatkan sumber daya manusia yang memiliki kualitas dan daya saing duniac. memperbaiki kualitas pendidikan masyarakat ASEANd. mengembangkan sektor pariwisata negara-negara ASEAN3.	Untuk mempercepat pertumbuhan ekonomi, perdamaian, dan stabilitas sosial merupakan .... *10 poina. Prinsip ASEANb. Tujuan ASEANc. Azas ASEANd. Perkembangan ASEAN4.	Contoh kerjasama ASEAN di bidang pendidikan adalah .... *10 poina. Pemberantasan narkoba di ASEANb. Pementasan tari tradisional negara-negara ASEANc. Pemberian beasiswa dosen untuk berkuliah di negara ASEANd. Pelatihan militer bersama5.	Manfaat kerjasama ASEAN di bidang budaya adalah .... *10 poina. Menjaga stabilitas ekonomi negara-negara anggotab. Mengurangi perselisihan antara negara-negara ASEANc. Memberi kesempatan bagi para atlet untuk berprestasid. Melestarikan dan memperkenalkan budaya ke negara-negara lain6.	Contoh kerjasama ASEAN di bidang teknologi adalah .... *10 poina. Pengembangan jaringan kota pintar ASEANb. Pemberian bantuan dan sumbangan bagi korban bencana alamc. Pertukaran pelajard. Perjanjian ekstradisi7.	Manfaat kerjasama ASEAN di bidang ekonomi adalah .... *10 poina. Meningkatkan pendapatan penduduk di negara-negara anggotab. Meningkatkan kesehatan penduduk di negara-negara anggotac. Menjaga stabilitas keamanan kawasan Asia Tenggarad. Mengurangi pengaruh budaya barat8.	Berikut ini adalah tujuan berdirinya ASEAN, kecuali .... *10 poina. Mempercepat pertumbuhan ekonomi dan kemajuan sosial budaya di Asia tenggarab. Memajukan perdamaian dan stabilitas kawasan dengan tetap menghormati keadilan dan penegakan hukumc. Memajukan persiapan perang negara-negara ASEAN melawan penjajah dari kawasan Benua Asiad. Memajukan kerjasama dalam bidang IPTEK9.	Pembentukan kelompok peneliti antarnegara merupakan salah satu kerjasama ASEAN di bidang ....*10 poina. Politikb. Ekonomic. Sosiald. Pendidikan10.	Manfaat pengembangan kota pintar (Smart City) ASEAN adalah .... *10 poina. Menjaga situasi keamananb. Meningkatkan kesehatan pendudukc. Meningkatkan penguasaan teknologid. Mengurangi pencemaran lingkungan​</h2><br />
+                        <strong>Bentuk kerjasama dari adanya kerjasama antara Indonesia dengan Thailand dalam bidang pertanian adalah kerjasama </strong>(C) bilateral.<strong>Yang menjadi tujuan kerjasama ASEAN dalam bidang ilmu pengetahuan dan teknologi adalah </strong>(C) memperbaiki kualitas pendidikan masyarakat ASEAN.<strong>Mempercepat pertumbuhan ekonomi dan menciptakan kawasan Asia Tenggara yang damai dan stabil adalah </strong>(B) tujuan ASEAN.<strong>Salah satu contoh kerjasama ASEAN dalam bidang pendidikan adalah </strong>(C) pemberian beasiswa dosen untuk berkuliah di negara ASEAN.<strong>Yang merupakan manfaat dari kerjasama ASEAN dalam bidang budaya adalah </strong>(D) melestarikan dan memperkenalkan budaya ke negara-negara lain.<strong>Yang merupakan contoh kerjasama ASEAN di bidang teknologi adalah </strong>(A) pengembangan jaringan kota pintar ASEAN.<strong>Yang merupakan manfaat dari kerjasama ASEAN di bidang ekonomi adalah </strong>(A) meningkatkan pendapatan penduduk di negara-negara anggota ASEAN.<strong>Yang bukan tujuan berdirinya ASEAN adalah </strong>(C) memajukan persiapan perang negara ASEAN melawan penjajah dari kawasan benua Asia.<strong>Bidang yang terpengaruh dari adanya pembentukan kelompok peneliti antarnegara ASEAN adalah </strong>(D) pendidikan.<strong>Manfaat dari adanya pengembangan kota pintar ASEAN adalah </strong>(C) meningkatkan penguasaan teknologi.<p><strong></strong></p><strong>Pembahasan</strong><p><strong>Pada nomor 1, pilihan (A), (B), dan (D) </strong><strong>salah</strong><strong> karena:</strong></p><strong>Pilihan (A): </strong>multilateral adalah kerjasama yang diadakan oleh lebih dari 2 negara tanpa melihat letak geografis dari negara-negaranya, contohnya adalah PBB.<strong>Pilihan (B): </strong>regional adalah kerjasama yang dilakukan oleh lebih dari 2 negara yang memiliki kesamaan letak geografis, contohnya adalah ASEAN.<strong>Pilihan (D): </strong>ASEAN adalah contoh dari kerjasama regional.<p><strong>Pada nomor 5, pilihan (A) </strong><strong>salah</strong><strong> karena </strong>merupakan manfaat kerjasama ASEAN dalam bidang ekonomi,<strong> pilihan (B) </strong><strong>salah</strong><strong> karena </strong>merupakan manfaat kerjasama ASEAN dalam bidang politik keamanan, dan<strong> pilihan (C) </strong><strong>salah</strong><strong> karena </strong>merupakan manfaat kerjasama ASEAN dalam bidang sosial budaya.</p><p><strong>Pada nomor 7, pilihan (B) </strong><strong>salah</strong><strong> karena</strong> merupakan bentuk manfaat kerjasama ASEAN dalam bidang kesehatan,<strong> pilihan (C) </strong><strong>salah</strong><strong> karena </strong>merupakan manfaat kerjasama ASEAN dalam bidang keamanan, dan <strong>pilihan (D) </strong><strong>salah</strong><strong> karena </strong>merupakan manfaat kerjasama ASEAN dalam bidang budaya.</p><p><strong></strong></p><strong>Pelajari lebih lanjut</strong><p>Materi tentang bentuk kerjasama ASEAN dalam bidang politik</p><p>https://brainly.co.id/tugas/43610974</p><p>Materi tentang bentuk kerjasama ASEAN dalam bidang sosial budaya</p><p>https://brainly.co.id/tugas/28744817</p><p>Materi tentang tujuan berdirinya ASEAN</p><p>https://brainly.co.id/tugas/28333947</p><p><strong></strong></p><strong>Detail jawaban</strong><p><strong>Kelas: </strong>9</p><p><strong>Mapel: </strong>PPKn</p><p><strong>Bab: </strong>3 - Dampak Globalisasi dalam Kehidupan</p><p><strong>Kode:</strong> 9.9.3</p><p></p><p><strong>#AyoBelajar </strong></p><br />
+                                            <h2 class="ez-toc-section" id="1-upaya-mitigasi-bencana-gempabumi-dengan-prinsip-pembuatan-rumah-tahan-gempa-melalui-a-%e2%80%8brumah-sederhana-berbentuk-panggungb-%e2%80%8bbahan-bangunan-sekuat-mungkinc-%e2%80%8bkonstruksi">
+                            15. 1. Upaya mitigasi bencana gempabumi dengan prinsip pembuatan rumah tahan gempa melalui ....
+A.​rumah sederhana berbentuk panggung
+B.​bahan bangunan sekuat mungkin
+C.​konstruksi penahan beban harus memadai
+D.​struktur pondasi sangat dalam dari bata merah
+E.​struktur pondasi cakar ayam yang kuat
+​
+2. Prinsip pengelolaan hutan berdasarkan prinsip pembangunan berkelanjutan adalah ....
+A.​melakukan pemanfaatan dan membiarkan hutan tanpa sentuhan
+B.​menindak pelaku pengerusakan dan pembajakan kawasan hutan
+C.​memberi kebebasan dalam mengeksploitasi hutan dan lingkungan
+D.​menjamin ketersediaan di masa kini dan masa yang akan datang
+E.​mengutamakan efektifitas dan efisiensi dalam pengelolaan hutan
+3. Pernyataan:
+(1)​tanah subur dan sumber air melimpah;
+(2)​kenyamanan dan keamanan tempat tinggal;
+(3)​memperbaiki jaringan transportasi;
+(4)​kekeringan dan paceklik di desa;
+(5)​generasi muda memajukan pendidikan.
+​Faktor pendorong interaksi desa dan kota terdapat pada angka ....
+A.​(1), (2), dan (3)
+B.​(1), (2), dan (4)
+C.​(1), (3), dan (5)
+D.​(2), (4), dan (5)
+E.​(3), (4), dan (5)
+4. Karakteristik wilayah:
+(1)​memiliki garis pantai yang panjang;
+(2)​morfologi pegunungan di pesisir;
+(3)​merupakan negara kepulauan;
+(4)​memiliki laut dengan palung yang dalam dan ombak yang besar;
+(5)​terletak di antara Samudera Pasifik dan Samudera Hindia.
+​Karakteristik wilayah yang tepat sebagai pendukung poros maritim dunia terdapat pada angka ....
+A.​(1), (2), dan (3)
+B.​(1), (3), dan (4)
+C.​(1), (3), dan (5)
+D.​(2), (3), dan (4)
+E.​(3), (4), dan (5)
+​</h2><br />
+                        1. B. bahan bangunan sekuat mungkin<br />2. B. menindak pelaku pengerusakan dan pembajakan hutan<br />3. A. 1, 2 dan 3<br />4. C. 1, 3 dan 5<br /><br />Jadiin jawaban terbaik dan likee yaa<br />
+                                            <h2 class="ez-toc-section" id="berikut-yang-bukan-merupakan-ciri-ciri-limbah-keras-4-poina-mudah-diurai-di-dalam-tanahb-tidak-mudah-berubah-bentukc-sulit-diolahd-berwujud-keras-serta-padatpertanyaan-ini-wajib-diisipe">
+                            16. Berikut yang bukan merupakan ciri-ciri limbah keras... *
+4 poin
+A. Mudah diurai di dalam tanah
+B. Tidak mudah berubah bentuk
+C. Sulit diolah
+D. Berwujud keras serta padat
+Pertanyaan ini wajib diisi
+Perkembangan sistem informasi tersaji dalam periode-periode berikut, kecuali... *
+4 poin
+A. 3000 SM
+B. 2900 SM
+C. 500 SM
+D. 4500 SM
+Sebelum diolah menjadi bahan kerajinan, limbah keras tentu saja harus terlebih dahulu melalui beberapa proses. Berikut yang bukan merupakan proses pendahuluan pengolahan limbah keras *
+4 poin
+A. Sanitasi
+B. Pembakaran
+C. Penghancuran
+D. Reboisasi
+Berikut yang bukan merupakan prinsip pengolahan limbah keras *
+4 poin
+A. Reduce
+B. Reuse
+C. Redundant
+D. Recycle
+Pada masa ini, bangsa Cina berhasil menemukan kertas. Kertasyang ditemukan adalah kertas yang kita kenal sekarang. Kertas inidibuat dari serat bambu yang dihaluskan, disaring, dicuci, kemudiandiratakan dan dikeringkan. Penemuan ini juga memungkinkan sistempencetakan yang dilakukan dengan menggunakan blok kayu yangditoreh dan dilumuri dengan tinta. Sistem ini sekarang dikenal denganistilah sistem cap. berikut merupakan Perkembangan sistem informasi tersaji dalam periode-periode keberapa ... *
+4 poin
+A. 3000 SM
+B. 105 SM
+C. 2900 SM
+D. 500 SM
+Beberapa alat komunikasi tradisionalpada masa kuno sebagai berikut, KECUALI.... *
+4 poin
+A. kentongan, lonceng
+B. daun lontar,prasasti
+C. burung merpati, terompet keong
+D. pesan suara, telegram
+Dahulu bunyi ini digunakansebagai alat komunikasi untuk menandai dimulai atau berakhirnya kegiatan-kegiatan tertentu, bunyi ini berasal dari alat .... tradisional *
+4 poin
+A. kentongan, lonceng
+B. daun lontar, prasasti
+C. terompet dari tanduk hewan
+D. terompet dari bahan lunak
+Piktografi digunakan pada masa.... dan didaerah mana ?.... *
+4 poin
+3000 SM. di sumeria
+2900 SM di Sumeria
+105 SM di aceh
+5000 SM di Indonesia
+Penemuan radio diawali dengan ditemukannya gelombang radiooleh Heinrich Herzt pada tahun.... *
+4 poin
+1886 tahun
+1887 tahun
+1889 tahun
+1897 tahun
+peralatan komunikasi yang digunakan untuk mengirim dokumen dengan menggunakan suatu perangkatyang mampu beroperasi melalui jaringan telepon dengan hasil yang sangat serupa dengan aslinya. pada masa modrn apa nama alat komunikasi ini ? *
+4 poin
+surat kabar/koran
+televisi/radio
+faksimili
+telegram
+Alat ini biasa digunakan oleh satuankepolisian, tentara, dan juga pihak satuan pengaman (satpam). alat ini disebut ?.... *
+4 poin
+handphone
+handy talky
+voice note
+pesan suara dengan whatsapp
+yang digunakan untuk mencengkram dan memotongbenda.... *
+4 poin
+obeng,
+pisau, palu
+gergaji, gunting seng
+tang, gunting
+Bel menghasilkan bunyi dengan bantuan arus listrik DC. Alat ini memerlukanbaterai. Bahan yang digunakan diambil dari lingkungan sekitar. apa saja bahan alat utama yang dibutuh kan ?.... *
+4 poin
+palu, gergaji, gunting seng, dan meteran
+ketam, palu obeng, sekru
+pisau, ketam, meteran,
+semua benar
+yang tidak termasuk hewan ternak kesayangan adalah... *
+4 poin
+kucing, kelinci
+hamster, burung merpati
+lintah, cacing
+kerbau, sapi
+yang harus diperhatikan dalam memelihara ternak hewan kesayangan adalah.... *
+4 poin
+pakan
+kandang
+obat-obatan, nutrisi
+semua benar
+Sehubungan dengan masalah kesehatan, beberapa hal harus diperhatikan,yaitu: kecuali.... *
+4 poin
+lahan yang hendak didirikan kandang harus bebas dari penyakit menular,
+kandang harus kuat, aman, nyaman, dan bebas penyakit;
+periksa kesehatan ternak yang baru dibeli.
+jaga kandang dan lingkungannya agar selalu lembab, dan banyak hama.
+Keuntungan menggunakan serbuk kayu pada pemeliharaan hamster ialah.... kecuali *
+4 poin
+Berfungsi sebagai alas kandang agar hamster bisa lebih nyaman dan empuk
+sebagai penghangat bagi hamster terutama di saat udara sedang dingin
+supaya lebih hemat
+Sebagai bahan untuk membuat sarang.
+Berikut ini diuraikan pengertian dari serealia, kacang-kacangan, dan umbi, Serealia adalah jenis tumbuhan golongan tanaman padi-padian/rumput-rumputan (Gramineae) yang dibudidayakan untuk menghasilkanbulir-bulir berisi biji-bijian sebagai sumber karbohidrat/pati. Biji tumbuhanserealia adalah buah tipe khusus yang disebut.... *
+4 poin
+karyopsis
+kandum
+kacang merah
+beras merah
+jenis serealia yang menjadi bahan pokok kita adalah .... *
+4 poin
+beras
+oatmeal
+beras meras
+kandum
+pengoahan yang baik akan menghasilkan makanan yang baik pula, sebagian orang mengenal bahan serealia yang sangat baik untuk orang penderita penyakit gula adalah .... *
+4 poin
+beras putih
+beras merah
+beras hitam
+semua benar
+Jagung merupakan tanaman semusim(annual). Satu siklus hidupnya diselesaikan dalam waktu berapa lama... *
+4 poin
+80-150 hari
+80-280 hari
+80-360 hari
+50-100 hari
+Beberapa manfaat gandumbagi kesehatan tubuh sebagai berikut. kecuali.... *
+4 poin
+Mengonsumsi gandum akan membuat tubuh merasa kenyang lebih lama.
+Mengonsumsi gandum secara teratur akan menurunkan kadar kolesterol dalam tubuh.
+Mengonsumsi gandum dengan berlebihan dapat menurunkan berat badan
+ Tolong donggg:)</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>A. mudah diurai di dalam tanah</p><p>D. reboisasi</p><p>C. Redundant</p><p>D. telegram pesan suara</p><p>C. terompet dari tanduk hewan</p><p><strong>Penjelasan:</strong></p><p>maaf kalau salah</p><br />
+                                            <h2 class="ez-toc-section" id="dalam-sistem-keamanan-jaringan-seseorang-tidak-bisa-mengelak-mengenai-aktivitas-yang-dilakukan-dalam-jaringan-prinsip-ini-disebuta-akses-kontrolb-integrityc-non-repudiationd-authentificatione-v">
+                            17. Dalam sistem keamanan jaringan seseorang tidak bisa mengelak mengenai aktivitas yang dilakukan dalam jaringan. Prinsip Ini Disebut?A. Akses KontrolB. IntegrityC. Non RepudiationD. AuthentificationE. Verification​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>A. Akses kontrol</p><p><strong>Penjelasan:</strong></p><p>Maap klau slah</p><p><strong>Jawaban:</strong></p><p>A</p><p><strong>Penjelasan:</strong></p><p>bhdhdhhdhdh</p><p></p><p>maaf klo salah</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-siswa-dapat-berperan-serta-dalam-melestarikan-tumbuhan-dengan-cara-a-menanam-padi-di-sawahb-memangkas-rumput-liarc-menebang-pohon-di-hutand-menanam-bunga-di-taman-sekolah2-lahan-pertan">
+                            18. 1.Siswa dapat berperan serta dalam melestarikan tumbuhan dengan cara ... *
+A. menanam padi di sawah
+B. memangkas rumput liar
+C. menebang pohon di hutan
+D. menanam bunga di taman sekolah
+2.Lahan pertanian atau perkebuan di daerah miring, seperti perbukitan sebaiknya dibuat ..... untuk mencegah terjadinya erosi dan longsor *
+A. sedimentasi
+B. hutan bakau
+C. tembok beton
+D. sengkedan
+3.Cara penangkapan ikan yang tidak diperbolehkan adalah menggunakan ... *
+A. jaring
+B. pancing
+C. keramba
+D. bahan peledak
+4.Peristiwa abrasi dipengaruhi oleh ...
+A. air laut
+B. air hujan
+C. gelombang bumi
+D. gelombang laut
+5.Untuk menjaga keseimbangan alam, penebangan pohon di hutan harus disertai dengan usaha ... *
+A. pengerajin kayu
+B. penanaman kembali
+C. pengangkutan dengan teratur
+D. pengamanan hutan dari pencuri kayu
+6.Kayu sebagai bahan dasar pembuatan kertas adalah contoh sumber daya alam yang dapat ditemukan di ... *
+A. laut
+B. sungai
+C. hutan
+D. danau
+7.Untuk membajak sawah, pertanian dengan teknologi tradisional memanfaatkan tenaga ... *
+A. manusia
+B. mesin
+C. kerbau
+D. angin
+8.Berikut ini yang bukan termasuk teknik pengawetan makanan adalah ... *
+A. pengasinan
+B. pembakaran
+C. pengalengan
+D. penggunaan bahan pengawet
+9.Teknologi berikut yang tergolong tepat untuk menangkap ikan adalah menggunakan ... *
+A.jala
+B.pukat harimau
+C.bahan peledak
+D.racun
+10.Sumber daya alam berikut yang dapat dimanfaatkan secara langsung adalah ... *
+A. minyak bumi
+B. air
+C. pohon
+D. tanah
+11.Sampah yang dapat dimanfaatkan sebagai pupuk kompos adalah sampah ... 
+A. plastik
+B. kertas
+C. kaleng
+D. daun
+12.Mengurangi atau menghemat pemakaian barang-barang yang ada di sekitar dapat mengurangi jumlah sampah. Hal tersebut merupakan contoh prinsip pengolahan sampah ... *
+A. reuse
+B. recycle
+C. reduce
+D. reform
+13.Lingkungan yang rusak akan mendatangkan ... *
+A. keuntungan bagi para pengusaha
+B. hasil alam yang melimpah
+C. kekayaan alam
+D. bencana alam
+14.Sampah basah disebut juga sampah ... *
+A.organik
+B. beracun
+C. anorganik
+D. berbahaya
+15.Sampah anorganik dapat diolah dengan cara ... *
+A. menimbun di tanah
+B.menjadikan pupuk kompos
+C. mencampurkannya pada media tanah
+D. menggunakan menjadi benda yang bernilai ekonomis
+16.Berikut ini yang bukan merupakan penyebab kepunahan hewan adalah ... *
+A. penangkaran hewan dan reboisasi
+B. perburuan liar dan perusakan habitat
+C. kebakaran hutan dan pencemaran sungai
+D. perluasan pertanian dan pencemaran laut
+17.Jika nelayan menangkap ikan dengan menggunakan racun, hal tersebut dapat membahayakan manusia karena ... *
+A. ikan yang dimakan tetap segar
+B. bentuk ikan menjadi berubah
+C. rasa daging ikan menjadi tidak enak
+D. ikan tidak mengandung racun tetapi air tempat hidup ikan tersebut mengandung racun
+18.Salah satu cara memulihkan hutan gundul adalah dengan cara ... *
+A. pengerikan
+B. pengerukan
+C. penghijauan
+D. pemupukan
+19.Laut menghasilkan sumber daya alam berupa ... *
+A. pohon bakau
+B.kayu mahoni
+C. ikan
+D.padi</h2><br />
+                        <p><strong>Jawaban:</strong></p>DDDABCCD ABDBDADACCC<p><strong>Penjelasan:</strong></p><p></p><p>jadikan jawaban terbaik yaaa</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/egoJ7sTrjPw?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>fisika</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/berikut-contoh-pendekatan-konsep-ruang-terkait-masa-praaksara-adalah.html">Berikut Contoh Pendekatan Konsep Ruang Terkait Masa Praaksara Adalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/soal-kerajinan-bahan-lunak.html">Soal Kerajinan Bahan Lunak</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/skema-daur-hidup-lumut.html">Skema Daur Hidup Lumut</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/tentukan-semua-bilangan-prima-yang-terletak-diantara-dua-bilangan-berikut.html">Tentukan Semua Bilangan Prima Yang Terletak Diantara Dua Bilangan Berikut</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/soal-cerita-matematika-kelas-1-sd-penjumlahan-dan-pengurangan.html">Soal Cerita Matematika Kelas 1 Sd Penjumlahan Dan Pengurangan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/pada-bioteknologi-modern-yang-diandalkan-adalah.html">Pada Bioteknologi Modern Yang Diandalkan Adalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/penilaian-drama.html">Penilaian Drama</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/komponen-air-service-unit.html">Komponen Air Service Unit</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/wujud-dari-nilai-persamaan-derajat-yaitu.html">Wujud Dari Nilai Persamaan Derajat Yaitu</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/300m-menit-cm-detik.html">300m Menit Cm Detik</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/power-point-bioteknologi-kelas-9.html">Power Point Bioteknologi Kelas 9</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/pernyataan-umum-dan-aspek-yang-dilaporkan-merupakan-struktur-dari-teks.html">Pernyataan Umum Dan Aspek Yang Dilaporkan Merupakan Struktur Dari Teks</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/alat-gerak-manusia-kelas-5-sd.html">Alat Gerak Manusia Kelas 5 Sd</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/tulisan-aksara-jawa-ing.html">Tulisan Aksara Jawa Ing</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/urutan-struktur-teks-persuasif-yang-tepat-adalah.html">Urutan Struktur Teks Persuasif Yang Tepat Adalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/gambar-lompat-jauh-gaya-jongkok.html">Gambar Lompat Jauh Gaya Jongkok</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/komunitas-belajar.html">Komunitas Belajar</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/jawaban-yang-tepat-untuk-mengganti-huruf-x-dan-y-adalah.html">Jawaban Yang Tepat Untuk Mengganti Huruf X Dan Y Adalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/energi-kimia-menjadi-panas.html">Energi Kimia Menjadi Panas</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/mewarnai-gambar-nahkoda-kapal.html">Mewarnai Gambar Nahkoda Kapal</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://organicstudy.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://organicstudy.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

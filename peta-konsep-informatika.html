@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Peta Konsep Informatika - QnA</title>
+    <meta name="description" content="Peta Konsep Informatika, PETA KONSEP INFORMATIKA, , , , Rusdi Surahman, 2020-09-23T05:54:32.000000Z, 20, Perancangan Konsep Basis Data - Mari Belajar - Materi, Soal, Jawaban, www.maribelajar.web.id, 1600 x 1310, png, , 20, peta-konsep-informatika, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Peta Konsep Informatika - QnA" />
+    <meta property="og:description" content="Peta Konsep Informatika, PETA KONSEP INFORMATIKA, , , , Rusdi Surahman, 2020-09-23T05:54:32.000000Z, 20, Perancangan Konsep Basis Data - Mari Belajar - Materi, Soal, Jawaban, www.maribelajar.web.id, 1600 x 1310, png, , 20, peta-konsep-informatika, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Peta Konsep Informatika - QnA" />
+    <meta name="twitter:description" content="Peta Konsep Informatika, PETA KONSEP INFORMATIKA, , , , Rusdi Surahman, 2020-09-23T05:54:32.000000Z, 20, Perancangan Konsep Basis Data - Mari Belajar - Materi, Soal, Jawaban, www.maribelajar.web.id, 1600 x 1310, png, , 20, peta-konsep-informatika, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://organicstudy.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://organicstudy.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://organicstudy.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://organicstudy.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://organicstudy.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Peta Konsep Informatika</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">Zihan0809</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Peta+Konsep+Informatika" alt="Peta Konsep Informatika">
+                    </div>
+                    <p></p>
+                    <p>Konsep informatika apa yang terkandung dalam setiap aktivitas?​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#konsep-informatika-apa-yang-terkandung-dalam-setiap-aktivitas%e2%80%8b">1.
+                                            Konsep informatika apa yang terkandung dalam setiap aktivitas?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-konsep-dasar-dari-informatika%e2%80%8b">2.
+                                            Tuliskan konsep dasar dari informatika​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#informatika-mempunyai-3-konsep-sebutkan%e2%80%8b">3.
+                                            informatika mempunyai 3 konsep sebutkan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#catatlah-dalam-buku-kerja-kalian-konsep-informatika-apa-yang-terkandung-dalam-setiap-aktivitas-tolong-bntu-jawab-ya%e2%80%8b">4.
+                                            Catatlah dalam buku kerja kalian, konsep informatika apa yang terkandung dalam setiap aktivitas! tolong bntu jawab ya​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mata-pelajaran-informatika-diharapkan-menumbuhkembangkan-siswa-menjadi-computationally-literate-creators-yang-menguasai-konsep-dan-praktik-informatika-yaitu%e2%80%8b">5.
+                                            Mata pelajaran Informatika diharapkan menumbuhkembangkan siswa menjadi "computationally literate creators" yang menguasai konsep dan praktik Informatika, yaitu​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#catatlah-dalam-buku-kerja-kalian-konsep-informatika-apa-yang-terkandungdalam-setiap-aktivitastolong-bntu-jawab-ya%e2%80%8b">6.
+                                            Catatlah dalam buku kerja kalian, konsep informatika apa yang terkandungdalam setiap aktivitas!tolong bntu jawab ya​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#informatika-memiliki-konsep-dasar-teori-dan-perkembangan-aplikasi-tersendiri-yang-di-sebut-%e2%80%8b">7.
+                                            informatika memiliki konsep dasar, teori, dan perkembangan aplikasi tersendiri yang di sebut....​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apakah-jurusan-informatika-sama-dengan-teknik-informatika%e2%80%8b">8.
+                                            apakah jurusan Informatika sama dengan teknik Informatika?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ruang-lingkup-informatika-yang-mempelajari-konsep-matematis-dari-suatu-informasi-adalah-aspek">9.
+                                            Ruang lingkup informatika yang mempelajari konsep matematis dari suatu informasi adalah aspek ..... </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#alat-yang-digunakan-secara-visual-mewakili-hubungan-antara-konsep-dan-ide-dapat-menggambarkan-sebab-dan-akibat-persyaratan-dan-kontribusi-antar-unsur-mengembangkan-pemikiran-logis-dan-membedah-sis">10.
+                                            Alat yang digunakan secara visual mewakili hubungan antara konsep dan ide, dapat menggambarkan sebab dan akibat, persyaratan, dan kontribusi antar unsur, mengembangkan pemikiran logis dan membedah sistem yang kompleks, serta mengaktualisasikan ide-ide spesifik dalam topik yang lebih besar. Hal tersebut merupakan penjabaran secara luas dari…..a.Informatikab.Presentasic.Peta Konsepd.Infografise.Sistem computer​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#alasan-yang-mendukung-bahwa-informatika-telah-menjadi-salah-satu-disiplin-ilmu-yang-tersendiri-adalah-a-informatika-membawa-seseorang-kedalam-suatu-cara-berfikir-yang-unik-dan-berbeda-dari-bidang-ilm">11.
+                                            alasan yang mendukung bahwa informatika telah menjadi salah satu disiplin ilmu yang tersendiri adalah A. informatika membawa seseorang kedalam suatu cara berfikir yang unik dan berbeda dari bidang ilmu lainnya B. ide-ide dan konsep informatika sudah berisi lebih dari 20 tahun dan terpakai sampai sekarang C. setiap prinsip inti diajarkan tanpa bergantung pada teknologi tertentu D. semua pernyataan benar​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#alasan-yang-mendukung-bahwa-informatika-telah-menjadi-salah-satu-disiplin-ilmu-yang-tersendiri-adalah-a-informatika-membawa-seseorang-ke-dalam-suatu-cara-berfikir-yang-unik-dan-berbeda-dari-bidang">12.
+                                            Alasan yang mendukung bahwa informatika telah menjadi salah satu disiplin ilmu yang tersendiri adalah...A. informatika membawa seseorang ke dalam suatu cara berfikir yang unik dan berbeda dari bidang ilmu lainnyaB. Ide-ide dan konsep informatika sudah berusia lebih dari 20 tahun dan terpakai sampai sekarangC. setiap prinsip inti diajarkan tanpa bergantung pada teknologi tertentuD. Informatika merupakan ilmu baru​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#perbedaan-informatika-dan-teknik-informatika">13.
+                                            Perbedaan informatika dan teknik informatika</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#manfaat-dan-implementasi-dari-konsep-pendidikan-khusus-untuk-dunia-bidang-teknik-informatika">14.
+                                            Manfaat dan implementasi dari konsep pendidikan khusus untuk dunia bidang teknik informatika</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-serta-jelaskan-keuntungan-dan-kerugian-penerapan-konsep-%e2%80%98gesekan%e2%80%99dalam-bidang-teknik-informatika-masing-masing-3-contoh">15.
+                                            Sebutkan serta jelaskan keuntungan dan kerugian penerapan konsep ‘Gesekan’
+dalam bidang Teknik Informatika (masing-masing 3 contoh!</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-apa-yang-dimaksud-informatika2-ruang-lingkup-informatika-yang-mempelajari-konsep-matematis-dari-suatu-informasi-adalah-aspek3-sebutkan-hal-hal-yang-dilakukan-dalam-presentasitolong-dijawab">16.
+                                            1. Apa yang dimaksud informatika?
+2. Ruang lingkup informatika yang mempelajari konsep matematis dari suatu informasi adalah aspek?
+3. Sebutkan hal-hal yang dilakukan dalam presentasi!
+Tolong dijawab ya, klo bener aku follow
+@evaagustriana</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#setelah-konsep-ini-akan-kalian-pelajari-dalam-program-kedua-hanya-mengacu-tanpa-membawa-objek-yang-saling-merupakan-dua-konsep-yang-penting-dalam-informatika-konsep-yang-kedua-akan-menjadi-dasar-untuk">17.
+                                            setelah Konsep ini akan kalian pelajari dalam program kedua hanya mengacu tanpa membawa objek yang saling merupakan dua konsep yang penting dalam Informatika konsep yang kedua akan menjadi dasar untuk belajar pointer​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#salah-satu-pilar-informatika-yang-mana-mempelajari-menyelesaikan-persoalan-persoalan-sehari-hari-yang-di-baliknya-mengandung-berbagai-macam-konsep-keilmuan-seperti-informatika-matematika-sains-atau-il">18.
+                                            salah satu pilar Informatika yang mana mempelajari menyelesaikan persoalan-persoalan sehari-hari yang di baliknya mengandung berbagai macam konsep keilmuan seperti Informatika matematika sains atau ilmu sosial adalah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-perbedaan-teknik-informatika-dan-sistem-informatika">19.
+                                            Apa perbedaan teknik informatika dan sistem informatika</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-itu-teknik-informatika-dan-apa-saja-yang-di-pelajari-di-teknik-informatika">20.
+                                            Apa itu teknik informatika dan apa saja yang di pelajari di teknik informatika?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#computational-thinking-ct-pada-dasarnyabisa-dikatakan-mampu-melandasi-sebuahkonsep-utama-yaitu-a-konsep-ambiguitasb-konsep-informatika%d1%81-konsep-kompleksitasd-konsep-retorikadon-nis">21.
+                                            Computational Thinking (CT) pada dasarnyabisa dikatakan mampu melandasi sebuahkonsep utama yaitu ....a. konsep ambiguitasb. konsep informatikaС. konsep kompleksitasd. konsep retorikadon Nis​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#gambar-konsep-informatika-tolong-yang-bisa-bantu-jawab%e2%80%8b">22.
+                                            gambar konsep informatika.tolong yang bisa bantu jawab?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-menyelesaikan-persoalan-sehari-hari-dengan-konsep-informatika-matematika-atau-ilmu-sosial-merupakan-bidang-pengetahuan-a-praktik-lintas-bidang-berpikir-komputasional-b-c-dampak-sosial-infor">23.
+                                            1. Menyelesaikan persoalan sehari-hari dengan konsep informatika, matematika atau ilmu sosial merupakan bidang pengetahuan.... a. praktik lintas bidang berpikir komputasional b. c. dampak sosial informatika d. algoritma dan pemrograman​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#setelah-mempelajari-setiap-elemen-informatika-di-kelas-7-apakah-kalian-dapat-membuat-peta-pikiran-yang-berisikan-elemen-elemen-tersebut-menjadi-pengetahuan-yang-untuh%e2%80%8b">24.
+                                            Setelah mempelajari setiap elemen informatika di kelas 7 Apakah kalian dapat membuat peta pikiran yang berisikan elemen-elemen tersebut menjadi pengetahuan yang untuh?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#uraikan-bahwa-computational-thingking-melandasi-konsep-informatika-%e2%80%8b">25.
+                                            uraikan bahwa computational thingking melandasi konsep informatika....​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-tujuh-aspek-praktik-lintas-bidang-dalam-konsep-kurikulum-informatika">26.
+                                            Sebutkan tujuh aspek praktik lintas bidang dalam konsep kurikulum informatika</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ruang-lingkup-informatika-yang-mempelajari-konsep-matematis-dari-suatu-informasi-adalah-aspek">27.
+                                            Ruang lingkup informatika yang mempelajari konsep matematis dari suatu informasi adalah aspek</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-dan-berikan-contoh-penggunaan-peta-dalam-teknologi-informatika%e2%80%8b">28.
+                                            Jelaskan dan berikan contoh penggunaan peta dalam teknologi informatika​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mengapa-konsep-pendidikan-informatika-berbeda-dengan-pendidikan-tik%e2%80%8b">29.
+                                            Mengapa konsep pendidikan Informatika berbeda dengan pendidikan tik​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-peran-konsep-event-dalam-suatu-objekinformatika-kelas-7mohon-bantuannya-nya-ya-dan-jangan-ngasal-butuh-bgt-soalnyaa%e2%80%8b">30.
+                                            jelaskan peran konsep event dalam suatu objek!informatika kelas 7mohon bantuannya nya ya, dan jangan ngasal, butuh bgt soalnyaa​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="konsep-informatika-apa-yang-terkandung-dalam-setiap-aktivitas%e2%80%8b">
+                            1. Konsep informatika apa yang terkandung dalam setiap aktivitas?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>internet dan jaringan</p><p>Algoritma dan pemograman</p><p><strong>Penjelasan:</strong></p><p>maaf kalau salah</p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-konsep-dasar-dari-informatika%e2%80%8b">
+                            2. Tuliskan konsep dasar dari informatika​</h2><br />
+                        <p>internet dan jaringan </p><p>algoritma dan pemograman</p><p><strong>Penjelasan:</strong></p><p>maaf kalo salah</p><br />
+                                            <h2 class="ez-toc-section" id="informatika-mempunyai-3-konsep-sebutkan%e2%80%8b">
+                            3. informatika mempunyai 3 konsep sebutkan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Informatika (Inggris: Informatics) merupakan disiplin ilmu komputer yaitu data maupun informasi pada mesin berbasis komputasi. ... Informatika dapat mendukung dan berkaitan dengan aspek kognitif dan sosial, termasuk tentang pengaruh serta akibat sosial dari teknologi informasi pada umumnya.</p><p><strong>disiplin</strong><strong> </strong><strong>ilmu</strong><strong> </strong><strong>komputer</strong><strong> </strong><strong>yaitu</strong><strong> </strong><strong>data </strong><strong>maupun</strong><strong> </strong><strong>informasi</strong><strong> </strong></p><p><strong>Penjelasan:</strong></p><p>maaf kalau salah jadikan jawaban yang terbaik semangat belajar ya...</p><br />
+                                            <h2 class="ez-toc-section" id="catatlah-dalam-buku-kerja-kalian-konsep-informatika-apa-yang-terkandung-dalam-setiap-aktivitas-tolong-bntu-jawab-ya%e2%80%8b">
+                            4. Catatlah dalam buku kerja kalian, konsep informatika apa yang terkandung dalam setiap aktivitas! tolong bntu jawab ya​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>internet dan jaringan </p><p>algoritma dan pemograman</p><p><strong>Penjelasan:</strong></p><p>Maaf kalau salah</p><br />
+                                            <h2 class="ez-toc-section" id="mata-pelajaran-informatika-diharapkan-menumbuhkembangkan-siswa-menjadi-computationally-literate-creators-yang-menguasai-konsep-dan-praktik-informatika-yaitu%e2%80%8b">
+                            5. Mata pelajaran Informatika diharapkan menumbuhkembangkan siswa menjadi "computationally literate creators" yang menguasai konsep dan praktik Informatika, yaitu​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Berpikir komputasional, dalam menyelesaikan persoalan-persoalan secara
+</p><p>sistematis, kritis, analitis, dan kreatif dalam menciptakan solusi.</p><p></p><p><strong>#Semoga Membantu</strong></p><br />
+                                            <h2 class="ez-toc-section" id="catatlah-dalam-buku-kerja-kalian-konsep-informatika-apa-yang-terkandungdalam-setiap-aktivitastolong-bntu-jawab-ya%e2%80%8b">
+                            6. Catatlah dalam buku kerja kalian, konsep informatika apa yang terkandungdalam setiap aktivitas!tolong bntu jawab ya​</h2><br />
+                        <p>Konsep <strong>informatika </strong>terkandung dalam setiap kegiatan yang melibatkan <strong>pengolahan data</strong>. Data dapat diproses secara manual atau otomatis. Pemrosesan data manual mencakup kegiatan seperti <strong>entri data</strong>, <strong>analisis data</strong>, dan <strong>pembersihan</strong> <strong>data</strong>. Pemrosesan data otomatis mencakup aktivitas seperti <strong>penambangan data</strong>, <strong>pergudangan data</strong>, dan <strong>visualisasi data</strong>.</p><p></p>Pembahasan<p><strong>Informatika </strong>adalah konsep yang relatif baru yang menjadi semakin penting dalam bidang pengolahan dan pengolahan data. <strong>Informatika </strong>berkaitan dengan struktur, perilaku, dan interaksi sistem informasi. Hal ini berkaitan dengan cara informasi dikumpulkan, disimpan, diakses, dan digunakan. <strong>Informatika </strong>telah digunakan di berbagai bidang, termasuk kedokteran, bisnis, dan pemerintahan.</p><p>Konsep <strong>informatika </strong>telah sangat penting dalam aktivitas manusia sehari-hari misalnya di bidang kedokteran. <strong>Informatika </strong>telah digunakan untuk mengembangkan cara baru dalam mengelola data pasien dan untuk meningkatkan efisiensi perawatan medis. <strong>Informatika </strong>juga telah digunakan untuk mengembangkan metode baru untuk diagnosis dan pengobatan penyakit. <strong>Informatika </strong>diharapkan memainkan peran yang lebih penting dalam kedokteran di masa depan karena semakin banyak data medis dikumpulkan dan diproses.</p><p></p>Pelajari lebih lanjutMateri tentang Informatika memiliki konsep dasar, teori, dan perkembangan aplikasi tersendiri<p>https://brainly.co.id/tugas/51784176</p>Materi tentang konsep pendidikan Informatika berbeda dengan pendidikan TIK​<p>https://brainly.co.id/tugas/51743208</p>Materi tentang perbedaan teknik informatika dengan manajemen informatika<p>https://brainly.co.id/tugas/5134666</p><p></p><p><strong>Detail jawaban</strong></p><p><strong>Kelas: </strong>10</p><p><strong>Mapel: </strong>TIK</p><p><strong>Bab:</strong> 2 - Fungsi dan Operasi Kerja Berbagai Peralatan Teknologi Informasi dan Komunikasi</p><p><strong>Kode: </strong>10.11.2</p><p><strong>#AyoBelajar #SPJ2</strong></p><br />
+                                            <h2 class="ez-toc-section" id="informatika-memiliki-konsep-dasar-teori-dan-perkembangan-aplikasi-tersendiri-yang-di-sebut-%e2%80%8b">
+                            7. informatika memiliki konsep dasar, teori, dan perkembangan aplikasi tersendiri yang di sebut....​</h2><br />
+                        <p><strong>Informatika </strong>mempunyai konsep dasar, teori, dan juga perkembangan aplikasi tersendiri yang disebut <strong>software development</strong> atau disebut juga dengan perkembangan perangkat lunak. </p><p>Ini dapat mendukung hal-hal yang berkaitan dengan begbagai aspek kognitif dan sosial, termasuk salah satunya adalah mengenai dampak serta akibat sosial dari teknologi informasi yang berkembang pada umumnya.</p><p><strong></strong></p><strong>Pembahasan :</strong><p><strong>Informatika </strong>merupakan cabang ilmu dari rekayasa informasi. Ini melibatkan praktik tentang pengolahan informasi dan rekayasa sistem informasi sebagai bidang akademik yang dimana bidang ini merupakan  bentuk dari ilmu informasi yang sudah ada dan diterapkan.</p><p>Bidang informatika ini mempertimbangkan interaksi dari antara manusia dan informasi di samping bidang pembangunan antarmuka, organisasi, teknologi dan juga sistem.</p><p></p><p><strong>Pelajari lebih lanjut :</strong></p><p>Materi tentang pengertian informatika dapat dipelajari pada link https://brainly.co.id/tugas/23305714</p><p></p><p><strong>#BelajarBersamaBrainly</strong></p><p><strong>#SPJ1</strong></p><br />
+                                            <h2 class="ez-toc-section" id="apakah-jurusan-informatika-sama-dengan-teknik-informatika%e2%80%8b">
+                            8. apakah jurusan Informatika sama dengan teknik Informatika?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p></p><p>Jurusan “Ilmu Komputer” berasal dari “Computer Science” yang banyak digunakan sebagai nama jurusan universitas di Amerika. Sedangkan nama jurusan Teknik Informatika berasal dari “Informatics” yang digunakan universitas di Eropa. ... Sedangkan Teknik Informatika berada di bawah Fakultas Teknik</p><p></p><p></p>maafkan saya jika ada yang salah dan semoga bermanfaat ikuti saya ya dan jadikan jawaban terbaik salam kenal ya<br />
+                                            <h2 class="ez-toc-section" id="ruang-lingkup-informatika-yang-mempelajari-konsep-matematis-dari-suatu-informasi-adalah-aspek">
+                            9. Ruang lingkup informatika yang mempelajari konsep matematis dari suatu informasi adalah aspek ..... </h2><br />
+                        <p>Teori informasi</p><p></p><p><strong>Penjelasan:</strong></p><p>ini msuk kedalam teori informasi</p><br />
+                                            <h2 class="ez-toc-section" id="alat-yang-digunakan-secara-visual-mewakili-hubungan-antara-konsep-dan-ide-dapat-menggambarkan-sebab-dan-akibat-persyaratan-dan-kontribusi-antar-unsur-mengembangkan-pemikiran-logis-dan-membedah-sis">
+                            10. Alat yang digunakan secara visual mewakili hubungan antara konsep dan ide, dapat menggambarkan sebab dan akibat, persyaratan, dan kontribusi antar unsur, mengembangkan pemikiran logis dan membedah sistem yang kompleks, serta mengaktualisasikan ide-ide spesifik dalam topik yang lebih besar. Hal tersebut merupakan penjabaran secara luas dari…..a.Informatikab.Presentasic.Peta Konsepd.Infografise.Sistem computer​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>A. Informatika</p><p>Semoga membantu</p><br />
+                                            <h2 class="ez-toc-section" id="alasan-yang-mendukung-bahwa-informatika-telah-menjadi-salah-satu-disiplin-ilmu-yang-tersendiri-adalah-a-informatika-membawa-seseorang-kedalam-suatu-cara-berfikir-yang-unik-dan-berbeda-dari-bidang-ilm">
+                            11. alasan yang mendukung bahwa informatika telah menjadi salah satu disiplin ilmu yang tersendiri adalah A. informatika membawa seseorang kedalam suatu cara berfikir yang unik dan berbeda dari bidang ilmu lainnya B. ide-ide dan konsep informatika sudah berisi lebih dari 20 tahun dan terpakai sampai sekarang C. setiap prinsip inti diajarkan tanpa bergantung pada teknologi tertentu D. semua pernyataan benar​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>(D. Semua pernyataan benar.)</p><p> </p><p></p><p><strong>Penjelasan:</strong></p><p>good and failed? </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="alasan-yang-mendukung-bahwa-informatika-telah-menjadi-salah-satu-disiplin-ilmu-yang-tersendiri-adalah-a-informatika-membawa-seseorang-ke-dalam-suatu-cara-berfikir-yang-unik-dan-berbeda-dari-bidang">
+                            12. Alasan yang mendukung bahwa informatika telah menjadi salah satu disiplin ilmu yang tersendiri adalah...A. informatika membawa seseorang ke dalam suatu cara berfikir yang unik dan berbeda dari bidang ilmu lainnyaB. Ide-ide dan konsep informatika sudah berusia lebih dari 20 tahun dan terpakai sampai sekarangC. setiap prinsip inti diajarkan tanpa bergantung pada teknologi tertentuD. Informatika merupakan ilmu baru​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>A. informatika membawa seseorang ke dalam suatu cara berfikir yang unik dan berbeda dari bidang ilmu lainya</p><br />
+                                            <h2 class="ez-toc-section" id="perbedaan-informatika-dan-teknik-informatika">
+                            13. Perbedaan informatika dan teknik informatika</h2><br />
+                        <p><strong>Jawaban:</strong></p><p><strong>Perbedaan TIK dan Informatika:</strong></p><p></p><p><strong>Informatika</strong> merupakan perluasan dan pendalaman dari muatan TIK yang pada awal pemberlakuan Kurikulum 2013 yang penerapannya diintegrasikan kepada seluruh mapel melalui pembelajaran berbasis TIK.</p><p>Memiliki cakupan materi, proses pembelajaran dan tujuan pembelajaran yang berbeda.</p><p>Pada informatika, peserta didik tidak hanya sebagai pemakai (user) saja namun lebih menekankan pada kemampuan mengidentifikasi masalah dan mengusulkan solusinya kemudian secara kreatif menghasilkan produk produk teknologi infromasi dengan kaidah ilmu informatika, rekayasa perangkat keras, perangkat lunak, pengolahan data dalam bentuk digital menjadi informasi.</p><p><strong>Penjelasan:</strong></p><p><strong>Teknologi Informasi dan Komunikasi (TIK) adalah bagian dari muatan lokal.</strong></p><p></p><p><strong>TIK</strong> adalah segala hal yang mencakup pemanfaatan peralatan teknis untuk memroses dan menyampaikan informasi. Fokus TIK adalah bagaimana memanfaatkan produk - produk teknologi informasi dalam menunjang tugas - tugas profesional atau kegiatan sehari - hari agar lebih kreatif, optimal, dan efisien.</p><p></p><p><strong>Informatika</strong> sebagai bagian dari tahapan Kemendikbud dalam menghadapi industri 4.0 di dunia pendidikan.</p><p></p><p><strong>Informatika</strong> adalah disiplin ilmu komputer yaitu data dan informasi pada mesin berbasi komputasi. Istilah informatika dipakai sebagai padanan istilah informatics, computer science, dan computing.</p><p></p><p><strong>Materi penunjang Informatika:</strong></p><p></p>Teknik KomputerJaringan Komputer / InternetAnalisis dataDampak sosial InformatikaProgramming<p><strong>Pelajari lebih lanjut</strong></p>Materi tentang pengertian informatika brainly.co.id/tugas/42835366Materi tentang pengertian ilmu informatika brainly.co.id/tugas/35824144Materi tentang teknik informatika brainly.co.id/tugas/6428162<br />
+                                            <h2 class="ez-toc-section" id="manfaat-dan-implementasi-dari-konsep-pendidikan-khusus-untuk-dunia-bidang-teknik-informatika">
+                            14. Manfaat dan implementasi dari konsep pendidikan khusus untuk dunia bidang teknik informatika</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>lmplementasi</p><p>Langkah 1: Tentukan tipe handphone</p><p>dan periode pencarian data.</p><p>Langkah 2: Menentukan jenis data yang</p><p>ingin digunakan. Jenis data tersebut</p><p>adalah data interanal (didapat dari tabel</p><p>pembelian dan tabel penjualan), dan</p><p>data eksternal (pnegguna memasukkan</p><p>harga beli dan harga jual secara</p><p>manual)</p><p>Gambar 6. Form langkah 1</p><p>Gambar 7. Form langkah 2</p><p>Sejati, lmplementasi Fuzzy Set dan Fuzzy lnference System Tsukamoto Pada Penentuan Harga Beti Handphone Bekas 45</p><p>Langkah 3: Memasukkan Himpunan</p><p>Bahasa variabel Kondisi Handphone</p><p>beserta derajat keanggotaan Himpunan</p><p>Bahasa tersebut. Pengguna dapat</p><p>memasukkan maksimal dua himpunan</p><p>bahasa dan derajat keanggotaannya.</p><p>Himpunan bahasa yang disediakan yaitu</p><p>Bagus, Agak Bagus, Sedang, Agak</p><p>Jelek, Jelek.</p><p>Gambar 8. Form langkah 3</p><p>Langkah 4: Pengguna memilih jenis</p><p>kurva untuk tiap himpunan bahasa pada</p><p>tiap variabel samar. Pengguna juga</p><p>dapat menentukan nilai batas bawah,</p><p>dan batas atas kurva.</p><p>Jenis kurva yang disediakan yaitu,</p><p>Kurva Segitiga, Kurva PHl, Kurva</p><p>Trapesium Linier, Kurva Trapesium Tak</p><p>Linier, Kuwa Line Down Linier, Kurva</p><p>Line Down Tak Linier, Kurva Line Up</p><p>Linier, dan Kurva Line Up Tak Linier</p><p>Gambar 9. Form langkah 4</p><p>46 JURNAL INFORMATIKA, VOLUME 4 NOMOR 2, NOVEMBER 2OO8</p><p>Langkah 5: Pengaturan IF-THEN Rule</p><p>(Aturan) yang akan digunakan dalam</p><p>proses penarikan kesimpulan samar</p><p>Gambar 10. Form langkah 5</p><p>Sistem akan menampilkan hasil dari</p><p>proses perhitungan-perhitungan yang</p><p>menerapkan</p><p>KALAU GK SALAH</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="sebutkan-serta-jelaskan-keuntungan-dan-kerugian-penerapan-konsep-%e2%80%98gesekan%e2%80%99dalam-bidang-teknik-informatika-masing-masing-3-contoh">
+                            15. Sebutkan serta jelaskan keuntungan dan kerugian penerapan konsep ‘Gesekan’
+dalam bidang Teknik Informatika (masing-masing 3 contoh!</h2><br />
+                        <p>KEUNTUNGAN GAYA GESEKAN :</p><p></p><p>1. Membantu benda bergerak tanpa tergelincir.</p><p></p><p>Contohnya ketika berjalan antara kaki atau sepatu kita dengan lantai harus ada gesekan. Jika  tidak ada gaya gesek kita tidak bisa berjalan karena selalu tergelincir.</p><p></p><p>2. Untuk menghentikan benda yang sedang bergerak</p><p></p><p>Contoh ketika kita mengerem sepeda, rem pada sepeda mencekram pelek agar roda sepeda berhenti berputar. </p><p></p><p>3. Menahan benda agar tidak bergeser</p><p></p><p>Gaya gesek mampu menahan benda agar tak bergeser. Barang – barang yang ada di rumah kita juga menggunakan gaya gesek, jika tidak ada gaya gesek barang barang itu akan bergeser.</p><p></p><p>KERUGIAN GAYA GESEKAN :</p><p></p><p>1. Menghambat Gerakan</p><p></p><p>Benda yang bergerak selalu ditahan gaya gesekan. Akibat gaya gesekan tersebut  maka  gerakan benda menjadi terhambat.</p><p></p><p>2. Mengikis permukaan benda yang bergesekan</p><p></p><p> Dua buah benda yang selalu saling bergesekan maka permukaannya lama - kelamaan akan terkikis (aus). Jadi ausnya sebuah benda dapat disebabkan karena sering bergesekan.</p><p></p><p>3. Memboroskan energi untuk mengatasi gaya gesekan</p><p></p><p>Agar benda bisa bergerak harus melawan gaya gesekan dan harus ada gaya tambahan . misalnya dengan dorongan  atau tarikan yang lebih kuat sehingga benda bergerak atau berpindah.</p><p></p><p></p><p>Penjelasan:</p><p>smoga membantu</p><br />
+                                            <h2 class="ez-toc-section" id="1-apa-yang-dimaksud-informatika2-ruang-lingkup-informatika-yang-mempelajari-konsep-matematis-dari-suatu-informasi-adalah-aspek3-sebutkan-hal-hal-yang-dilakukan-dalam-presentasitolong-dijawab">
+                            16. 1. Apa yang dimaksud informatika?
+2. Ruang lingkup informatika yang mempelajari konsep matematis dari suatu informasi adalah aspek?
+3. Sebutkan hal-hal yang dilakukan dalam presentasi!
+Tolong dijawab ya, klo bener aku follow
+@evaagustriana</h2><br />
+                        <p><strong>Jawaban:</strong></p><p><strong>1</strong><strong>.</strong><strong> </strong>informatika adalah disiplin sains yang mengkaji struktur dan ciri (bukan isi spesifik) informasi ilmiah, juga keajegan keaktifan informasi ilmiah, teori, sejarah, metodologi dan organisasi informasi ilmiah.</p><p></p><p><strong>2</strong><strong>.</strong><strong> </strong>keamanan informasi ilmu yang mempelajari mengenai kajian proses mengamankan dan melindungi data pada yang ada pada sistem atau komputers</p><p></p><p><strong>3</strong><strong>.</strong><strong> </strong>Pandangan harus diarahkan pada lawan bicara. Pembicara perlu melakukan kontak mata dengan peserta. </p><p>Pandangan harus diarahkan pada lawan bicara. Pembicara perlu melakukan kontak mata dengan peserta. Gerak-gerak mimik yang tepat. </p><p>Pandangan harus diarahkan pada lawan bicara. Pembicara perlu melakukan kontak mata dengan peserta. Gerak-gerak mimik yang tepat. Kenyaringan suara. </p><p>Kelancaran. </p><p>Kelancaran. Relevansi (Penalaran) </p><p>Kelancaran. Relevansi (Penalaran) Penguasaan Topik. </p><p>Kelancaran. Relevansi (Penalaran) Penguasaan Topik. Waktu Presentasi.</p><p></p><p><strong>Penjelasan:</strong></p><p></p><p>Jadikan Jawaban Terbaik </p><p><strong>Penjelasan:</strong></p><p>Apa yang dimaksud informatika? adalah kata informatika, pada dasarnya mereka adalah ilmu yang berhubungan dengan informasi. Seperti yang kita ketahui, sebuah informasi dapat direkam atau ditransmisikan, hal ini termasuk seperti tanda, atau sebagai sinyal (gelombang). Bidang yang satu ini mempertimbangkan interaksi antara sistem informasi dan user atau pengguna, serta pembangunan antarmuka antara keduanya, seperti User Interface (UI).</p><br />
+                                            <h2 class="ez-toc-section" id="setelah-konsep-ini-akan-kalian-pelajari-dalam-program-kedua-hanya-mengacu-tanpa-membawa-objek-yang-saling-merupakan-dua-konsep-yang-penting-dalam-informatika-konsep-yang-kedua-akan-menjadi-dasar-untuk">
+                            17. setelah Konsep ini akan kalian pelajari dalam program kedua hanya mengacu tanpa membawa objek yang saling merupakan dua konsep yang penting dalam Informatika konsep yang kedua akan menjadi dasar untuk belajar pointer​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Kelak, konsep ini akan kalian pelajari dalam pemrograman! kedua konsep ini, yaitu (1) menyalin dan membawa salinannya, atau (2) hanya mengacu tanpa membawa objek yang disalin merupakan dua konsep yang penting dalam informatika. konsep yang kedua akan menja</p><p> <strong>semoga</strong><strong> </strong><strong>bermanfaat</strong><strong> </strong><strong>sob</strong><strong>!</strong><strong>!</strong><strong>!</strong></p><br />
+                                            <h2 class="ez-toc-section" id="salah-satu-pilar-informatika-yang-mana-mempelajari-menyelesaikan-persoalan-persoalan-sehari-hari-yang-di-baliknya-mengandung-berbagai-macam-konsep-keilmuan-seperti-informatika-matematika-sains-atau-il">
+                            18. salah satu pilar Informatika yang mana mempelajari menyelesaikan persoalan-persoalan sehari-hari yang di baliknya mengandung berbagai macam konsep keilmuan seperti Informatika matematika sains atau ilmu sosial adalah​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Aljabar, Algoritma</p><p><strong>Penjelasan:</strong></p><p><strong>Aljabar: Cara Menghitung</strong></p><p><strong>Algoritma: Cara Berpikir Secara Berurutan</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-perbedaan-teknik-informatika-dan-sistem-informatika">
+                            19. Apa perbedaan teknik informatika dan sistem informatika</h2><br />
+                        <p>Teknik informatika</p><p>Jurusan ini mempelajari tentang bagaimana membangun dan menerapkan teknologi informasi dengan proses bisnis yang ada saat ini, sehingga suatu bisnis akan dapat dengan efektif mencapai tujuannya dengan menerapkan IT dalam bisnis.</p><p>kemampuan –&gt; menekankan kemampuan dalam merancang dan mengembangkan ragam algoritma komputasi.</p><p></p><p>Sistem informatika</p><p>Jurusan ini mempelajari tentang bagaimana membangun dan menerapkan teknologi informasi dengan proses bisnis yang ada saat ini, sehingga suatu bisnis akan dapat dengan efektif mencapai tujuannya dengan menerapkan IT dalam bisnis.</p><p>kemampuan –&gt; menekankan kemampuan dalam merancang, mengembangkan, dan menerapkan sistem informasi organisasi</p><p>Good luck :)</p><p>Teknik informatika adalah menangani permasalahan transformasi atau pengelohan data berbasis komputasi</p><p>Sistem informatika adalah untuk mendukung operasi dan manajemen </p><br />
+                                            <h2 class="ez-toc-section" id="apa-itu-teknik-informatika-dan-apa-saja-yang-di-pelajari-di-teknik-informatika">
+                            20. Apa itu teknik informatika dan apa saja yang di pelajari di teknik informatika?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Informatika merupakan disiplin ilmu komputer yaitu data maupun informasi pada mesin berbasis komputasi. Disiplin ilmu ini mencakup beberapa macam bidang, termasuk di dalamnya: sistem informasi, ilmu komputer, ilmu informasi, teknik komputer dan aplikasi informasi dalam sistem informasi manajemen.</p><br />
+                                            <h2 class="ez-toc-section" id="computational-thinking-ct-pada-dasarnyabisa-dikatakan-mampu-melandasi-sebuahkonsep-utama-yaitu-a-konsep-ambiguitasb-konsep-informatika%d1%81-konsep-kompleksitasd-konsep-retorikadon-nis">
+                            21. Computational Thinking (CT) pada dasarnyabisa dikatakan mampu melandasi sebuahkonsep utama yaitu ....a. konsep ambiguitasb. konsep informatikaС. konsep kompleksitasd. konsep retorikadon Nis​</h2><br />
+                        <p>B</p><p>konsep informatika</p><p>Jadikan jawaban terbaik</p><br />
+                                            <h2 class="ez-toc-section" id="gambar-konsep-informatika-tolong-yang-bisa-bantu-jawab%e2%80%8b">
+                            22. gambar konsep informatika.tolong yang bisa bantu jawab?​</h2><br />
+                        <p>....................................</p><br />
+                                            <h2 class="ez-toc-section" id="1-menyelesaikan-persoalan-sehari-hari-dengan-konsep-informatika-matematika-atau-ilmu-sosial-merupakan-bidang-pengetahuan-a-praktik-lintas-bidang-berpikir-komputasional-b-c-dampak-sosial-infor">
+                            23. 1. Menyelesaikan persoalan sehari-hari dengan konsep informatika, matematika atau ilmu sosial merupakan bidang pengetahuan.... a. praktik lintas bidang berpikir komputasional b. c. dampak sosial informatika d. algoritma dan pemrograman​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>B. Berpikir Komputasional</p><p><strong>Penjelasan:</strong></p><p>Berpikir komputasional (Computational Thinking) adalah metode menyelesaikan persoalan dengan menerapkan teknik ilmu komputer (informatika).</p><br />
+                                            <h2 class="ez-toc-section" id="setelah-mempelajari-setiap-elemen-informatika-di-kelas-7-apakah-kalian-dapat-membuat-peta-pikiran-yang-berisikan-elemen-elemen-tersebut-menjadi-pengetahuan-yang-untuh%e2%80%8b">
+                            24. Setelah mempelajari setiap elemen informatika di kelas 7 Apakah kalian dapat membuat peta pikiran yang berisikan elemen-elemen tersebut menjadi pengetahuan yang untuh?​</h2><br />
+                        <p>Membuat peta pikiran yang berisi tentang elemen menjadi <strong>pengetahuan </strong>yang utuh terdapat caranya yaitu dengan membuat pokok dari pembahasan serta menghubungkan <strong>keterkaitan </strong>satu sama lainnya.</p><p><strong>Pembahasan</strong></p><p><strong>Peta pikiran</strong> adalah diagram yang  secara visual mewakili ide, konsep, informasi, atau hal lainnya. Setiap ide, konsep, atau potongan informasi yang terdapat dalam  kotak mind map dihubungkan secara terorganisir oleh garis (link). Peta pikiran adalah diagram yang  secara visual mewakili ide, informasi, konsep, atau  hal lain. Setiap ide, informasi, konsep, dll. terletak dalam sebuah kotak atau <strong>peta pikiran </strong>yang saling berhubungan  dan diatur oleh garis atau tautan. Mind mapping adalah metode yang digunakan untuk mencari informasi dalam sebuah teks. Informasi yang ditemukan ditulis dalam kotak-kotak peta pikiran. Mind mapping menawarkan banyak manfaat, seperti: Melepaskan imajinasi dalam menggali ide sehingga menjadi lebih kreatif. Lebih mudah untuk mengingat fakta dan angka. Membantu fokus dan menghemat waktu.</p><p></p>Pelajari lebih lanjut<p>Pelajari lebih lanjut materi tentang peta pikiran: https://brainly.co.id/tugas/1027675</p><p></p><p><strong>#BelajarBersamaBrainly #SPJ1</strong></p><br />
+                                            <h2 class="ez-toc-section" id="uraikan-bahwa-computational-thingking-melandasi-konsep-informatika-%e2%80%8b">
+                            25. uraikan bahwa computational thingking melandasi konsep informatika....​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>pemikiran yang termasuk cara berpikir modern yang cepat seperti cara berpikir computer yang dapat menglahkan pemikiran manusia</p><p><strong>Penjelasan:</strong></p><p>computational thingking berarti pemikiran komputer yang cepat dan cara pemikiran komputer melalui sistem yang dijalankan oleh manusia</p><p></p><p>hal tersebut akan dapat menyelesaikan masalah dalam kehidupan sehari-hari seperti juga dapat untuk : mengendalikan robot dan mempelajari kehidupan sekitar</p><p></p><p>[tex]\begin{gathered}\begin{gathered}\begin{gathered}\color{magenta}{\rule{10pt}{20pt}}\purple{\rule{10pt}{20pt}}\red{\rule{10pt}{20pt}}\orange{\rule{10pt}{20pt}}\color{yellow}{\rule{10pt}{20pt}}\color{lime}{\rule{10pt}{20pt}}\color{green}{\rule{10pt}{20pt}}\color{blue}{\rule{10pt}{20pt}}\color{indigo}{\rule{10pt}{20pt}}\color{violet}{\rule{10pt}{20pt}}\color{aquamarine}{\rule{10pt}{20pt}} \\\color{magenta}{\rule{10pt}{20pt}}\purple{\rule{10pt}{20pt}}\red{\rule{10pt}{20pt}}\orange{\rule{10pt}{20pt}}\color{yellow}{\rule{10pt}{20pt}}\color{lime}{\rule{10pt}{20pt}}\color{green}{\rule{10pt}{20pt}}\color{blue}{\rule{10pt}{20pt}}\color{indigo}{\rule{10pt}{20pt}}\color{violet}{\rule{10pt}{20pt}}\color{aquamarine}{\rule{10pt}{20pt}}\end{gathered}\end{gathered}\end{gathered}[/tex]</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="sebutkan-tujuh-aspek-praktik-lintas-bidang-dalam-konsep-kurikulum-informatika">
+                            26. Sebutkan tujuh aspek praktik lintas bidang dalam konsep kurikulum informatika</h2><br />
+                        <p>Aspek-aspek yang terdapat pada ruang lingkup informatika yaitu</p><p></p><p><strong>Penjelasan:</strong></p><p>•ilmu informasi</p><p>•teori informasi</p><p>•ilmu komputer dan teknik komputer</p><p>•sistem informasi</p><p>•informatika sosial</p><p>•keamanan informasi</p><p></p><p></p><p>maaf kalo salah</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="ruang-lingkup-informatika-yang-mempelajari-konsep-matematis-dari-suatu-informasi-adalah-aspek">
+                            27. Ruang lingkup informatika yang mempelajari konsep matematis dari suatu informasi adalah aspek</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Teori informasi</p><p><strong>Penjelasan:</strong></p><p>Semoga membantu</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-dan-berikan-contoh-penggunaan-peta-dalam-teknologi-informatika%e2%80%8b">
+                            28. Jelaskan dan berikan contoh penggunaan peta dalam teknologi informatika​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Fungsi Peta Fungsi dari sebuah peta adalah sebagai berikut: a. Memberi informasi kepada pembaca mengenai letak relatif maupun absolut suatu daerah terhadap daerah lainnya di permukaan bumi. b. Kondisi fisik non-fisik suatu daerah misalnya kepadatan, jumlah penduduk, persebaran, dan lain-lain. c. Memperhatikan ukuran dengan peta sehingga dapat diukur luas wilayah dan jarak di permukaan bumi. d. Menyajikan data tentang potensi suatu daerah. e. Sebagai alat bantu dalam hal penelitian lapangan, operasi militer, perencanaan suatu wilayah, jelajah alam dan lain-lain. Sementara, orang yang membuat peta bertujuan untuk: a. Menyimpan dan mengomunikasikan informasi spasial/keruangan. b. Membantu suatu pekerjaan misalnya membuat jalan, saluran irigasi, dan navigasi. c. Membantu dalam pembuatan suatu desain wilayah misalnya perencanaan komplek pemukiman, jalur hijau, dan kompleks perniagaan. d. Analisis data spasial misalnya menghitung volume debit air. Jenis-Jenis Peta Klasifikasi peta dapat dibedakan menjadi beberapa jenis, di antaranya: a. Berdasarkan Skalanya 1) Peta Kadaster / Peta teknik skala 1 : 100 – 1 : 5000 Digunakan untuk membuat peta luas tanah, sertifikat tanah. 2) Peta skala besar 1 : 5001 – 1: 250.000 Digunakan untuk membuat peta yang sempit, desa, kecamatan, kota. 3) Peta skala sedang 1 : 250.001 – 1: 500.000 Digunakan membuat peta propinsi. 4) Peta skala kecil 1 : 500.001 – 1 : 1.000.000 Digunakan untuk membuat peta Negara-negara. 5) Peta skala geografis skala lebih dari 1 : 1.000.000 Digunakan membuat peta benua, kawasan, peta dunia. b. Berdasarkan Isinya 1) Peta Umum atau Peta Ikhtisar Peta umum adalah peta yang memberikan banyak informasi. Peta ini menggambarkan gambaran umum baik ketampakan atau medan asli maupun buatan manusia atau baik ketampakan fisis maupun sosial budaya. Misalnya sawah, sungai, gunung, jalan, kota, jembatan, pemukiman, dan lain-lain. Jenis-jenis peta ini antara lain: a) Peta Topografi Peta yang menggambarkan keadaan relief bumi, umumnya skala besar (1 : 5.000) maka daerah yang dipetakan sempit, kenampakannya sangat detail. Ciri utama peta topografi adalah penggunaan garis kontur yaitu garis yang menunjukkan variasi ketinggian di suatu tempat tertentu. Sementara, keuntungan garis kontur adalah sebagai berikut; Ketinggian suatu tempat dapat diketahui. Jarak suatu tempat yang sesungguhnya dapat diketahui dengan jelas. Tingkat kecuraman dan kemiringan lereng dapat diperkirakan secara akurat. Sifat-sifat garis kontur: Memiliki ketinggian yang sama. Memisahkan titik-titik yang lebih tinggi dari semua titik yang lebih rendah. Tidak mungkin berpotongan satu sama lain. Tidak mungkin bercabang. Makin rapat garis kontur makin terjal, makin jarang makin landai daerahnya. b) Peta Korografi Peta yang menggambarkan daerah yang luas seperti Negara-negara dengan atau benua-benua dengan skala kecil. Misalnya peta-peta dalam atlas. 2) Peta dunia Peta dunia adalah peta umum yang berskala sangat kecil dengan fungsi memberi informasi tentang bentuk dan letak wilayah setiap Negara. a) Peta Tematik atau Peta Khusus Peta yang hanya memberikan satu atau sedikit sekali informasi. Peta ini menggambarkan ketampakan tertentu baik fisik maupun sosial budaya. Data yang tergambar dapat data kualitatif maupun kuantitatif. Peta ini disajikan dalam berbagai bentuk yang berhubungan dengan unsur asli muka bumi dan unsur-unsur buatan manusia. Misalnya peta iklim, peta perhubungan, peta pariwisata, peta persebaran tambang, peta penduduk, dan lain-lain. c. Berdasarkan Obyeknya 1) Peta dinamik yaitu peta yang menggambarkan keadaan yang sifatnya tidak tetap atau labil. Misalnya adalah peta penduduk, peta pemukiman, peta transmigrasi. 2) Peta stationer yaitu peta yang menampilkan data yang tetap sifatnya atau stabil. Misalnya adalah peta wilayah, peta tanah, peta geologi. d. Peta Militer Khusus untuk peta militer dibagi menjadi : 1) Peta umum skala 1 : 1.000.000 2) Peta strategi peta yang dibuat khusus untuk strategi tempur dengan skala 1 : 100.000. 3) Peta Taktik yaitu peta yang digunakan untuk penyerangan skala 1 : 25.000, 1 : 50.000, 1 : 100.000. Cara Membaca Peta Berikut ini adalah cara yang dapat Anda lakukan saat membaca peta. 1. Pilih model peta yang tepat Terdapat berbagai jenis peta untuk berbagai penggunaan. Sebelum menggunakan peta untuk membantu Anda menemukan jalan, pastikan peta tersebut sesuai dengan jenis perjalanan yang Anda lakukan 2. Periksa orientasi peta Buka dan periksa peta untuk memastikan bahwa Anda </p><p><strong>Penjelasan:</strong></p><p>cuman itu yang saya tau jadikan jawaban tercerdas ok</p><br />
+                                            <h2 class="ez-toc-section" id="mengapa-konsep-pendidikan-informatika-berbeda-dengan-pendidikan-tik%e2%80%8b">
+                            29. Mengapa konsep pendidikan Informatika berbeda dengan pendidikan tik​</h2><br />
+                        <p>Konsep pendidikan Informatika berbeda dengan pendidikan TIK adalah karena konsep pendidikan <strong>informatika </strong>lebih mendalami tentang dasar dari <strong>informatika</strong> dan cara berpikirnya. Sedangkan ilmu TIK adalah ilmu teknis dalam menggunakan teknologi dalam kehidupan sehari-hari.</p><p><strong>Pembahasan</strong></p><p>Dengan mengembangkan<strong> konsep data</strong>, informasi, pengetahuan, komunikasi, dan interaksi saja, <strong>ilmu komputer</strong> menciptakan hubungan antara berbagai disiplin ilmu, menggunakan perspektif dan metode unik untuk pengembangan teori dan aplikasi praktis. Ilmu komputer telah muncul sebagai bidang interdisipliner yang terkait dengan studi tentang sifat-sifat informasi dan teknologi, dengan fokus pada bagaimana orang menggabungkannya untuk menghasilkan dan mengelola informasi dan  pengetahuan. Oleh karena itu, ilmu komputer memiliki cakupan yang lebih luas daripada ilmu informasi, karena fokus utama ilmu informasi adalah pengumpulan, pengorganisasian, penyimpanan, pengambilan, interpretasi, dan penggunaan informasi. Ilmu komputer lebih luas dari ilmu komputer dan ilmu informasi karena digunakan dalam konteks  yang lebih luas daripada ilmu informasi.  Ilmu Komputer mencakup semua aspek dari. Ilmu Komputer dan perilaku manusia.</p><p><strong></strong></p><p><strong>Pelajari lebih lanjut</strong></p><p>Pelajari lebih lanjut materi tentang informatika: https://brainly.co.id/tugas/2884546</p><p></p><p><strong>#BelajarBersamaBrainly #SPJ1</strong></p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-peran-konsep-event-dalam-suatu-objekinformatika-kelas-7mohon-bantuannya-nya-ya-dan-jangan-ngasal-butuh-bgt-soalnyaa%e2%80%8b">
+                            30. jelaskan peran konsep event dalam suatu objek!informatika kelas 7mohon bantuannya nya ya, dan jangan ngasal, butuh bgt soalnyaa​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Konsep event dalam sebuah objek yang sangat penting karena objek tidak akan melakukan suatu action atau tindakan jika hanya akan diam jika tidak ada event yang diberikian</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/wY_0ziHG2Kk?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>ti</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/langkah-langkah-penilaian.html">Langkah Langkah Penilaian</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/sebutkan-empat-prinsip-dasar-gerakan-pengembalian-servis-pendek.html">Sebutkan Empat Prinsip Dasar Gerakan Pengembalian Servis Pendek</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/analisis-tujuan-pembelajaran.html">Analisis Tujuan Pembelajaran</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/huruf-dan-angka-pada-gambar-teknik-berfungsi-untuk.html">Huruf Dan Angka Pada Gambar Teknik Berfungsi Untuk</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/mengapa-sebelum-bermain-kasti-harus-pemanasan-lebih-dahulu.html">Mengapa Sebelum Bermain Kasti Harus Pemanasan Lebih Dahulu</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/kegiatan-ekonomi-berikut-yang-sesuai-dengan-prinsip-ekonomi-adalah.html">Kegiatan Ekonomi Berikut Yang Sesuai Dengan Prinsip Ekonomi Adalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/kata-benda-dalam-bahasa-jerman.html">Kata Benda Dalam Bahasa Jerman</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/apa-itu-cm2.html">Apa Itu Cm2</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/kehidupan-awal-masyarakat-indonesia.html">Kehidupan Awal Masyarakat Indonesia</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/faktor-penyebab-keragaman-budaya-sebagai-berikut-kecuali.html">Faktor Penyebab Keragaman Budaya Sebagai Berikut Kecuali</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/montase-kerja-bakti.html">Montase Kerja Bakti</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/bagaimana-cara-menentukan-ide-pokok-pada-teks-lisan.html">Bagaimana Cara Menentukan Ide Pokok Pada Teks Lisan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/gerak-melompat-dan-meloncat.html">Gerak Melompat Dan Meloncat</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/dimana-lani-dan-siti-bercakap-cakap.html">Dimana Lani Dan Siti Bercakap Cakap</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/gambar-bunga-mawar-anak-tk.html">Gambar Bunga Mawar Anak Tk</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/contoh-cecangkitan.html">Contoh Cecangkitan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/pertanyaan-tentang-norma-hukum.html">Pertanyaan Tentang Norma Hukum</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/siklus-glikolisis.html">Siklus Glikolisis</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/gagasan-pokok-d-topeng.html">Gagasan Pokok D Topeng</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/cara-pengelompokan-sejarah-evolusi-suatu-makhluk-hidup-disebut.html">Cara Pengelompokan Sejarah Evolusi Suatu Makhluk Hidup Disebut</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://organicstudy.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://organicstudy.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

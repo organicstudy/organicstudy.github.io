@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rumus Pengolahan Data - QnA</title>
+    <meta name="description" content="Rumus Pengolahan Data, , , , , , , 0, 3 Rumus Excel dalam Pengolahan Data, course-net.com, 961 x 721, jpeg, , 20, rumus-pengolahan-data, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rumus Pengolahan Data - QnA" />
+    <meta property="og:description" content="Rumus Pengolahan Data, , , , , , , 0, 3 Rumus Excel dalam Pengolahan Data, course-net.com, 961 x 721, jpeg, , 20, rumus-pengolahan-data, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rumus Pengolahan Data - QnA" />
+    <meta name="twitter:description" content="Rumus Pengolahan Data, , , , , , , 0, 3 Rumus Excel dalam Pengolahan Data, course-net.com, 961 x 721, jpeg, , 20, rumus-pengolahan-data, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://organicstudy.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://organicstudy.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://organicstudy.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://organicstudy.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://organicstudy.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://organicstudy.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Rumus Pengolahan Data</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">jumadiwaras2020</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Rumus+Pengolahan+Data" alt="Rumus Pengolahan Data">
+                    </div>
+                    <p></p>
+                    <p>pengolahan data harus dilakukan dengan menggunakan rumus matematika . yang bukan termasuk rumus nilai pengolahan data adalah​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pengolahan-data-harus-dilakukan-dengan-menggunakan-rumus-matematika-yang-bukan-termasuk-rumus-nilai-pengolahan-data-adalah%e2%80%8b">1.
+                                            pengolahan data harus dilakukan dengan menggunakan rumus matematika . yang bukan termasuk rumus nilai pengolahan data adalah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pengolahan-data-harus-dilakukan-dengan-menggunakan-rumus-matematika-yang-bukan-termasuk-rumus-nilai-pengolahan-data-adalah%e2%80%8b">2.
+                                            pengolahan data harus dilakukan dengan menggunakan rumus matematika . yang bukan termasuk rumus nilai pengolahan data adalah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#rumus-pengolahan-data">3.
+                                            rumus pengolahan data</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebuah-bilangan-bernilai-6-setelah-melalui-sebuah-proses-pengolahan-data-diperoleh-output-6maka-rumus-fungsi-yang-digunakan-adalah-a-abs-b-log-c-exp">4.
+                                            sebuah bilangan bernilai -6.setelah melalui sebuah proses pengolahan data diperoleh output 6,maka rumus fungsi yang digunakan adalah...                                               A.ABS B.Log C.EXP D.Sin</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#setelah-mengumpulkan-data-dari-eksperimen-yg-dilakukan-seorang-peneliti-akan-melakukan-a-uji-ulang-datab-mengumpulkan-informasic-olah-datad-merumuskan-masalahe-presentasitolong-jawab-dengan-be">5.
+                                            Setelah mengumpulkan data dari eksperimen yg dilakukan, seorang peneliti akan melakukan...a. uji ulang datab. mengumpulkan informasic. olah datad. merumuskan masalahe. presentasiTolong Jawab dengan benar :)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#microsoft-excel-membantu-dalam-hal-pengolahan-data-dan-angka-dengan-menggunakan-beberapa-rumus-jika-mengalami-kesalahan-menuliskan-rumus-maka-akan-berakibat%e2%80%a6">6.
+                                            Microsoft excel membantu dalam hal pengolahan data dan angka dengan menggunakan beberapa rumus. jika mengalami kesalahan menuliskan rumus maka akan berakibat…</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#16-rumusan-masalah-dalam-penelitian-biologi-dibuat-berdasarkan-select-onea-analisa-data-dan-hasil-eksperimenb-hasil-eksperimen-dan-pengolahan-datac-prakiraan-dan-tafsirand-hasil-observ">7.
+                                            16. Rumusan masalah dalam penelitian Biologi dibuat berdasarkan ... .
+Select one:
+a. Analisa data dan hasil eksperimen
+b. Hasil eksperimen dan pengolahan data
+c. Prakiraan dan tafsiran
+d. Hasil observasi dan pengumpulan data
+e. Hipotesis dan perkiraan</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ada-3-macam-kemampuan-microsoft-excel-dalam-pengolahan-data-yaitu-data-a-processor-data-program-dan-grafikb-tabel-data-penghitungan-rumus-dan-grafikc-program-data-sel-aktif-dan-grafikd-mane">8.
+                                            Ada 3 macam kemampuan Microsoft Excel dalam pengolahan data, yaitu data ...A. Processor, data program dan grafikB. Tabel, data penghitungan rumus dan grafikC. Program, data sel aktif dan grafikD. Manejemen, data paragraf dan grafiktolong di jawab ya^^</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#setelah-mengumpulkan-data-penelitian-roni-melakukan-reduksi-data-tahap-pengolahan-data-tersebut-bertujuan-a-menyimpulkan-data-yang-diperoleh-sesuai-kebutuhan-penelitian-b-menyederhanakan-data">9.
+                                            Setelah mengumpulkan data penelitian, Roni melakukan reduksi data. Tahap pengolahan data tersebut bertujuan.... a. menyimpulkan data yang diperoleh sesuai kebutuhan penelitian b. menyederhanakan data agar mempermudah proses analisis C. menampilkan hasil data dalam bentuk deskripsi d. menyajikan hasil data yang telah dikategorikan e. menjawab rumusan masalah penelitian​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-rumus-pengolahan-data-dispeardsheet-yang-kalian-ketahui-dan-fungsinya">10.
+                                            Tuliskan rumus pengolahan data dispeardsheet yang kalian ketahui dan fungsinya! </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#microsoft-excel-membantu-dalam-hal-pengolahan-data-dan-angka-dengan-menggunakan-beberapa-rumus-jika-mengalami-kesalahan-menuliskan-rumus-maka-akan-berakibat">11.
+                                            Microsoft Excel membantu dalam hal pengolahan data dan angka dengan menggunakan beberapa rumus.jika mengalami kesalahan menuliskan rumus maka akan berakibat?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#isi-setuju-atau-tidak-setuju1-peluang-yang-menggunakan-rumus-adalah-peluang-empirik-2-pengumpulan-data-pengolahan-data-dan-penyajian-data-merupakan-bagian-dari-statistik">12.
+                                            Isi SETUJU atau TIDAK SETUJU
+1. Peluang yang menggunakan rumus adalah peluang empirik.
+2. Pengumpulan data, pengolahan data, dan penyajian data merupakan bagian dari statistik.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-rumus-mencari-nilai-rata-rata-pada-pengolahan-data">13.
+                                            Apa Rumus mencari Nilai Rata-rata pada pengolahan data?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#microsoft-excel-membantu-dalam-hal-pengolahan-data-dan-angka-dengan-menggunakan-beberapa-rumus-jika-mengalami-kesalahan-menulis-rumus-maka-akan-berakibat">14.
+                                            Microsoft Excel membantu dalam hal pengolahan data dan angka dengan menggunakan beberapa rumus.jika mengalami kesalahan menulis rumus maka akan berakibat</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-tujuan-penggunaan-rumus-pada-pengolahan-data-ms-excel">15.
+                                            jelaskan tujuan penggunaan rumus pada pengolahan data ms. Excel</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pengolahan-data-di-bedakan-menjadi-3-yaitu-mean-median-dan-modus-coba-kalian-jelaskan-apa-yang-dimaksud-dengan-mean-serta-tuliskan-rumus-mencari-mean-%e2%80%8b">16.
+                                            Pengolahan data di bedakan menjadi 3 yaitu mean, median dan modus. Coba kalian jelaskan apa yang dimaksud dengan mean? serta tuliskan rumus mencari mean !​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-untuk-mengetik-proposal-dpt-digunakan-software-2-pengolahan-rumus-dalam-microsoft-diawali-dgn-tanda-7-laporan-akhir-dari-siklus-pengolahan-data-dengan-menggunakan-software-basis-data-berupa">17.
+                                            1.Untuk Mengetik Proposal Dpt Digunakan Software..2.Pengolahan Rumus Dalam Microsoft Diawali dgn tanda..7.Laporan Akhir dari siklus pengolahan data dengan menggunakan software basis data berupa..</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-berikut-ini-fungsi-utama-dan-aplikasi-pengolahan-angka-kecuali-a-pembuatan-tabel-data-b-pengolahan-data-pembuatan-grafikd-pembuatan-database-sederhana-e-pembuatan-wordart-2-karakter-data-yang-beris">18.
+                                            1.Berikut ini fungsi utama dan aplikasi pengolahan angka kecuali a Pembuatan tabel data b Pengolahan data Pembuatan Grafikd Pembuatan database sederhana e.Pembuatan WordArt 2. Karakter data yang berisi rumus-rumus pada aplikasi pengolahan angka adalaha. Data Teksb. Basis Datac. Data Angka d. Data Maya e. Data Formula3. Karakter data yang berisi huruf pada aplikasi pengolahan angka adalaha.Data Teks b.Basis Datac. Data Angka d. Data Mayae. Data Formula 4.Dalam aplikasi pengolahan angka "K3" disebut dengana.Barisb.Kolomc.Celld.Rangee.Rumus5.Dalam aplikasi pengolahan angka "B4:D6" disebut dengana.Baris b.Kolomc.Celld.Rangee.Rumus​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#10-poinmicrosoft-excel-membantu-dalam-halpengolahan-data-dan-angka-denganmenggunakan-beberapa-rumus-jikamengalami-kesalahan-menuliskanrumus-maka-akan-berakibat-%e2%80%8b">19.
+                                            10 poinMicrosoft Excel membantu dalam halpengolahan data dan angka denganmenggunakan beberapa rumus. Jikamengalami kesalahan menuliskanrumus maka akan berakibat ...​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#microsoft-excel-membantu-dalam-hal-pengolahan-data-dan-angka-dengan-menggunakan-beberapa-rumus-jija-mengalami-kesalahan-menuliskan-rumus-maka-akan-berakibat">20.
+                                            microsoft excel membantu dalam hal pengolahan data dan angka dengan menggunakan beberapa rumus.jija mengalami kesalahan menuliskan rumus maka akan berakibat?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#data-hasil-penelitian-yang-telah-didapatkan-dari-eksperimen-kemudian-akan-di-analisis-supaya-bisa-ditindaklanjuti-dengan-menghubungkan-berbagai-macam-pola-dasar-teori-dan-konsep-yang-ada-sehingga-b">21.
+                                            Data hasil penelitian yang telah didapatkan dari eksperimen kemudian akan di analisis supaya bisa ditindaklanjuti dengan menghubungkan berbagai macam pola, dasar, teori dan konsep yang ada, sehingga bisa ditarik kesimpulan yang sesuai dengan rumusan masalah. Dalam proses analisis data, pengolahan data dapat dilakukan dalam berbagai bentuk, jelaskan!​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#microsoft-excel-ditunjang-dengan-berbagai-fasilitas-kemampuan-seperti-berikut-kecuali-a-olah-data-dan-tabel-b-tabel-dan-rumus-c-database-dan-olah-kata-d-rumus-dan-grafik-e-grafik-dan-database">22.
+                                            microsoft excel ditunjang dengan berbagai fasilitas kemampuan seperti berikut kecuali A. Olah data dan tabel B. Tabel dan rumus C. Database dan olah kata D. Rumus dan grafik E. Grafik dan database</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#rumus-cepat-mencari-rata-rata-bab-pengolahan-data">23.
+                                            rumus cepat mencari rata-rata, bab pengolahan data?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#erna-sedang-memasukkan-angka-angka-akan-didapatkan-dalam-pengumpulan-data-sebelum-dalam-pengolahan-angka-memasukkan-data-tersebut-ke-dalam-rumus-yang-sudah-diketahui-sebelumnya-kegiatan-yang-dilakukan">24.
+                                            Erna sedang memasukkan angka-angka akan didapatkan dalam pengumpulan data sebelum dalam pengolahan angka memasukkan data tersebut ke dalam rumus yang sudah diketahui sebelumnya kegiatan yang dilakukan dalam metode ilmiah termasuk kedalam kegiatan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#aplikasi-untuk-mengolah-data-dalam-bentuk-perhitungan-dasar-rumus-pemakaian-fungsi-fungsi-dan-juga-untuk-pengolahan-data-tabel-pembuatan-grafik-dan-manajemen-data-adalah-%e2%80%a6-%c2%a0a-micro">25.
+                                            Aplikasi untuk mengolah data dalam bentuk perhitungan dasar, rumus, pemakaian fungsi-fungsi, dan juga untuk pengolahan data, tabel, pembuatan grafik dan manajemen data adalah …. *a. Microsoft wordb. Microseoft excelc. Microsoft power poind. Notepad​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tujuan-pengolahan-data-pengolahan-hasil-penelitian-adalah-a-merumuskan-penelitian-b-bantu-menemukan-topik-masalahnya-c-tingkatkan-kualitas-data-d-buat-meja-e-enkripsi-data">26.
+                                            Tujuan pengolahan data, pengolahan hasil penelitian adalah. A Merumuskan penelitian B Bantu menemukan topik masalahnya C Tingkatkan kualitas data D Buat meja E Enkripsi data</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#kak-saya-mau-tanya-rumus-nya-rata%c2%b2-pengolahan-data">27.
+                                            kak saya mau tanya rumus nya rata² pengolahan data</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#perhatikan-data-berikut-1-database-dan-olah-kata-2-grafik-dan-database-3-olah-data-dan-tabel-4-rumus-dan-grafik-5-tabel-dan-rumus-berdasarkan-data-tersebut-microsoft-excel-ditunjang-dengan">28.
+                                            Perhatikan data berikut! (1) database dan olah kata (2) grafik dan database (3) olah data dan tabel (4) rumus dan grafik (5) tabel dan rumus berdasarkan data tersebut, microsoft excel ditunjang dengan aneka macam akomodasi ditunjukkan oleh nomor….</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebuah-swalayan-melakukan-pencatatan-transaksi-penjualan-dengan-menggunakan-program-microsoft-excel-untuk-kegiatan-pengolahan-data-tersebut-dapat-memanfaatkan-kelebihan-microsoft-excel-seperti-terseb">29.
+                                            sebuah swalayan melakukan pencatatan transaksi penjualan dengan menggunakan program microsoft excel. untuk kegiatan pengolahan data tersebut dapat memanfaatkan kelebihan microsoft excel seperti tersebut di bawah ini, kecuali ....
+a. pengurutan data
+b. pengelompokkan data
+c. desain grafis 
+d. pembuatan tabel
+e. penggunaan rumus/formula </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebuah-bilangn-bernilai-6-setelah-melalui-proses-pengolahan-data-diperoleh-output-6-maka-rumus-fungsi-yang-digunakan-adalah">30.
+                                            sebuah bilangn bernilai -6. setelah melalui proses pengolahan data diperoleh output 6, maka rumus fungsi yang digunakan adalah?</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="pengolahan-data-harus-dilakukan-dengan-menggunakan-rumus-matematika-yang-bukan-termasuk-rumus-nilai-pengolahan-data-adalah%e2%80%8b">
+                            1. pengolahan data harus dilakukan dengan menggunakan rumus matematika . yang bukan termasuk rumus nilai pengolahan data adalah​</h2><br />
+                        <p>Pengolahan data harus dilakukan dengan menggunakan rumus matematika. yang <strong>bukan</strong> termasuk rumus nilai pengolahan data adalah​ pilihan jawabannya:</p><p>a. Mean<br />b. Modus<br />c. Median<br />d. Meantana</p><p>Jawaban yang tepat yang bukan termasuk rumus nilai pengolahan data adalah <strong>d. Meantana.</strong></p><p></p><p><strong>Pembahasan:</strong></p><p>Ukuran pemusatan yang terdiri dari <strong>mean, median, dan modus</strong> merupakan bagian mendasar dari apa yang harus kita pelajari dalam statistik. Ketika berbicara tentang kumpulan data kuantitatif, akan sangat membantu untuk dapat menggambarkan ukuran kumpulan data dengan mengkarakterisasi kumpulan data secara numerik. Salah satu caranya adalah dengan memahami besarnya pemusatan datanya.</p><p>Ukuran pemusatan merupakan ukuran sembarang yang menunjukkan pusat dari sekumpulan data, diurutkan dari yang terkecil sampai yang terbesar dan sebaliknya. Ada beberapa metode untuk mengukur konsentrasi, tetapi tiga yang paling umum digunakan adalah mean, median, dan modus.</p><p></p>Pelajari lebih lanjut<p>Pelajari lebih lanjut mengenai materi mean, median dan modus pada link berikut :</p><p>https://brainly.co.id/tugas/18935188</p><p></p><strong>#BelajarBersamaBrainly</strong><br />
+                                            <h2 class="ez-toc-section" id="pengolahan-data-harus-dilakukan-dengan-menggunakan-rumus-matematika-yang-bukan-termasuk-rumus-nilai-pengolahan-data-adalah%e2%80%8b">
+                            2. pengolahan data harus dilakukan dengan menggunakan rumus matematika . yang bukan termasuk rumus nilai pengolahan data adalah​</h2><br />
+                        <p><strong>Yang bukan termasuk rumus nilai pengolahan data dalam matematika adalah​ selain mean, median, dan modus.</strong></p><p><strong></strong></p><p><strong>Pembahasan</strong></p><p>Dalam matematika, segala sesuatu yang dihitung pasti menggunakan rumus termasuk pengolahan data kuantitatif atau data yang berbentuk angka. Dalam pengolahan data dapat menggunakan tiga rumus tergantung apa yang ingin dicari pada soal. Rumus dalam pengolahan data antara lain adalah sebagai berikut.</p><strong>Mean</strong><p>Mean adalah nilai rata-rata dari suatu data kuantitatif. Untuk menentukan nilai mean yaitu dengan cara menjumlahkan keseluruhan nilai pada data kemudian dibagi dengan banyak datanya.</p><p>Mean = ∑x / n</p><p>∑x = Jumlah data</p><p>n  = banyak data</p><strong>Median</strong><p>Median atau kuartil adalah nilai tengah dari suatu data kuantitatif setelah data diurutkan dari yang terkecil sampai yang terbesar. Untuk menghitung nilai median pada data tunggal dapat menggunakan rumus berikut.</p><p>Me = X [tex](\frac{n+1}{2})[/tex]</p><p>Sedangkan untuk data genap dapat menggunakan rumus berikut.</p><p>Me = [tex]\frac{X \frac{n}{2} + X (\frac{n}{2} + 1)}{2}[/tex]</p><p>X = data ke -</p><p>n = banyak data</p><strong>Modus</strong><p>Modus adalah nilai yang sering muncul pada suatu data kuantitatif. Untuk menghitung modus dapat menggunakan rumus sebagai berikut.</p><p>Mo = Tb + [tex]\frac{d1}{d1 + d2}[/tex] x p</p><p>Tb = tepi bawah dari kelas modus</p><p>d1 = selisih frekunsi kelas modus dengan frekunsi sebelum kelas modus</p><p>d2 = selisih frekunsi kelas modus dengan frekunsi setelah kelas modus</p><p>p  = panjang kelas interval</p><p></p><p><strong>Pelajari lebih lanjut</strong></p><p>Pelajari lebih lanjut tentang materi pengolahan data pada link https://brainly.co.id/tugas/50869561</p><p><strong>#BelajarBersamaBrainly</strong></p><br />
+                                            <h2 class="ez-toc-section" id="rumus-pengolahan-data">
+                            3. rumus pengolahan data</h2><br />
+                        Penggunaan1+ (ikon plus)Penjumlahan=A1+A22- (ikon minus)Pengurangan=A3-A43* (ikon bintang)Perkalian=A5*A64/ (ikon garis miring)Pembagian=A7/A85^ (ikon caret)Pangkat=A9^2 (angka berapapun yang berada di cell A9 akan dipangkat 26% (ikon persen)Prosentase=A1*10% (gunakan sesuai dengan kebutuhan)<br />
+                                            <h2 class="ez-toc-section" id="sebuah-bilangan-bernilai-6-setelah-melalui-sebuah-proses-pengolahan-data-diperoleh-output-6maka-rumus-fungsi-yang-digunakan-adalah-a-abs-b-log-c-exp">
+                            4. sebuah bilangan bernilai -6.setelah melalui sebuah proses pengolahan data diperoleh output 6,maka rumus fungsi yang digunakan adalah...                                               A.ABS B.Log C.EXP D.Sin</h2><br />
+                        -6 menjadi 6, rumus fungsi yg digunakan adalah c.EXP<br />
+                                            <h2 class="ez-toc-section" id="setelah-mengumpulkan-data-dari-eksperimen-yg-dilakukan-seorang-peneliti-akan-melakukan-a-uji-ulang-datab-mengumpulkan-informasic-olah-datad-merumuskan-masalahe-presentasitolong-jawab-dengan-be">
+                            5. Setelah mengumpulkan data dari eksperimen yg dilakukan, seorang peneliti akan melakukan...a. uji ulang datab. mengumpulkan informasic. olah datad. merumuskan masalahe. presentasiTolong Jawab dengan benar :)​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>a.uji ulang data</p><p></p><p>maaf kalo salah:)</p><p>e. presentasi</p><p></p><p>Setelah melakukan penelitian, peneliti melakukan analisis data dan merumuskan hasil penelitian. Selanjutnya peneliti menyusun laporan penelitian dan melakukan <strong>DISEMINASI</strong></p><br />
+                                            <h2 class="ez-toc-section" id="microsoft-excel-membantu-dalam-hal-pengolahan-data-dan-angka-dengan-menggunakan-beberapa-rumus-jika-mengalami-kesalahan-menuliskan-rumus-maka-akan-berakibat%e2%80%a6">
+                            6. Microsoft excel membantu dalam hal pengolahan data dan angka dengan menggunakan beberapa rumus. jika mengalami kesalahan menuliskan rumus maka akan berakibat…</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Microsoft excel membantu dalam hal pengolahan data dan angka dengan menggunakan beberapa rumus. Jika mengalami kesalahan menuliskan rumus maka akan berakibat <strong>m</strong><strong>u</strong><strong>n</strong><strong>c</strong><strong>u</strong><strong>l</strong><strong> </strong><strong>k</strong><strong>o</strong><strong>t</strong><strong>a</strong><strong>k</strong><strong> </strong><strong>p</strong><strong>e</strong><strong>r</strong><strong>i</strong><strong>n</strong><strong>g</strong><strong>a</strong><strong>t</strong><strong>a</strong><strong>n</strong><strong> </strong><strong>y</strong><strong>a</strong><strong>n</strong><strong>g</strong><strong> </strong><strong>m</strong><strong>e</strong><strong>n</strong><strong>a</strong><strong>w</strong><strong>a</strong><strong>r</strong><strong>k</strong><strong>a</strong><strong>n</strong><strong> </strong><strong>s</strong><strong>o</strong><strong>l</strong><strong>u</strong><strong>s</strong><strong>i</strong><strong> </strong><strong>u</strong><strong>n</strong><strong>t</strong><strong>u</strong><strong>k</strong><strong> </strong><strong>m</strong><strong>e</strong><strong>m</strong><strong>p</strong><strong>e</strong><strong>r</strong><strong>b</strong><strong>a</strong><strong>i</strong><strong>k</strong><strong>i</strong><strong> </strong><strong>k</strong><strong>e</strong><strong>s</strong><strong>a</strong><strong>l</strong><strong>a</strong><strong>h</strong><strong>a</strong><strong>n</strong><strong> </strong><strong>d</strong><strong>a</strong><strong>l</strong><strong>a</strong><strong>m</strong><strong> </strong><strong>p</strong><strong>e</strong><strong>n</strong><strong>u</strong><strong>l</strong><strong>i</strong><strong>s</strong><strong>a</strong><strong>n</strong><strong> </strong><strong>h</strong><strong>u</strong><strong>r</strong><strong>u</strong><strong>f</strong><strong>.</strong></p><p></p>Pembahasan<p>Ms. excel adalah singkatan dari microsoft excel. Microsoft excel merupakan salah satu program aplikasi yang memiliki fungsi penting dalam kehidupan sehari-hari, yakni untuk melakukan pengelolaan data berupa data. Atau bisa juga untuk menyediakan operasi perhitungan dalam bentuk spreadsheet. </p><p></p><p>Tampilan microsoft excel berbentuk kotak-kotak atau sekumpulan persegi yang dinamakan sebagai sell.</p><p></p><p><strong>Bagian-bagian microsoft excel :</strong></p>Status bar.Ribbon.Formula bar.Worksheet area.Tab menu.Size button.Quick Acces Toolbar.Name bar.Toolbar.Scrool bar.Tab sheet.<p></p>Pelajari lebih lanjutPengertian microsoft excel : https://brainly.co.id/tugas/10940116Bagian microsoft excel dan fungsinya : https://brainly.co.id/tugas/6404528Manfaat microsoft excel : https://brainly.co.id/tugas/6208960<p></p>Detail jawaban<p>Mapel : TI</p><p>Kelas : VIII SMP</p><p>Materi : Fungsi Menu dan Ikon pada Program Pengelolah Angka</p><p>Kode : 8.11.5</p><br />
+                                            <h2 class="ez-toc-section" id="16-rumusan-masalah-dalam-penelitian-biologi-dibuat-berdasarkan-select-onea-analisa-data-dan-hasil-eksperimenb-hasil-eksperimen-dan-pengolahan-datac-prakiraan-dan-tafsirand-hasil-observ">
+                            7. 16. Rumusan masalah dalam penelitian Biologi dibuat berdasarkan ... .
+Select one:
+a. Analisa data dan hasil eksperimen
+b. Hasil eksperimen dan pengolahan data
+c. Prakiraan dan tafsiran
+d. Hasil observasi dan pengumpulan data
+e. Hipotesis dan perkiraan</h2><br />
+                        Jawabannya b <br />kalau ga salah <br />
+                                            <h2 class="ez-toc-section" id="ada-3-macam-kemampuan-microsoft-excel-dalam-pengolahan-data-yaitu-data-a-processor-data-program-dan-grafikb-tabel-data-penghitungan-rumus-dan-grafikc-program-data-sel-aktif-dan-grafikd-mane">
+                            8. Ada 3 macam kemampuan Microsoft Excel dalam pengolahan data, yaitu data ...A. Processor, data program dan grafikB. Tabel, data penghitungan rumus dan grafikC. Program, data sel aktif dan grafikD. Manejemen, data paragraf dan grafiktolong di jawab ya^^</h2><br />
+                        jawaban nya adalah B<br /><br /><br />#SEMOGA MEMBANTU<br />
+                                            <h2 class="ez-toc-section" id="setelah-mengumpulkan-data-penelitian-roni-melakukan-reduksi-data-tahap-pengolahan-data-tersebut-bertujuan-a-menyimpulkan-data-yang-diperoleh-sesuai-kebutuhan-penelitian-b-menyederhanakan-data">
+                            9. Setelah mengumpulkan data penelitian, Roni melakukan reduksi data. Tahap pengolahan data tersebut bertujuan.... a. menyimpulkan data yang diperoleh sesuai kebutuhan penelitian b. menyederhanakan data agar mempermudah proses analisis C. menampilkan hasil data dalam bentuk deskripsi d. menyajikan hasil data yang telah dikategorikan e. menjawab rumusan masalah penelitian​</h2><br />
+                        <p><strong>jawaban</strong><strong> </strong></p><strong>A</strong><strong> </strong><strong>menyimpulkan</strong><strong> </strong><strong>data</strong><strong> </strong><strong>yang</strong><strong> </strong><strong>diperoleh</strong><strong> </strong><strong>sesuai</strong><strong> </strong><strong>kebutuhan</strong><strong> </strong><strong>penelitian</strong><p><strong>Penjelasan:</strong></p>karena tahap pengolahan data tersebut bertujuan A menyimpulkan data yang diperoleh sesuai kebutuhan penelitian <strong>maaf</strong><strong> </strong><strong>klo</strong><strong> </strong><strong>ada</strong><strong> </strong><strong>kekurangan</strong><strong> </strong><strong>dan</strong><strong> </strong><strong>maaf</strong><strong> </strong><strong>klo</strong><strong> </strong><strong>salah</strong><strong> </strong><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-rumus-pengolahan-data-dispeardsheet-yang-kalian-ketahui-dan-fungsinya">
+                            10. Tuliskan rumus pengolahan data dispeardsheet yang kalian ketahui dan fungsinya! </h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Berikut adalah beberapa rumus pengolahan data di spreadsheet dan fungsinya:</p><p></p><p>SUM: Digunakan untuk menjumlahkan nilai di sel atau rentang sel tertentu. Contoh: =SUM(A1:A10), untuk menjumlahkan nilai dari sel A1 hingga A10.</p><p></p><p>AVERAGE: Digunakan untuk menghitung nilai rata-rata dari sel atau rentang sel tertentu. Contoh: =AVERAGE(B1:B5), untuk menghitung nilai rata-rata dari sel B1 hingga B5.</p><p></p><p>COUNT: Digunakan untuk menghitung jumlah sel atau rentang sel yang berisi nilai atau data tertentu. Contoh: =COUNT(A1:A10), untuk menghitung jumlah sel yang berisi data di antara sel A1 hingga A10.</p><p></p><p>MAX: Digunakan untuk menemukan nilai maksimum dari sel atau rentang sel tertentu. Contoh: =MAX(B1:B5), untuk menemukan nilai maksimum dari sel B1 hingga B5.</p><p></p><p>MIN: Digunakan untuk menemukan nilai minimum dari sel atau rentang sel tertentu. Contoh: =MIN(B1:B5), untuk menemukan nilai minimum dari sel B1 hingga B5.</p><p></p><p>IF: Digunakan untuk mengevaluasi suatu kondisi dan memberikan hasil yang berbeda-beda tergantung pada apakah kondisi tersebut benar atau salah. Contoh: =IF(A1&gt;10, "Lebih besar dari 10", "Kurang dari atau sama dengan 10"), untuk mengevaluasi apakah nilai di sel A1 lebih besar dari 10.</p><p></p><p>VLOOKUP: Digunakan untuk mencari nilai tertentu di kolom tertentu dari tabel atau rentang data. Contoh: =VLOOKUP("Nama", A1:B10, 2, FALSE), untuk mencari nilai dari kolom B yang sesuai dengan nama di sel A1.</p><p></p><p>CONCATENATE: Digunakan untuk menggabungkan teks dari beberapa sel menjadi satu sel. Contoh: =CONCATENATE(A1, " ", B1), untuk menggabungkan nilai di sel A1 dan B1 dengan spasi di antaranya.</p><p></p><p>LEFT dan RIGHT: Digunakan untuk mengambil sebagian teks dari awal atau akhir dari sebuah sel. Contoh: =LEFT(A1, 3), untuk mengambil 3 karakter pertama dari sel A1.</p><p></p><p>LEN: Digunakan untuk menghitung jumlah karakter dalam sebuah sel. Contoh: =LEN(A1), untuk menghitung jumlah karakter dalam sel A1.</p><p><strong>Penjelasan:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="microsoft-excel-membantu-dalam-hal-pengolahan-data-dan-angka-dengan-menggunakan-beberapa-rumus-jika-mengalami-kesalahan-menuliskan-rumus-maka-akan-berakibat">
+                            11. Microsoft Excel membantu dalam hal pengolahan data dan angka dengan menggunakan beberapa rumus.jika mengalami kesalahan menuliskan rumus maka akan berakibat?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Hal yang terjadi jika penulisan rumus mengalami kesalahan pada MS Excel adalah sebagai berikut.</p>Rumus akan menampilkan hasil yang kurang tepat.Sel akan menampilkan tulisan ERROR.Akan muncul kotak peringatan yang menawarkan solusi untuk memperbaiki kesalahan penulisan rumus.<p></p><p><strong>Penjelasan:</strong></p><p>MS Excel merupakan aplikasi keluaran pabrikan Microsoft. Aplikasi ini digunakan untuk mengolah masukan dalam bentuk data dan angka. Salah satu format data yang dapat diolah adalah grafik. </p><p></p><p>Pelajari lebih lanjut tentang materi MS Excel pada https://brainly.co.id/tugas/1891767</p><p></p><p>#BelajarBersamaBrainly</p><br />
+                                            <h2 class="ez-toc-section" id="isi-setuju-atau-tidak-setuju1-peluang-yang-menggunakan-rumus-adalah-peluang-empirik-2-pengumpulan-data-pengolahan-data-dan-penyajian-data-merupakan-bagian-dari-statistik">
+                            12. Isi SETUJU atau TIDAK SETUJU
+1. Peluang yang menggunakan rumus adalah peluang empirik.
+2. Pengumpulan data, pengolahan data, dan penyajian data merupakan bagian dari statistik.</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1Tidak Setuju 2 Setuju</p><p><strong>Penjelasan dengan langkah-langkah:</strong></p><p>1 Setuju</p><p>2tidak Setuju</p><strong>Jawaban:</strong>setujusetuju<p></p><strong>Penjelasan dengan langkah-langkah:</strong><p></p>untuk nomor pertama<p>kita harus tau apa itu peluang empirik</p><p></p><p>peluang empirik adalah perbandingan berapa kali hal akan terjadi menurut percobaan</p><p></p><p>peluang empirik mempunyai rumus </p><p>[tex] \frac{hal \: itu \: terjadi}{jumblah \: pecobaan} [/tex]</p><p>jadi bisa dikatakan bebas ya peluang ini menggunakan rumus</p><p></p><p>biasanya contoh hasilnya kayak 1 dari 1000 orang terpapar penyakit gitu</p><p></p><p>ya walau ternyata peluang teorik juga punya rumus</p><p></p><p>jadi tergantung pemikiran kamu sendiri </p><p></p><p></p>untuk nomor 2<p></p><p>kita harus tau apa itu statistik</p><p></p><p>dengan mudah statistik adalah kumpulan data yang diolah dan diaplikasikan dalam bentuk yang bervariasi</p><p></p><p>jadi mengumpulkan data, mengolah data, penyajian data termasuk dalam statistik</p><p></p><p></p>note jawaban tetap tergantung pemikiran guru<br />
+                                            <h2 class="ez-toc-section" id="apa-rumus-mencari-nilai-rata-rata-pada-pengolahan-data">
+                            13. Apa Rumus mencari Nilai Rata-rata pada pengolahan data?</h2><br />
+                        rata rata = jumlah seluruh data : banyak data<br />dijumlah semua data lalu dibagi banyaknya data<br />
+                                            <h2 class="ez-toc-section" id="microsoft-excel-membantu-dalam-hal-pengolahan-data-dan-angka-dengan-menggunakan-beberapa-rumus-jika-mengalami-kesalahan-menulis-rumus-maka-akan-berakibat">
+                            14. Microsoft Excel membantu dalam hal pengolahan data dan angka dengan menggunakan beberapa rumus.jika mengalami kesalahan menulis rumus maka akan berakibat</h2><br />
+                        <p>Jawaban:</p><p>Hal yang terjadi jika penulisan rumus mengalami kesalahan pada MS Excel adalah sebagai berikut.</p><p>1. Rumus akan menampilkan hasil yang kurang tepat.</p><p>2. Sel akan menampilkan tulisan ERROR.</p><p>3. Akan muncul kotak peringatan yang menawarkan solusi untuk memperbaiki kesalahan penulisan rumus.</p><p></p><p><strong>Jawaban:</strong></p><p></p><p>Hal yang terjadi jika penulisan rumus mengalami kesalahan pada MS Excel adalah sebagai berikut.</p><p></p><p>Rumus akan menampilkan hasil yang kurang tepat.</p><p>Sel akan menampilkan tulisan ERROR.</p><p>Akan muncul kotak peringatan yang menawarkan solusi untuk memperbaiki kesalahan penulisan rumus.</p><p></p><p><strong>Penjelasan</strong><strong>:</strong></p><p></p><p>MS Excel merupakan aplikasi keluaran pabrikan Microsoft. Aplikasi ini digunakan untuk mengolah masukan dalam bentuk data dan angka. Salah satu format data yang dapat diolah adalah grafik.</p><p></p><p>#Semoga</p><p>#Membantu</p><p>#dan</p><p>#Mohon.Maaf.Jika.Ada.Kesalahan</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-tujuan-penggunaan-rumus-pada-pengolahan-data-ms-excel">
+                            15. jelaskan tujuan penggunaan rumus pada pengolahan data ms. Excel</h2><br />
+                        agar kita dapat lebihudah mengolah dan menghitung angkaTujuannya adalah untuk memudahkan para pengguna nya dalam menghitung sebuah angka meggunakan rumus seperti perkalian, pertambahan dan penjumlahan dengan data yang banyak dan dengan otomatis , akurat dan cepat. <br /><br />
+                                            <h2 class="ez-toc-section" id="pengolahan-data-di-bedakan-menjadi-3-yaitu-mean-median-dan-modus-coba-kalian-jelaskan-apa-yang-dimaksud-dengan-mean-serta-tuliskan-rumus-mencari-mean-%e2%80%8b">
+                            16. Pengolahan data di bedakan menjadi 3 yaitu mean, median dan modus. Coba kalian jelaskan apa yang dimaksud dengan mean? serta tuliskan rumus mencari mean !​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>mean adalah rata rata</p><p>rumus:jumlah seluruh data : banyak data</p><p>maaf kalau salah</p><p><strong>Mean</strong><strong>(</strong><strong>median</strong><strong>)</strong> yaitu nilai rata-rata yang didapatkan dari hasil penjumlahan seluruh nilai dari masing-masing data, lalu dibagi dengan banyaknya data yang ada.</p><p><strong>rumus</strong><strong>:</strong></p><p>mean = jumlah seluruh nilai/banyaknya data.</p><br />
+                                            <h2 class="ez-toc-section" id="1-untuk-mengetik-proposal-dpt-digunakan-software-2-pengolahan-rumus-dalam-microsoft-diawali-dgn-tanda-7-laporan-akhir-dari-siklus-pengolahan-data-dengan-menggunakan-software-basis-data-berupa">
+                            17. 1.Untuk Mengetik Proposal Dpt Digunakan Software..2.Pengolahan Rumus Dalam Microsoft Diawali dgn tanda..7.Laporan Akhir dari siklus pengolahan data dengan menggunakan software basis data berupa..</h2><br />
+                        1. Microsoft Office (Word dan Excell)<br />2. Sama dengan (=)<br />7. 1. Microsoft Word<br />2. = (sama dengan)<br />7. PDF<br />
+                                            <h2 class="ez-toc-section" id="1-berikut-ini-fungsi-utama-dan-aplikasi-pengolahan-angka-kecuali-a-pembuatan-tabel-data-b-pengolahan-data-pembuatan-grafikd-pembuatan-database-sederhana-e-pembuatan-wordart-2-karakter-data-yang-beris">
+                            18. 1.Berikut ini fungsi utama dan aplikasi pengolahan angka kecuali a Pembuatan tabel data b Pengolahan data Pembuatan Grafikd Pembuatan database sederhana e.Pembuatan WordArt 2. Karakter data yang berisi rumus-rumus pada aplikasi pengolahan angka adalaha. Data Teksb. Basis Datac. Data Angka d. Data Maya e. Data Formula3. Karakter data yang berisi huruf pada aplikasi pengolahan angka adalaha.Data Teks b.Basis Datac. Data Angka d. Data Mayae. Data Formula 4.Dalam aplikasi pengolahan angka "K3" disebut dengana.Barisb.Kolomc.Celld.Rangee.Rumus5.Dalam aplikasi pengolahan angka "B4:D6" disebut dengana.Baris b.Kolomc.Celld.Rangee.Rumus​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1. E</p><p>2. E</p><p>3. A</p><p>4. C</p><p>5. D</p><p></p><p>semoga membantu</p><p><strong>Jawaban:</strong></p><p>1. E</p><p>2.C</p><p>3.A</p><p>4.C</p><p>5.D</p><p><strong>Penjelasan:</strong></p><p>maaf kalo salah xixi</p><br />
+                                            <h2 class="ez-toc-section" id="10-poinmicrosoft-excel-membantu-dalam-halpengolahan-data-dan-angka-denganmenggunakan-beberapa-rumus-jikamengalami-kesalahan-menuliskanrumus-maka-akan-berakibat-%e2%80%8b">
+                            19. 10 poinMicrosoft Excel membantu dalam halpengolahan data dan angka denganmenggunakan beberapa rumus. Jikamengalami kesalahan menuliskanrumus maka akan berakibat ...​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Hal yang terjadi jika penulisan rumus mengalami kesalahan pada Microsoft Excel adalah sebagai berikut.</p><p></p><p>1. Rumus akan menampilkan hasil yang kurang  tepat.</p><p>2. Sel akan menampilkan tulisan ERROR.</p><p>3. Akan muncul kotak peringatan yang menawarkan solusi untuk memperbaiki kesalahan penulisan rumus.</p><p></p><p><strong>penj</strong><strong>elasan</strong><strong> </strong><strong>:</strong></p><p></p><p>Microsoft Excel merupakan aplikasi keluaran pabrikan Microsoft. Aplikasi ini digunakan untuk mengolah masukan dalam bentuk data dan angka. Salah satu format data yang dapat diolah adalah grafik.</p><p></p><p></p><p># semoga membantu #</p><br />
+                                            <h2 class="ez-toc-section" id="microsoft-excel-membantu-dalam-hal-pengolahan-data-dan-angka-dengan-menggunakan-beberapa-rumus-jija-mengalami-kesalahan-menuliskan-rumus-maka-akan-berakibat">
+                            20. microsoft excel membantu dalam hal pengolahan data dan angka dengan menggunakan beberapa rumus.jija mengalami kesalahan menuliskan rumus maka akan berakibat?</h2><br />
+                        <p>jika mengalami kesalahan dalam penulisan rumus misal hasil dalam belajar kita mengerjakan latihan karena salah rumus jawaban atau hasilnya salah.</p><br />
+                                            <h2 class="ez-toc-section" id="data-hasil-penelitian-yang-telah-didapatkan-dari-eksperimen-kemudian-akan-di-analisis-supaya-bisa-ditindaklanjuti-dengan-menghubungkan-berbagai-macam-pola-dasar-teori-dan-konsep-yang-ada-sehingga-b">
+                            21. Data hasil penelitian yang telah didapatkan dari eksperimen kemudian akan di analisis supaya bisa ditindaklanjuti dengan menghubungkan berbagai macam pola, dasar, teori dan konsep yang ada, sehingga bisa ditarik kesimpulan yang sesuai dengan rumusan masalah. Dalam proses analisis data, pengolahan data dapat dilakukan dalam berbagai bentuk, jelaskan!​</h2><br />
+                        <p><strong>Penjelasan:</strong></p><p>pengelolaan data dapat dilakukan dengan melakukan pengumpulan data dan fakta yang diperlukan untuk menyelesaikan sebuah masalah dan juga melakukan penelitian terlebih dahulu</p><br />
+                                            <h2 class="ez-toc-section" id="microsoft-excel-ditunjang-dengan-berbagai-fasilitas-kemampuan-seperti-berikut-kecuali-a-olah-data-dan-tabel-b-tabel-dan-rumus-c-database-dan-olah-kata-d-rumus-dan-grafik-e-grafik-dan-database">
+                            22. microsoft excel ditunjang dengan berbagai fasilitas kemampuan seperti berikut kecuali A. Olah data dan tabel B. Tabel dan rumus C. Database dan olah kata D. Rumus dan grafik E. Grafik dan database</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>c. database dan olah kata</p><p><strong>Penjelasan:</strong></p><p> olah kata itu adanya di word...</p><p><strong>Jawaban:</strong></p><p>c.  database dan olah kata</p><p></p><p>#maaf klo salah </p><br />
+                                            <h2 class="ez-toc-section" id="rumus-cepat-mencari-rata-rata-bab-pengolahan-data">
+                            23. rumus cepat mencari rata-rata, bab pengolahan data?</h2><br />
+                        tambah semua dulu baru bagisampai sekarang blum tau rumua cepatnya .. rumua cepatnya kayaknya biasanya di jumlah lalu dibagi banyak bilanganya<br />
+                                            <h2 class="ez-toc-section" id="erna-sedang-memasukkan-angka-angka-akan-didapatkan-dalam-pengumpulan-data-sebelum-dalam-pengolahan-angka-memasukkan-data-tersebut-ke-dalam-rumus-yang-sudah-diketahui-sebelumnya-kegiatan-yang-dilakukan">
+                            24. Erna sedang memasukkan angka-angka akan didapatkan dalam pengumpulan data sebelum dalam pengolahan angka memasukkan data tersebut ke dalam rumus yang sudah diketahui sebelumnya kegiatan yang dilakukan dalam metode ilmiah termasuk kedalam kegiatan​</h2><br />
+                        <p>Jawaban:</p><p>﻿pengolahan data</p><p>Penjelasan:ya itu</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="aplikasi-untuk-mengolah-data-dalam-bentuk-perhitungan-dasar-rumus-pemakaian-fungsi-fungsi-dan-juga-untuk-pengolahan-data-tabel-pembuatan-grafik-dan-manajemen-data-adalah-%e2%80%a6-%c2%a0a-micro">
+                            25. Aplikasi untuk mengolah data dalam bentuk perhitungan dasar, rumus, pemakaian fungsi-fungsi, dan juga untuk pengolahan data, tabel, pembuatan grafik dan manajemen data adalah …. *a. Microsoft wordb. Microseoft excelc. Microsoft power poind. Notepad​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Microsoft Excel</p><p><strong>Penjelasan:</strong></p><p>sebuah aplikasi yang berfungsi seperti diatas adalah Ms. Excel (SC:Gugel)</p><br />
+                                            <h2 class="ez-toc-section" id="tujuan-pengolahan-data-pengolahan-hasil-penelitian-adalah-a-merumuskan-penelitian-b-bantu-menemukan-topik-masalahnya-c-tingkatkan-kualitas-data-d-buat-meja-e-enkripsi-data">
+                            26. Tujuan pengolahan data, pengolahan hasil penelitian adalah. A Merumuskan penelitian B Bantu menemukan topik masalahnya C Tingkatkan kualitas data D Buat meja E Enkripsi data</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>A . Merumuskan penelitian</p><p><strong>Penjelasan:</strong></p><p>Karena Tujuan pengolahan data, pengolahan hasil penelitian adalah Merumuskan penelitian</p><br />
+                                            <h2 class="ez-toc-section" id="kak-saya-mau-tanya-rumus-nya-rata%c2%b2-pengolahan-data">
+                            27. kak saya mau tanya rumus nya rata² pengolahan data</h2><br />
+                        jumlah data dibagi banyak datajumlah data dibagi banyak data<br /><br />maaf kalau salah<br />
+                                            <h2 class="ez-toc-section" id="perhatikan-data-berikut-1-database-dan-olah-kata-2-grafik-dan-database-3-olah-data-dan-tabel-4-rumus-dan-grafik-5-tabel-dan-rumus-berdasarkan-data-tersebut-microsoft-excel-ditunjang-dengan">
+                            28. Perhatikan data berikut! (1) database dan olah kata (2) grafik dan database (3) olah data dan tabel (4) rumus dan grafik (5) tabel dan rumus berdasarkan data tersebut, microsoft excel ditunjang dengan aneka macam akomodasi ditunjukkan oleh nomor….</h2><br />
+                        <p>Berdasarkan soal tersebut, <strong>microsoft excel </strong>ditunjang dengan aneka macam akomodasi ditunjukkan oleh nomor<strong> 2, 3, 4, dan 5. </strong>Yaitu oleh  (2) Grafik dan Database (3) Olah data dan Tabel (4) Rumus dan Grafik (5) Tabel dan Rumus. </p><p></p><p><strong>Pembahasan:</strong></p><p><strong>Microsoft Excel </strong>merupakan salah satu aplikasi atau software yang dapat digunakan dalam melakukan <strong>analisis data</strong>. Microsoft Excel mengandung rumus-rumus yang dapat memudahkan penggunanya dalam menyajikan atau menghitung sebuah data. Salah satu rumus basic yang terdapat di Excel yaitu <strong>SUM</strong>, <strong>SUMIFS</strong>, <strong>AVERAGER</strong>, <strong>IF</strong>, dan lainnya. Rumus <strong>SUM</strong> digunakan untuk menjumlah suatu data pada Excel. Rumus <strong>SUMIFS</strong> biasanya digunakan untuk menghitung jumlah data pada range tertentu.</p><p></p><p><strong>Pelajari Lebih Lanjut</strong></p><p>Pelajari lebih lanjut materi tentang rumus excel pada link brainly.co.id/tugas/6300338</p><p></p><p><strong>#BelajarBersamaBrainly #SPJ1</strong></p><br />
+                                            <h2 class="ez-toc-section" id="sebuah-swalayan-melakukan-pencatatan-transaksi-penjualan-dengan-menggunakan-program-microsoft-excel-untuk-kegiatan-pengolahan-data-tersebut-dapat-memanfaatkan-kelebihan-microsoft-excel-seperti-terseb">
+                            29. sebuah swalayan melakukan pencatatan transaksi penjualan dengan menggunakan program microsoft excel. untuk kegiatan pengolahan data tersebut dapat memanfaatkan kelebihan microsoft excel seperti tersebut di bawah ini, kecuali ....
+a. pengurutan data
+b. pengelompokkan data
+c. desain grafis 
+d. pembuatan tabel
+e. penggunaan rumus/formula </h2><br />
+                        c. design grafis karena microsoft excel tidak memiliki fitur seperti itu<br />
+                                            <h2 class="ez-toc-section" id="sebuah-bilangn-bernilai-6-setelah-melalui-proses-pengolahan-data-diperoleh-output-6-maka-rumus-fungsi-yang-digunakan-adalah">
+                            30. sebuah bilangn bernilai -6. setelah melalui proses pengolahan data diperoleh output 6, maka rumus fungsi yang digunakan adalah?</h2><br />
+                        menggunakan rumus =ABS(-6) <br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/nN8UoEaNhpc?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>matematika</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/stalle-s-bakery.html">Stalle s Bakery</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/kebahasaan-buku-non-fiksi.html">Kebahasaan Buku Non Fiksi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/konsep-dasar-routing.html">Konsep Dasar Routing</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/gambar-sikap-bajrasana.html">Gambar Sikap Bajrasana</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/kerajinan-dari-daerah-pegunungan.html">Kerajinan Dari Daerah Pegunungan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/kehidupan-awal-masyarakat-indonesia.html">Kehidupan Awal Masyarakat Indonesia</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/resep-makanan-dari-serealia-kacang-kacangan-dan-umbi.html">Resep Makanan Dari Serealia Kacang Kacangan Dan Umbi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/syarat-pancasila-sebagai-ideologi-terbuka.html">Syarat Pancasila Sebagai Ideologi Terbuka</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/apa-itu-bilangan-rasional.html">Apa Itu Bilangan Rasional</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/contoh-kerajinan-limbah-lunak-organik-dan-anorganik.html">Contoh Kerajinan Limbah Lunak Organik Dan Anorganik</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/struktur-bumi-pdf.html">Struktur Bumi Pdf</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/sistematika-surat-lamaran-kerja.html">Sistematika Surat Lamaran Kerja</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/kehidupan-politik-dinasti-sanjaya.html">Kehidupan Politik Dinasti Sanjaya</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/aksara-rekan-lan-pasangan.html">Aksara Rekan Lan Pasangan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/bagaimana-cara-melakukan-pola-gerak-dominan-keseimbangan-pada-handstand.html">Bagaimana Cara Melakukan Pola Gerak Dominan Keseimbangan Pada Handstand</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/contoh-cecangkitan.html">Contoh Cecangkitan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/kebijakan-pembayaran-internasional.html">Kebijakan Pembayaran Internasional</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/contoh-papan-pengumuman-bahasa-bali.html">Contoh Papan Pengumuman Bahasa Bali</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/contoh-gambar-poster-tentang-cinta-tanah-air-indonesia.html">Contoh Gambar Poster Tentang Cinta Tanah Air Indonesia</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://organicstudy.github.io/siklus-glikolisis.html">Siklus Glikolisis</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://organicstudy.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://organicstudy.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://organicstudy.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>
